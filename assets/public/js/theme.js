@@ -84,7 +84,7 @@ window.knote = window.knote || {};
 		  });
 
 		  function _manageFocus(evt) {
-			if (evt.keyCode !== 9) return;
+			if (evt.keyCode !== 9 || evt.key !== 'Tab' ) return;
 			/**
 			 * On the first focusable element and tab backward,
 			 * focus the last element
@@ -250,11 +250,7 @@ window.knote = window.knote || {};
 		subNavToggleElements.forEach(subNavToggle => {
 			subNavToggle.addEventListener('click', function(event) {
 				event.preventDefault();
-				const parentLi = this.closest('li');
-				parentLi.classList.toggle('expanded');
-				// parentLi.querySelectorAll('li').forEach( (item) => {
-				// 	item.setAttribute('tabindex', 0);
-				// });
+				this.closest('li').classList.toggle('expanded');
 			});
 		});
 	};

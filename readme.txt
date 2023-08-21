@@ -77,10 +77,15 @@ Knote is distributed under the terms of the GNU GPL
 == Changelog ==
 
 = 0.1.4 (Released: August 21, 2023) =
-
-= 0.1.3 (Released: August 16, 2023) =
 * [Fix] Menu overflow issue fixed
 * [Fix] Menu accessibility issue fixed
+
+= 0.1.3 (Released: August 16, 2023) =
+* [Fix] Select for field padding fix
+* [Fix] Form select color issue fixed
+* [Fix] Header menu overflow issue fixed
+* [Fix] Link(Button) visited style fixed
+* [Update] Header layout default update
 
 = 0.1.2 (Released: August 15, 2023) =
 * [New] Remove jQuery dependency

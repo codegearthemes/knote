@@ -435,6 +435,7 @@ html {
     position: fixed;
     overflow-y: auto;
     overflow-x: hidden;
+	visibility: hidden;
     padding: 0 16px 15px;
     background-color: #f6f6f6;
 	max-width: calc( 100% - 32px);
@@ -2878,6 +2879,10 @@ h6, .h6 {
 	h6,
 	.h6 {
 		font-size: var(--theme--heading-tablet-size6);
+	}
+
+	.drawer {
+		visibility: visible;
 	}
 
 	.site-header {

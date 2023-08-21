@@ -749,6 +749,7 @@ body.sticky-active .header-sticky.header-sticky-below .builder-header_row_below{
     overflow: hidden;
 }
 
+.header-offcanvas .main-navigation ul li.focus > ul,
 .header-offcanvas .main-navigation ul li.expanded > ul{
     height: auto;
     display: flex;
