@@ -2903,7 +2903,7 @@ h6, .h6 {
 	input[type="submit"],
 	.search-form .search-submit{
 		font-size: var(--theme--button-tablet-font-size);
-		padding: var(--theme--button-tablet-top-bottom-padding) 24px;
+		padding: var(--theme--button-tablet-top-bottom-padding) 16px;
 	}
 
 	.single-article .centered .post-thumbnail{
@@ -3005,7 +3005,7 @@ h6, .h6 {
 	input[type="submit"],
 	.search-form .search-submit{
 		font-size: var(--theme--button-mobile-font-size);
-		padding: var(--theme--button-mobile-top-bottom-padding) 24px;
+		padding: var(--theme--button-mobile-top-bottom-padding) 12px;
 	}
 
 	.article .content .entry-title{
