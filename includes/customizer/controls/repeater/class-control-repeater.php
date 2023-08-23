@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 if ( class_exists( 'WP_Customize_Control' ) ) {
 
-    class Knote_Control_Repeater extends WP_Customize_Control {
+    class Knote_Control_Repeater_Simple extends WP_Customize_Control {
 
         /**
          * The type of control being rendered

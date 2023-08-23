@@ -10,8 +10,6 @@
  *
  */
 
-use \KnoteToolkit\Includes\Customizer as KnoteToolkit;
-
 $row                    = $args[ 'row' ];
 $device                 = $args[ 'device' ];
 $row_data               = $args[ 'row_data' ];
@@ -21,7 +19,9 @@ $component_args = array(
     'builder_type' => 'footer'
 );
 
+
 $knote_builder = Knote_Builder::get_instance();
+use \KnoteToolkit\Includes\Customizer as KnoteToolkit;
 
 // Get columns number
 $cols_number = $knote_builder->get_row_number_of_columns( $row_data->$device );
@@ -74,7 +74,6 @@ foreach( $row_data->$device as $col_id => $elements ) :
 				}else if( class_exists( 'KnoteToolkit' ) ) {
 
 					$knote_premium = KnoteToolkit\Customizer::instance();
-
 					if( method_exists( $knote_premium, $component_callback  ) ) {
 						call_user_func( array( $knote_premium, $component_callback ), $component_args );
 					}
