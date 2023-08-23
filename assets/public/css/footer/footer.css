@@ -24,6 +24,10 @@
     width: fit-content;
 }
 
+.site-footer .builder-item a{
+    text-decoration: none;
+}
+
 /* Blocks */
 .site-footer .wp-block-image{
     margin-top: 0px;
@@ -267,6 +271,7 @@
 }
 
 .footer-widget3 .widget a{
+    text-decoration: none;
     color: var(--theme--widget3-link-color);
 }
 
