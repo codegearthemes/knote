@@ -278,17 +278,17 @@ $screen = get_current_screen(); // phpcs:ignore WPThemeReview.CoreFunctionality.
                         </div>
                     </div>
                 </div>
-                <div class="panel block">
+                <div class="panel block support">
                     <div class="panel-head">
                         <h3 class="panel-title">
                             <?php esc_html_e('Changelog', 'knote'); ?>
-                            <?php echo esc_html( ( ! $this->settings[ 'premium' ] ) ? KNOTE_VERSION : KNOTE_PREMIUM_VERSION ); ?>
+                            <span class="version"><?php echo esc_html( ( ! $this->settings[ 'premium' ] ) ? KNOTE_VERSION : KNOTE_PREMIUM_VERSION ); ?></span>
                         </h3>
                     </div>
                     <div class="panel-content">
                         <p class="description"><?php esc_html_e('Keep informed with the latest changes about each theme.', 'knote'); ?></p>
                         <div class="action-button">
-                            <a href="<?php echo esc_url( $this->settings['theme_link'] ); ?>" target="_blank"><?php esc_html_e('See the changelog', 'knote'); ?></a>
+                            <a href="<?php echo esc_url( $this->settings['changelog_link'] ); ?>" target="_blank"><?php esc_html_e('See the changelog', 'knote'); ?></a>
                         </div>
                     </div>
                 </div>

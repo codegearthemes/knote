@@ -100,7 +100,7 @@ class KnoteFramework {
             	esc_html__('Knote', 'knote'),
 				'manage_options', 'knote',
                 array( $this, 'html' ),
-                get_template_directory_uri().'/assets/admin/src/icon.svg', 45 );
+                get_template_directory_uri().'/assets/admin/src/icon.svg', 59 );
 
         }
     }

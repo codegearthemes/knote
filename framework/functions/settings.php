@@ -326,6 +326,7 @@ function knote_settings_variables()
 
 	// Documentation
 	$settings['docs_link'] = 'https://docs.codegearthemes.com/knote';
+	$settings['changelog_link'] = 'https://codegearthemes.com/pages/changelog-knote/';
 
 	// Community
 	$settings['community_link'] = 'https://www.facebook.com/groups/codegearonline/';
