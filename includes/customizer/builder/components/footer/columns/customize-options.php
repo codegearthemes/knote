@@ -50,7 +50,7 @@ foreach( $this->footer_rows as $row ) {
                             "#customize-control-{$section}_inner_layout",
                             "#customize-control-{$section}_horizontal_alignment",
                             "#customize-control-{$section}_elements_spacing",
-                        ),
+                        )
                     ),
                     'controls_design'		=> json_encode(
                         array(

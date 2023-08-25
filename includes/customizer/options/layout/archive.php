@@ -265,7 +265,7 @@ $wp_customize->add_control(
 			),
 			'active_callback' 	=> 'knote_archive_feature_image_enable',
 			'priority'  => 15
-		),
+		)
 	)
 );
 

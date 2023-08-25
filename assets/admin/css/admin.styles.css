@@ -9,6 +9,12 @@
   --theme--black-color: #000000;
 }
 
+#toplevel_page_knote img{
+  width: 20px;
+  margin-top: -1px;
+  position: relative;
+}
+
 /* Header */
 .section-header .header {
   display: flex;

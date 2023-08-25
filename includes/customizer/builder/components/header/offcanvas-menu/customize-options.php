@@ -35,7 +35,7 @@ $wp_customize->add_control(
                     array(
                         '#customize-control-knote_header_component_offcanvas_menu_visibility'
                     )
-                ),
+                )
             ),
             'controls_design'		=> json_encode(
                 array_merge(

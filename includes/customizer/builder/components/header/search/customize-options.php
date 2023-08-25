@@ -33,7 +33,7 @@ $wp_customize->add_control(
                     array(
                         '#customize-control-knote_header_component_search_layout',
                     )
-                ),
+                )
             ),
             'controls_design'		=> json_encode(
                 array_merge(

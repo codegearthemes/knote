@@ -59,8 +59,9 @@ class KnoteFramework {
 
 		if( $this->_themes_page() || $this->_dashboard_page() ) {
             add_action( 'init', array($this, 'set_settings') );
-            add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ), 100 );
         }
+
+		add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ), 100 );
 
         add_action( 'admin_menu', array( $this, 'admin_menu_init' ), 9 );
 		add_action( 'wp_ajax_knote_install_starter_plugin', array( $this, 'install_starter_plugin' ) );
@@ -94,9 +95,12 @@ class KnoteFramework {
     public function admin_menu_init() {
         if ( current_user_can( 'edit_theme_options' ) ) {
 
-            add_menu_page( 'Knote', 'Knote', 'manage_options', 'knote',
+            add_menu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_menu_page
+				esc_html__('Knote', 'knote'),
+            	esc_html__('Knote', 'knote'),
+				'manage_options', 'knote',
                 array( $this, 'html' ),
-                get_template_directory_uri().'/assets/admin/src/knote.svg', 45 ); // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
+                get_template_directory_uri().'/assets/admin/src/icon.svg', 45 );
 
         }
     }
@@ -225,7 +229,7 @@ class KnoteFramework {
         $plugin_path = (isset($_POST['path'])) ? sanitize_text_field(wp_unslash($_POST['path'])) : '';
 
 		if ( ! current_user_can( 'install_plugins' ) ) {
-			wp_send_json_error( esc_html__( 'Insufficient permissions to install the plugin.', 'cosme' ) );
+			wp_send_json_error( esc_html__( 'Insufficient permissions to install the plugin.', 'knote' ) );
 			wp_die();
 		}
 
@@ -242,7 +246,7 @@ class KnoteFramework {
 			wp_send_json_success();
 		}
 
-		wp_send_json_error( esc_html__( 'Failed to initialize or activate importer plugin.', 'cosme' ) );
+		wp_send_json_error( esc_html__( 'Failed to initialize or activate importer plugin.', 'knote' ) );
 
 		wp_die();
 	}

@@ -29,12 +29,12 @@ $screen = get_current_screen(); // phpcs:ignore WPThemeReview.CoreFunctionality.
                     </div>
                     <div class="hero-actions">
                         <?php
-                            $status = 'inactive';
+                            $plugin_status = 'inactive';
                             if ('active' === $this->settings['starter_path'] ) {
-                                $status = 'active';
+                                $plugin_status = 'active';
                             }
                         ?>
-                        <a id="starter-install" href="<?php echo esc_url( add_query_arg('page', $this->settings['menu_slug'], admin_url('themes.php'))); ?>" data-status="<?php echo esc_attr($status); ?>" class="button button-primary">
+                        <a id="starter-install" href="<?php echo esc_url( add_query_arg('page', $this->settings['menu_slug'], admin_url('themes.php'))); ?>" data-status="<?php echo esc_attr( $plugin_status ); ?>" class="button button-primary">
                             <?php esc_html_e('View starter sites', 'knote'); ?>
                         </a>
 
@@ -178,7 +178,7 @@ $screen = get_current_screen(); // phpcs:ignore WPThemeReview.CoreFunctionality.
                                     <div class="panel-content">
                                         <h4><?php esc_html_e('Need help? We\'re here for you!', 'knote'); ?></h4>
                                         <p><?php esc_html_e('Have a question? Hit a bug? Get the help you need, when you need it from our friendly support staff.', 'knote'); ?></p>
-                                        <a href="https://wordpress.org/support/theme/knote/" class="button button-secondary" target="_blank"><?php esc_html_e('Get Support', 'knote'); ?></a>
+                                        <a href="<?php echo esc_url( $this->settings['support_link'] ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e('Get Support', 'knote'); ?></a>
                                     </div>
                                 </div>
                             </div>
@@ -192,7 +192,7 @@ $screen = get_current_screen(); // phpcs:ignore WPThemeReview.CoreFunctionality.
                             <div class="panel-content">
                                 <h4><?php esc_html_e('Join our community', 'knote'); ?></h4>
                                 <p><?php esc_html_e('Discuss products and ask for community support or help the community.', 'knote'); ?></p>
-                                <a href="https://www.facebook.com/groups/codegearonline" class="button button-secondary" target="_blank"><?php esc_html_e('Join Now', 'knote'); ?></a>
+                                <a href="<?php echo esc_url( $this->settings['community_link'] ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e('Join Now', 'knote'); ?></a>
                             </div>
                         </div>
                     </div>
@@ -251,7 +251,7 @@ $screen = get_current_screen(); // phpcs:ignore WPThemeReview.CoreFunctionality.
                         </div>
                         <p class="description"><?php esc_html_e('It makes us happy to hear from our users. We would appreciate a review.', 'knote'); ?></p>
                         <div class="action-button">
-                            <a href="https://wordpress.org/support/theme/knote/reviews/" class="button button-secondary" target="_blank"><?php esc_html_e('Submit a review', 'knote'); ?></a>
+                            <a href="<?php echo esc_url( $this->settings['review_link'] ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e('Submit a review', 'knote'); ?></a>
                         </div>
                         <div class="divider"></div>
                     </div>
@@ -263,7 +263,7 @@ $screen = get_current_screen(); // phpcs:ignore WPThemeReview.CoreFunctionality.
                     <div class="panel-content">
                         <p class="description"><?php esc_html_e('Browse documentation, reference material, and tutorials.', 'knote'); ?></p>
                         <div class="action-button">
-                            <a href="https://docs.codegearthemes.com/knote" class="button button-secondary" target="_blank"><?php esc_html_e('View more', 'knote'); ?></a>
+                            <a href="<?php echo esc_url( $this->settings['docs_link'] ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e('View more', 'knote'); ?></a>
                         </div>
                     </div>
                 </div>
@@ -274,18 +274,21 @@ $screen = get_current_screen(); // phpcs:ignore WPThemeReview.CoreFunctionality.
                     <div class="panel-content">
                         <p class="description"><?php esc_html_e('Post your question on the WordPress.org forum where a member of the team or community will get back to you.', 'knote'); ?></p>
                         <div class="action-button">
-                            <a href="https://wordpress.org/support/theme/knote/" class="button button-secondary" target="_blank"><?php esc_html_e('Submit a ticket', 'knote'); ?></a>
+                            <a href="<?php echo esc_url( $this->settings['support_link'] ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e('Submit a ticket', 'knote'); ?></a>
                         </div>
                     </div>
                 </div>
                 <div class="panel block">
                     <div class="panel-head">
-                        <h3 class="panel-title"><?php esc_html_e('Changelog', 'knote'); ?> <?php esc_html_e( KNOTE_VERSION ); ?></h3>
+                        <h3 class="panel-title">
+                            <?php esc_html_e('Changelog', 'knote'); ?>
+                            <?php echo esc_html( ( ! $this->settings[ 'premium' ] ) ? KNOTE_VERSION : KNOTE_PREMIUM_VERSION ); ?>
+                        </h3>
                     </div>
                     <div class="panel-content">
                         <p class="description"><?php esc_html_e('Keep informed with the latest changes about each theme.', 'knote'); ?></p>
                         <div class="action-button">
-                            <a href="https://wordpress.org/themes/knote/" target="_blank"><?php esc_html_e('See the changelog', 'knote'); ?></a>
+                            <a href="<?php echo esc_url( $this->settings['theme_link'] ); ?>" target="_blank"><?php esc_html_e('See the changelog', 'knote'); ?></a>
                         </div>
                     </div>
                 </div>
