@@ -61,13 +61,18 @@ class KnoteFramework {
             add_action( 'init', array($this, 'set_settings') );
         }
 
+		add_action( 'admin_notices', array( $this , 'notice' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ), 100 );
 
         add_action( 'admin_menu', array( $this, 'admin_menu_init' ), 9 );
 		add_action( 'wp_ajax_knote_install_starter_plugin', array( $this, 'install_starter_plugin' ) );
+		add_action('wp_ajax_knote_dismissed_handler', array($this, 'dismissed_handler'));
 
         add_action( 'knote_admin_content_before', array( $this, 'header_before'), 10 );
         add_action( 'knote_admin_content_after', array( $this, 'footer_after'), 100 );
+
+		add_action('switch_theme', array($this, 'reset_notices'));
+        add_action('after_switch_theme', array($this, 'reset_notices'));
 
     }
 
@@ -76,6 +81,46 @@ class KnoteFramework {
 		$this->settings = apply_filters('knote_dashboard_settings', array() );
 
 	}
+
+	public function notice(){
+		global $pagenow;
+
+		$screen = get_current_screen();
+
+		if ( 'themes.php' === $pagenow && 'themes' === $screen->base ) {
+			$transient_name = sprintf( '%s_hero_notice', get_template() );
+
+			if ( ! get_transient( $transient_name ) ) { ?>
+				<div class="notice notice-success theme-dashboard-notice is-dismissible" data-notice="<?php echo esc_attr( $transient_name ); ?>">
+					<button type="button" class="notice-dismiss" data-notice-dismiss></button>
+					<?php require get_template_directory() . '/framework/views/hero.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound ?>
+				</div>
+				<?php
+			}
+		}
+	}
+
+	/**
+     * Dismissed handler
+     */
+    public function dismissed_handler() {
+
+        check_ajax_referer( 'nonce', 'nonce' );
+
+		if ( isset( $_POST['notice'] ) ) { // Input var ok; sanitization ok.
+			set_transient( sanitize_text_field( wp_unslash( $_POST['notice'] ) ), true, 0 ); // Input var ok.
+			wp_send_json_success();
+		}
+        wp_send_json_error();
+
+    }
+
+	/**
+     * Purified from the database information about notification.
+     */
+    public function reset_notices() {
+        delete_transient(sprintf('%s_hero_notice', get_template()));
+    }
 
 	public static function premium() {
 		if( class_exists( 'KnoteToolkit' ) )

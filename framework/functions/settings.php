@@ -19,8 +19,9 @@ function knote_settings_variables()
 
 	//General
 	$settings['premium']        = false;
-	$settings['menu_slug']      = 'starter';
+	$settings['menu_slug']      = 'knote';
 	$settings['starter_slug']   = 'codegear-starter';
+	$settings['starter_menu_slug']   = 'starter';
 	$settings['starter_path']   = 'codegear-starter/codegear-starter.php';
 	$settings['website_link']   = 'https://codegearthemes.com.com/';
 

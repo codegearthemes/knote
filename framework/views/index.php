@@ -30,16 +30,16 @@ $screen = get_current_screen(); // phpcs:ignore WPThemeReview.CoreFunctionality.
                     <div class="hero-actions">
                         <?php
                             $plugin_status = 'inactive';
-                            if ('active' === $this->settings['starter_path'] ) {
+                            if ('active' === $this->get_plugin_status( $this->settings['starter_path'] ) ) {
                                 $plugin_status = 'active';
                             }
                         ?>
-                        <a id="starter-install" href="<?php echo esc_url( add_query_arg('page', $this->settings['menu_slug'], admin_url('themes.php'))); ?>" data-status="<?php echo esc_attr( $plugin_status ); ?>" class="button button-primary">
+                        <a id="starter-install" href="<?php echo esc_url( add_query_arg('page', $this->settings['starter_menu_slug'], admin_url('themes.php'))); ?>" data-status="<?php echo esc_attr( $plugin_status ); ?>" class="button button-primary">
                             <?php esc_html_e('View starter sites', 'knote'); ?>
                         </a>
 
                         <?php if ( 'themes.php' === $pagenow && 'themes' === $screen->base ) { ?>
-                            <a href="<?php echo esc_url(add_query_arg('page', $this->settings['menu_slug'], admin_url('themes.php'))); ?>" class="button">
+                            <a href="<?php echo esc_url(add_query_arg('page', $this->settings['menu_slug'], admin_url('admin.php'))); ?>" class="button button-secondary">
                                 <?php esc_html_e('View theme dashboard', 'knote'); ?>
                             </a>
                         <?php } ?>
