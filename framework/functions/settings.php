@@ -138,7 +138,7 @@ function knote_settings_variables()
 	);
 
 	//Premium
-	$settings['upgrade_premium'] = 'https://codegearthemes.com/upgrade?utm_source=theme_info&utm_medium=link&utm_campaign=Knote';
+	$settings['upgrade_premium'] = 'https://codegearthemes.com/upgrade?utm_source=theme_info&utm_medium=link&utm_campaign=knote';
 
 
 	// Premium features.

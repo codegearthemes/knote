@@ -78,6 +78,7 @@ Knote is distributed under the terms of the GNU GPL
 
 = 0.1.5 (Released: August 25, 2023) =
 * [New] 15+ Starter template
+* [New] Demo import feature
 * [New] Starter plugin integration
 
 = 0.1.4 (Released: August 21, 2023) =
