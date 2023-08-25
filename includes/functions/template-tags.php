@@ -272,9 +272,15 @@ if ( ! function_exists( 'knote_post_thumbnail' ) ) :
 		}
 
 		if ( is_singular() ) :
+
+			$classes = 'aligncenter';
+			$alignment = get_theme_mod( 'knote_single_image_wide_alignment', 1 );
+			if ( $alignment ){
+				$classes = 'alignwide';
+			}
 			?>
 
-			<div class="post-thumbnail">
+			<div class="post-thumbnail <?php echo esc_attr( $classes ); ?>">
 				<?php the_post_thumbnail(); ?>
 			</div><!-- .post-thumbnail -->
 

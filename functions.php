@@ -7,7 +7,7 @@
  * @author      CodeGearThemes
  * @category    WordPress
  * @package     Knote
- * @version     0.1.4
+ * @version     0.1.5
  *
  */
 if ( ! defined( 'ABSPATH' ) ) {
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Define Constants
  */
 if ( ! defined( 'KNOTE_VERSION' ) )
-	define( 'KNOTE_VERSION', '0.1.4' );
+	define( 'KNOTE_VERSION', '0.1.5' );
 	define( 'KNOTE_THEME_DIR', trailingslashit( get_template_directory() ) );
 	define( 'KNOTE_THEME_URI', trailingslashit( esc_url( get_template_directory_uri() ) ) );
 
@@ -236,11 +236,7 @@ add_action( 'after_switch_theme', 'knote_set_elementor_defaults' );
  * Autoload
  */
 require_once get_parent_theme_file_path( 'vendor/autoload.php' );
-
-/**
- * Theme dashboard.
- */
-//require get_template_directory() . '/includes/dashboard/class-theme-dashboard.php';
+require_once get_parent_theme_file_path( 'framework/framework.php' );
 
 /**
  * SVG Icons

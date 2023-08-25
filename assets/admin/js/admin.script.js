@@ -13,6 +13,8 @@
 
                 const formData = new FormData();
                 formData.append( 'action', 'knote_install_starter_plugin' );
+                formData.append( 'slug', 'codegear-starter' );
+                formData.append( 'path', 'codegear-starter/codegear-starter.php' );
                 formData.append( 'nonce', knote_localize.nonce );
 
 
@@ -41,7 +43,7 @@
 
                 })
                 .catch((error) => {
-                    output.innerHTML = '<span>'+Codegear_Starter_localize.failed_message+'</span>';
+                    output.innerHTML = '<span>'+knote_localize.failed_message+'</span>';
                 });
 
             });
