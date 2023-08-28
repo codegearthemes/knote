@@ -108,7 +108,7 @@ WooCommerce styles override
 	}
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 	.products.columns-6,
     .products.columns-5,
     .products.columns-4,
@@ -1613,18 +1613,18 @@ p.no-comments {
 	height: 100%;
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 992px) {
     .single-product__content .summary .product_title{
-        font-size: var(--theme--product-title-font-size-mobile);
+        font-size: var(--theme--product-title-font-size-tablet);
     }
 
     .single-product__content .summary .price,
     .single-product__content .summary .price span{
-        font-size: var(--theme--product-price-font-size);
+        font-size: var(--theme--product-price-font-size-tablet);
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 	.single-product__content{
 		flex-direction: column;
 	}
@@ -1635,7 +1635,7 @@ p.no-comments {
 
     .single-product__content .summary .price,
     .single-product__content .summary .price span{
-        font-size: var(--theme--product-price-font-size);
+        font-size: var(--theme--product-price-font-size-mobile);
     }
 
 	.single-product__content .summary,

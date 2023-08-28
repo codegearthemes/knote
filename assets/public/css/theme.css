@@ -2860,17 +2860,6 @@ h6, .h6 {
 }
 
 @media screen and (max-width: 992px){
-	.header-main{
-		padding: 15px 0;
-	}
-
-	.single-article .centered .post-thumbnail{
-		margin-left: -4rem;
-		margin-right: -4rem;
-	}
-}
-
-@media screen and (max-width: 880px) {
 	/**
 	* Correct the font size and margin on `h1` elements within `section` and
 	* `article` contexts in Chrome, Firefox, and Safari.
@@ -2913,14 +2902,6 @@ h6, .h6 {
 		visibility: visible;
 	}
 
-	.site-header {
-		padding: var(--theme--header-padding-tablet);
-	}
-
-	.site-header .site-branding img{
-		max-width: var(--theme--logo-size-desktop);
-	}
-
 	.btn,
 	button,
 	.button,
@@ -2934,6 +2915,18 @@ h6, .h6 {
 		padding: var(--theme--button-tablet-top-bottom-padding) 16px;
 	}
 
+	.site-header {
+		padding: var(--theme--header-padding-tablet);
+	}
+
+	.site-header .site-branding img{
+		max-width: var(--theme--logo-size-desktop);
+	}
+
+	.header-main{
+		padding: 15px 0;
+	}
+
 	.single-article .centered .post-thumbnail{
 		margin-left: 0rem;
 		margin-right: 0rem;
@@ -2942,9 +2935,14 @@ h6, .h6 {
 	.article .content .entry-title{
 		font-size: var(--theme--arcive-title-font-size-tablet);
 	}
+
+	.single-article .centered .post-thumbnail{
+		margin-left: -4rem;
+		margin-right: -4rem;
+	}
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
 	/**
 	* Correct the font size and margin on `h1` elements within `section` and

@@ -225,7 +225,7 @@
 }
 
 /* Media */
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 992px) {
     .article-content .entry-header h1{
         font-size: var( --theme--single-title-font-size-tablet );
     }
@@ -237,7 +237,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .single-article .content-area.omega{
         order: unset;
     }
