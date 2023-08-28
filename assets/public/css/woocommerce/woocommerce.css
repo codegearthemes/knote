@@ -968,7 +968,7 @@ table.shop_table_responsive tr td.download-actions .button {
     padding: 24px 32px;
 	max-width: 480px;
     color: var(--theme--content-card-color);
-    background: var(--theme--content-card-background-color);
+    background: var(--theme--content-card-background);
     margin-left: auto;
     margin-right: 0px;
 }

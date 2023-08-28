@@ -76,6 +76,10 @@ Knote is distributed under the terms of the GNU GPL
 
 == Changelog ==
 
+= 0.1.6 (Released: August 28, 2023) =
+* [Fix] Archive alternate layout issue fix
+* [Fix] Single layout selector image mismatch fix
+
 = 0.1.5 (Released: August 25, 2023) =
 * [New] 15+ Starter template
 * [New] Demo import feature

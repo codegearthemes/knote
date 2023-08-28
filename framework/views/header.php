@@ -2,7 +2,6 @@
 
 if ( ! defined( 'ABSPATH' ) ) { die; }
 
-
 function knote_admin_header(){ ?>
     <div class="section-header">
         <div class="header">

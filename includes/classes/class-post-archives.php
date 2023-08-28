@@ -140,9 +140,11 @@ if ( !class_exists( 'Knote_Posts_Archive' ) ) :
 							$this->post_image();
 						echo '</div>';
 						echo '<div class="grid__item list-content large--three-fifths medium--one-half small--one-whole">';
-							$this->post_title();
-							$this->post_meta();
-							$this->post_excerpt();
+							echo '<div class="richcontent">';
+								$this->post_title();
+								$this->post_meta();
+								$this->post_excerpt();
+							echo '</div>';
 						echo '</div>';
 					echo '</div>';
 

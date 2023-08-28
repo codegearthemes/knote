@@ -36,7 +36,7 @@ form.woocommerce-checkout {
     margin-bottom: 24px;
     width: calc( 60% + 16px);
     border-radius: var(--theme--button-border-radius);
-    background: var(--theme--content-card-background-color);
+    background: var(--theme--content-card-background);
 }
 
 .woocommerce-checkout .woocommerce-form-coupon-toggle .woocommerce-info{
@@ -65,7 +65,7 @@ form.woocommerce-checkout {
   width: calc(40% - 60px);
   flex: 0 1 calc(40% - 60px);
   color: var(--theme--content-card-color);
-  background: var(--theme--content-card-background-color);
+  background: var(--theme--content-card-background);
 }
 
 .woocommerce-checkout .block-order-review h3 {
@@ -106,7 +106,7 @@ form.woocommerce-checkout {
   padding: 24px;
   margin-top: 32px;
   color: var(--theme--content-card-color);
-  background: var(--theme--content-card-background-color);
+  background: var(--theme--content-card-background);
 }
 
 .woocommerce-checkout .woocommerce-additional-fields h3 {
@@ -264,7 +264,7 @@ form.woocommerce-checkout {
 .woocommerce-thankyou-order-details {
     padding: 24px;
     margin: 24px 0 24px 0;
-    background: var(--theme--content-card-background-color);
+    background: var(--theme--content-card-background);
 }
 
 .woocommerce-thankyou-order-details li {
@@ -274,7 +274,7 @@ form.woocommerce-checkout {
 .woocommerce-order .woocommerce-order-details{
     padding: 32px 24px;
     color: var(--theme--content-card-color);
-    background: var(--theme--content-card-background-color);
+    background: var(--theme--content-card-background);
     margin-bottom: 32px;
 }
 
@@ -381,7 +381,7 @@ form.woocommerce-checkout {
 .woocommerce-customer-details{
     padding: 24px;
     margin: 24px 0 24px 0;
-    background: var(--theme--content-card-background-color);
+    background: var(--theme--content-card-background);
 }
 
 .woocommerce-order .woocommerce-customer-details h2{

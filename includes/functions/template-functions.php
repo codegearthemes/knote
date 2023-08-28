@@ -39,7 +39,12 @@ add_filter( 'body_class', 'knote_body_classes' );
 
 function knote_container_classes() {
 	// Global
-	$knote_website_layout = get_theme_mod( 'knote_website_container', 'container' );
+	$knote_website_layout 	= get_theme_mod( 'knote_website_container', 'container' );
+	$knote_single_layout	= get_theme_mod( 'knote_single_layout', 'centered' );
+
+	if( is_singular('post') && $knote_single_layout === 'fullwidth' ){
+		$knote_website_layout = 'container-fluid';
+	}
 
 	return $knote_website_layout;
 

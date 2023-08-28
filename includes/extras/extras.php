@@ -353,7 +353,7 @@ function knote_public_scripts(){
 
 			--theme--content-card-color: ". esc_attr ( $knote_content_card_color ) .";
 			--theme--content-card-heading-color: ". esc_attr ( $knote_content_card_heading_color ) .";
-			--theme--content-card-background-color: ". esc_attr ( $knote_content_card_background_color ) .";
+			--theme--content-card-background: ". esc_attr ( $knote_content_card_background_color ) .";
 
 			--theme--other-error-color: ". esc_attr ( $knote_other_error_color ) .";
 			--theme--other-success-color: ". esc_attr ( $knote_other_success_color ) .";
