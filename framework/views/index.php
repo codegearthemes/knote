@@ -6,7 +6,7 @@ $user   = wp_get_current_user(); // phpcs:ignore WPThemeReview.CoreFunctionality
 $screen = get_current_screen(); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound
 
 ?>
-<div class="section-codegear">
+<div class="page-width">
     <div class="section-hero">
         <div class="content">
             <div class="hero-content">
