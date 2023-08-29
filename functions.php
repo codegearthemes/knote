@@ -7,7 +7,7 @@
  * @author      CodeGearThemes
  * @category    WordPress
  * @package     Knote
- * @version     0.1.5
+ * @version     0.1.6
  *
  */
 if ( ! defined( 'ABSPATH' ) ) {
