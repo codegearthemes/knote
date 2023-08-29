@@ -126,11 +126,6 @@ WooCommerce styles override
 	position: relative;
 }
 
-.products .product-card-default{
-    padding: 16px;
-    border: 1px solid var(--theme--border-color);
-}
-
 .products .product a{
 	display: flex;
     flex-direction: column;
@@ -243,6 +238,8 @@ WooCommerce styles override
     width: fit-content;
     position: absolute;
     text-transform: uppercase;
+    top: var(--theme--woocommerce-sale-spacing);
+    left: var(--theme--woocommerce-sale-spacing);
 	color: var(--theme--woocommerce-sale-badge-color);
     background: var(--theme--woocommerce-sale-badge-background);
     border-radius: var(--theme--woocommerce-sale-border-radius);

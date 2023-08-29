@@ -43,8 +43,15 @@ foreach( $row_data->$device as $col_id => $elements ) :
 		$horizontal_alignment = str_replace( '-', '-align-', $horizontal_alignment );
 	}
 	$select     = str_replace( '_', '-', $row );
-	$margin   = Knote_Styles::dimensions_variables(  $column_option_id . '_margin', 'margin', $select.'-column'.( $col_id + 1 ) );
-	$padding  = Knote_Styles::dimensions_variables(  $column_option_id . '_padding', 'padding', $select.'-column'.( $col_id + 1 ) );
+	$margin   = Knote_Styles::dimensions_variables(  $column_option_id . '_margin', 'margin', 'footer-column' );
+	$padding  = Knote_Styles::dimensions_variables(  $column_option_id . '_padding', 'padding', 'footer-column' );
+
+	$spacing  			= get_theme_mod(  $column_option_id . '_spacing_desktop', 24 ). 'px';
+	$styles[] = '--theme--column-spacing-desktop:'.$spacing;
+	$spacing_tablet  	= get_theme_mod(  $column_option_id . '_spacing_tablet', 16 ). 'px';
+	$styles[] = '--theme--column-spacing-tablet:'.$spacing_tablet;
+	$spacing_mobile  	= get_theme_mod(  $column_option_id . '_spacing_mobile', 12 ). 'px';
+	$styles[] = '--theme--column-spacing-mobile:'.$spacing_mobile;
 
 	// Column class.
 	$column_classes[] = 'grid__item';

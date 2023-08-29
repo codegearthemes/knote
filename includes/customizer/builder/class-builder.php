@@ -875,14 +875,14 @@ class Knote_Builder {
                             $default    = '{ "unit": "px","top": "15", "right": "", "bottom": "15", "left": "" }';
 
                             $styles = array();
-                            $margin     = Knote_Styles::dimensions_variables('knote_builder_'.$row['id'].'_margin', 'margin', $select );
-                            $padding    = Knote_Styles::dimensions_variables('knote_builder_'.$row['id'].'_padding', 'padding', $select, $default);
+                            $margin     = Knote_Styles::dimensions_variables('knote_builder_'.$row['id'].'_margin', 'margin', 'footer-row' );
+                            $padding    = Knote_Styles::dimensions_variables('knote_builder_'.$row['id'].'_padding', 'padding', 'footer-row', $default);
 
-                            $background_color = '--theme--'.esc_attr( str_replace( '_', '-', $row['id'] ) ).'-background:'.esc_attr( get_theme_mod( 'knote_builder_'.$row['id'].'_background_color', '#FBFBF9') );
+                            $background_color = '--theme--footer-row-background:'.esc_attr( get_theme_mod( 'knote_builder_'.$row['id'].'_background_color', '#FBFBF9') );
                             $background = array( $background_color );
 
-                            $border_width = '--theme--'.esc_attr( str_replace( '_', '-', $row['id'] ) ).'-border-width:'.esc_attr( get_theme_mod( 'knote_builder_'.$row['id'].'_border_bottom_desktop', 0) ).'px';
-                            $border_color = '--theme--'.esc_attr( str_replace( '_', '-', $row['id'] ) ).'-border-color:'.esc_attr( get_theme_mod( 'knote_builder_'.$row['id'].'_border_bottom_color', '#EAEAEA') );
+                            $border_width = '--theme--footer-row-border-width:'.esc_attr( get_theme_mod( 'knote_builder_'.$row['id'].'_border_bottom_desktop', 0) ).'px';
+                            $border_color = '--theme--footer-row-border-color:'.esc_attr( get_theme_mod( 'knote_builder_'.$row['id'].'_border_bottom_color', '#EAEAEA') );
 
                             $border = array( $border_color, $border_width );
 
