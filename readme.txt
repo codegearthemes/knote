@@ -76,6 +76,9 @@ Knote is distributed under the terms of the GNU GPL
 
 == Changelog ==
 
+= 0.1.7 (Released: Sepetember 4, 2023) =
+
+
 = 0.1.6 (Released: August 29, 2023) =
 * [New] 5 More starter sites
 * [New] Add low primority for away fold styles

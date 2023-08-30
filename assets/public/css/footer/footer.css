@@ -283,6 +283,7 @@
 }
 
 .footer-widget-area .widget{
+    margin-bottom: 0px;
     color: var(--theme--widget_area-text-color);
 }
 

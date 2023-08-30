@@ -786,6 +786,16 @@ textarea {
 	max-width: var(--theme--site-width);
 }
 
+.container-medium{
+	margin: 0 auto;
+	max-width: 1024px;
+}
+
+.container-narrow{
+	margin: 0 auto;
+	max-width: 992px;
+}
+
 .container-fluid{
 	margin: 0 auto;
 	padding-left: 16px;
@@ -2381,6 +2391,10 @@ h6, .h6 {
 	text-transform: var(--theme--button-text-transform);
 	letter-spacing: var(--theme--button-letter-spacing);
 	padding: var(--theme--button-desktop-top-bottom-padding) 24px;
+}
+
+.btn-full{
+	width: 100%;
 }
 
 /*--------------------------------------------------------------
