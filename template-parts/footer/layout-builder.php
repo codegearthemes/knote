@@ -36,11 +36,27 @@ foreach( $row_data->$device as $col_id => $elements ) :
 	$inner_layout_mobile  = get_theme_mod( $column_option_id . '_inner_layout_small', 'inline' );
 
 	$vertical_alignment   = get_theme_mod( $column_option_id . '_vertical_alignment_'.$device, 'flex-align-center' );
+	$vertical_alignment_tablet   = 'medium--'.get_theme_mod( $column_option_id . '_vertical_alignment_tablet', 'flex-align-center' );
+	$vertical_alignment_mobile   = 'small--'.get_theme_mod( $column_option_id . '_vertical_alignment_mobile', 'flex-align-center' );
+
 	$horizontal_alignment = get_theme_mod( $column_option_id . '_horizontal_alignment_'.$device, 'flex-start' );
+	$horizontal_alignment_tablet = 'medium--'.get_theme_mod( $column_option_id . '_horizontal_alignment_tablet', 'flex-start' );
+	$horizontal_alignment_mobile = 'small--'.get_theme_mod( $column_option_id . '_horizontal_alignment_mobile', 'flex-start' );
 
 	if( $inner_layout === 'stack' ){
+
+		$vertical_alignment_previous = $vertical_alignment;
+		$vertical_alignment_previous_tablet = $vertical_alignment_tablet;
+		$vertical_alignment_previous_mobile = $vertical_alignment_mobile;
+
 		$vertical_alignment = str_replace( '-align', '', $horizontal_alignment );
-		$horizontal_alignment = str_replace( '-', '-align-', $horizontal_alignment );
+		$vertical_alignment_tablet = str_replace( '-align', '', $horizontal_alignment_tablet );
+		$vertical_alignment_mobile = str_replace( '-align', '', $horizontal_alignment_mobile );
+
+		$horizontal_alignment = str_replace( '-', '-align-', $vertical_alignment_previous );
+		$horizontal_alignment_tablet = str_replace( '-', '-align-', $vertical_alignment_previous_tablet );
+		$horizontal_alignment_mobile = str_replace( '-', '-align-', $vertical_alignment_previous_mobile );
+
 	}
 	$select     = str_replace( '_', '-', $row );
 	$margin   = Knote_Styles::dimensions_variables(  $column_option_id . '_margin', 'margin', 'footer-column' );
@@ -58,8 +74,15 @@ foreach( $row_data->$device as $col_id => $elements ) :
 
 	$column_classes[] = 'builder-column';
 	$column_classes[] = $inner_layout;
+
 	$column_classes[] = $vertical_alignment;
+	$column_classes[] = $vertical_alignment_tablet;
+	$column_classes[] = $vertical_alignment_mobile;
+
 	$column_classes[] = $horizontal_alignment;
+	$column_classes[] = $horizontal_alignment_tablet;
+	$column_classes[] = $horizontal_alignment_mobile;
+
 	$column_classes[] = 'builder-column-' . esc_attr( $col_id + 1 );
 
 	if ( is_array( $margin ) ){

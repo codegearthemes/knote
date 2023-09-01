@@ -380,7 +380,7 @@
   background: #213fd4;
   cursor: pointer;
   -webkit-appearance: none;
-  box-shadow: 1px 1px 1px 213fd4;
+  box-shadow: 1px 1px 1px #213fd4;
   border: 1px solid #213fd4;
 }
 

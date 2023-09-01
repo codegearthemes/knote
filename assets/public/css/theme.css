@@ -1064,6 +1064,66 @@ textarea {
 	flex: 0 1 91.666%;
 }
 
+.show {
+	display: block !important;
+}
+
+.hide {
+	display: none !important;
+}
+
+.left {
+	float: left !important;
+}
+
+.right {
+	float: right !important;
+}
+
+.text-left {
+	text-align: left !important;
+}
+
+.text-right {
+	text-align: right !important;
+}
+
+.text-center {
+	text-align: center !important;
+}
+
+.flex-start {
+	justify-content: flex-start !important;
+}
+
+.flex-space-between {
+	justify-content: space-between !important;
+}
+
+.flex-center {
+	justify-content: center !important;
+}
+
+.flex-space-evenly {
+	justify-content: space-evenly !important;
+}
+
+.flex-end {
+	justify-content: flex-end !important;
+}
+
+.flex-align-start {
+	align-items: flex-start !important;
+}
+
+.flex-align-center {
+	align-items: center !important;
+}
+
+.flex-align-end{
+	align-items: flex-end !important;
+}
+
 /*================ Our responsive classes, if we have enabled them ================*/
 @media only screen and (max-width: 768px) {
   	/* Whole */
@@ -1268,36 +1328,36 @@ textarea {
 		float: right !important;
 	}
 
-	.small--align--flex-start {
-		align-items: flex-start;
+	.small--align-flex-start {
+		align-items: flex-start !important;
 	}
 
-	.small--align--flex-center {
-		align-items: center;
+	.small--align-flex-center {
+		align-items: center !important;
 	}
 
-	.small--align--flex-end {
-		align-items: flex-end;
+	.small--align-flex-end {
+		align-items: flex-end !important;
 	}
 
 	.small--flex-start {
-		justify-content: flex-start;
+		justify-content: flex-start !important;
 	}
 
 	.small--flex-space {
-		justify-content: space-between;
+		justify-content: space-between !important;
 	}
 
 	.small--flex-center {
-		justify-content: center;
+		justify-content: center !important;
 	}
 
 	.small--flex-even {
-		justify-content: space-evenly;
+		justify-content: space-evenly !important;
 	}
 
 	.small--flex-end {
-		justify-content: flex-end;
+		justify-content: flex-end !important;
 	}
 }
 
@@ -1503,36 +1563,36 @@ textarea {
 		float: right !important;
 	}
 
-	.medium--align--flex-start {
-		align-items: flex-start;
+	.medium--align-flex-start {
+		align-items: flex-start !important;
 	}
 
-	.medium--align--flex-center {
-		align-items: center;
+	.medium--align-flex-center {
+		align-items: center !important;
 	}
 
-	.medium--align--flex-end {
-		align-items: flex-end;
+	.medium--align-flex-end {
+		align-items: flex-end !important;
 	}
 
 	.medium--flex-start {
-		justify-content: flex-start;
+		justify-content: flex-start !important;
 	}
 
 	.medium--flex-space {
-		justify-content: space-between;
+		justify-content: space-between !important;
 	}
 
 	.medium--flex-center {
-		justify-content: center;
+		justify-content: center !important;
 	}
 
 	.medium--flex-even {
-		justify-content: space-evenly;
+		justify-content: space-evenly !important;
 	}
 
 	.medium--flex-end {
-		justify-content: flex-end;
+		justify-content: flex-end !important;
 	}
 }
 
@@ -1745,97 +1805,37 @@ textarea {
 		float: right !important;
 	}
 
-	.large--align--flex-start {
-		align-items: flex-start;
+	.large--align-flex-start {
+		align-items: flex-start !important;
 	}
 
-	.large--align--flex-center {
-		align-items: center;
+	.large--align-flex-center {
+		align-items: center !important;
 	}
 
-	.large--align--flex-end {
-		align-items: flex-end;
+	.large--align-flex-end {
+		align-items: flex-end !important;
 	}
 
 	.large--flex-start {
-		justify-content: flex-start;
+		justify-content: flex-start !important;
 	}
 
 	.large--flex-space {
-		justify-content: space-between;
+		justify-content: space-between !important;
 	}
 
 	.large--flex-center {
-		justify-content: center;
+		justify-content: center !important;
 	}
 
 	.large--flex-even {
-		justify-content: space-evenly;
+		justify-content: space-evenly !important;
 	}
 
 	.large--flex-end {
-		justify-content: flex-end;
+		justify-content: flex-end !important;
 	}
-}
-
-.show {
-	display: block !important;
-}
-
-.hide {
-	display: none !important;
-}
-
-.left {
-	float: left !important;
-}
-
-.right {
-	float: right !important;
-}
-
-.text-left {
-	text-align: left !important;
-}
-
-.text-right {
-	text-align: right !important;
-}
-
-.text-center {
-	text-align: center !important;
-}
-
-.flex-start {
-	justify-content: flex-start !important;
-}
-
-.flex-space-between {
-	justify-content: space-between !important;
-}
-
-.flex-center {
-	justify-content: center !important;
-}
-
-.flex-space-evenly {
-	justify-content: space-evenly !important;
-}
-
-.flex-end {
-	justify-content: flex-end !important;
-}
-
-.flex-align-start {
-	align-items: flex-start !important;
-}
-
-.flex-align-center {
-	align-items: center !important;
-}
-
-.flex-align-end{
-	align-items: flex-end !important;
 }
 
 /*--------------------------------------------------------------
