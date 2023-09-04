@@ -82,6 +82,7 @@ Knote is distributed under the terms of the GNU GPL
 * [Fix] Mobile canvas menu toogle fix
 * [Fix] Related post image height issue fixed
 * [Fix] Single post image alignwide issue fixed
+* [Update] Links normal & hover color update
 
 
 = 0.1.6 (Released: August 29, 2023) =
