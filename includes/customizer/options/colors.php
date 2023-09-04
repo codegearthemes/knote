@@ -166,6 +166,39 @@ $wp_customize->add_control(
 	)
 );
 
+$wp_customize->add_setting(
+	'knote_link_color',
+	array(
+		'default'           => '#D0F224',
+		'sanitize_callback' => 'knote_sanitize_hex_rgba'
+	)
+);
+
+$wp_customize->add_setting(
+	'knote_link_color_hover',
+	array(
+		'default'           => '#D0F224',
+		'sanitize_callback' => 'knote_sanitize_hex_rgba'
+	)
+);
+
+$wp_customize->add_control(
+	new Knote_Control_ColorGroup(
+		$wp_customize,
+		'knote_link_color',
+		array(
+			'label'    => esc_html__('Color', 'knote'),
+			'section'  => 'colors',
+			'border' 	=> true,
+			'settings' => array(
+				'normal' => 'knote_link_color',
+				'hover'  => 'knote_link_color_hover',
+			),
+			'priority' => 7
+		)
+	)
+);
+
 $wp_customize->add_setting( 'knote_website_color_divider',
 	array(
 		'sanitize_callback' => 'knote_sanitize_text'

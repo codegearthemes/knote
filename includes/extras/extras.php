@@ -21,14 +21,17 @@ function knote_public_scripts(){
 	);
 
 
-    $knote_site_width 				= get_theme_mod( 'knote_container_width', '1260').'px';
+    $knote_site_width 					= get_theme_mod( 'knote_container_width', '1260').'px';
 
 	$knote_primary_color				= get_theme_mod( 'knote_website_primary_color', '#121212' );
-	$knote_secondary_color			= get_theme_mod( 'knote_website_secondary_color', '#D0F224' );
-	$knote_accent_color				= get_theme_mod( 'knote_website_accent_color', '#000000' );
+	$knote_secondary_color				= get_theme_mod( 'knote_website_secondary_color', '#D0F224' );
+	$knote_accent_color					= get_theme_mod( 'knote_website_accent_color', '#000000' );
+
+	$knote_link_color					= get_theme_mod( 'knote_link_color', '#D0F224' );
+	$knote_link_color_hover				= get_theme_mod( 'knote_link_color_hover', '#D0F224' );
 
 	$knote_base_color					= get_theme_mod( 'knote_website_text_color', '#757575' );
-	$knote_base_background			= get_theme_mod( 'background_color', '#ffffff' );
+	$knote_base_background				= get_theme_mod( 'background_color', '#ffffff' );
 	$knote_heading_color				= get_theme_mod( 'knote_website_heading_color', '#121212' );
 
 
@@ -239,6 +242,9 @@ function knote_public_scripts(){
 			--theme--primary-color:		". esc_attr ( $knote_primary_color ) .";
 			--theme--secondary-color:	". esc_attr( $knote_secondary_color ) .";
 			--theme--accent-color:	". esc_attr( $knote_accent_color ) .";
+
+			--theme--link-color:	". esc_attr( $knote_link_color ) .";
+			--theme--link-color-hover:	". esc_attr( $knote_link_color_hover ) .";
 
 			--theme--base-color:	". esc_attr ( $knote_base_color ) .";
 			--theme--base-background:	". esc_attr ( $knote_base_background ).";
