@@ -169,7 +169,7 @@ $wp_customize->add_control(
 $wp_customize->add_setting(
 	'knote_link_color',
 	array(
-		'default'           => '#D0F224',
+		'default'           => '#000000',
 		'sanitize_callback' => 'knote_sanitize_hex_rgba'
 	)
 );
@@ -177,7 +177,7 @@ $wp_customize->add_setting(
 $wp_customize->add_setting(
 	'knote_link_color_hover',
 	array(
-		'default'           => '#D0F224',
+		'default'           => '#121212',
 		'sanitize_callback' => 'knote_sanitize_hex_rgba'
 	)
 );

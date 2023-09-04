@@ -27,8 +27,8 @@ function knote_public_scripts(){
 	$knote_secondary_color				= get_theme_mod( 'knote_website_secondary_color', '#D0F224' );
 	$knote_accent_color					= get_theme_mod( 'knote_website_accent_color', '#000000' );
 
-	$knote_link_color					= get_theme_mod( 'knote_link_color', '#D0F224' );
-	$knote_link_color_hover				= get_theme_mod( 'knote_link_color_hover', '#D0F224' );
+	$knote_link_color					= get_theme_mod( 'knote_link_color', '#000000' );
+	$knote_link_color_hover				= get_theme_mod( 'knote_link_color_hover', '#121212' );
 
 	$knote_base_color					= get_theme_mod( 'knote_website_text_color', '#757575' );
 	$knote_base_background				= get_theme_mod( 'background_color', '#ffffff' );
