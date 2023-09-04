@@ -77,6 +77,11 @@ Knote is distributed under the terms of the GNU GPL
 == Changelog ==
 
 = 0.1.7 (Released: Sepetember 4, 2023) =
+* [New] Scroll to top added
+* [Flex] Mobile canvas menu gap fix
+* [Fix] Mobile canvas menu toogle fix
+* [Fix] Related post image height issue fixed
+* [Fix] Single post image alignwide issue fixed
 
 
 = 0.1.6 (Released: August 29, 2023) =

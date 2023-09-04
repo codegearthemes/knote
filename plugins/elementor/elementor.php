@@ -16,7 +16,7 @@ class Elementor {
     public function __construct() {
 
         // Init
-        add_action( 'customize_save_after', array( $this, 'elementor_theme_containers' ) );
+        add_action( 'init', array( $this, 'elementor_theme_containers' ) );
         add_action( 'customize_save_after', array( $this, 'elementor_add_theme_colors' ) );
 
     }

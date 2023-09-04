@@ -207,6 +207,9 @@ function knote_get_svg_icon( $icon, $echo = false, $wrap= true ) {
 				'transform' => true,
 				'focusable' => true,
 			),
+			'polyline' => array(
+				'points' => true,
+			),
 			'rect'    => array(
 				'x'      => true,
 				'y'      => true,

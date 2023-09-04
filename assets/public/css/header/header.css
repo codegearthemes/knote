@@ -731,6 +731,12 @@ body.sticky-active .header-sticky.header-sticky-below .builder-header_row_below{
     color: var(--theme--canvas-close-color-hover);
 }
 
+.header-offcanvas .navigation-content{
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+}
+
 .header-offcanvas .main-navigation ul{
     flex-direction: column;
     gap: 0px;

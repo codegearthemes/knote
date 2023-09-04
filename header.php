@@ -29,7 +29,7 @@
 
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'knote' ); ?></a>
-    <div class="container-wrapper">
+    <div class="container-wrapper" data-container-main>
 		<?php
 
 			// Header

@@ -15,7 +15,7 @@ function knote_sale_badge( $html, $post, $product ) {
 	}
 
 	$knote_text 			    = get_theme_mod( 'knote_catalog_sale_badge_text', esc_html__( 'Sale', 'knote' ) );
-	$knote_enable_percent 	= get_theme_mod( 'knote_catalog_sale_badge_percent', 0 );
+	$knote_enable_percent 		= get_theme_mod( 'knote_catalog_sale_badge_percent', 0 );
 	$knote_percent_text 		= get_theme_mod( 'knote_catalog_sale_badge_percent_text', '-{value}%' );
 	$knote_sale_position 		= get_theme_mod( 'knote_catalog_sale_badge_layout', 'layout1');
 

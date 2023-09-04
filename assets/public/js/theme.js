@@ -251,6 +251,7 @@ window.knote = window.knote || {};
 			subNavToggle.addEventListener('click', function(event) {
 				event.preventDefault();
 				this.closest('li').classList.toggle('expanded');
+				this.closest('li').classList.remove('focus');
 			});
 		});
 	};
@@ -306,6 +307,34 @@ window.knote = window.knote || {};
 
 	knote.footer = function(){
 
+		const scrollElement 	= document.querySelector('[data-scrollup]');
+		const containerElement 	= document.querySelector('[data-container-main]');
+		const footerElement 	= document.querySelector('[data-footer-type="fixed"]');
+
+		if( scrollElement ){
+
+			document.addEventListener('scroll', () => {
+				var scrollValue = window.scrollY;
+				if( scrollValue > 500 ){
+					scrollElement.classList.add('active');
+				}else{
+					scrollElement.classList.remove('active');
+				}
+
+			} );
+
+			scrollElement.addEventListener('click', () => {
+				document.documentElement.scrollTo({
+					top: 0,
+					behavior: 'smooth'
+				});
+			});
+
+		}
+
+		if( footerElement ){
+			containerElement.style.marginBottom = footerElement.offsetHeight+'px';
+		}
 	}
 
 	/*==================================================

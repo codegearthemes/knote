@@ -34,12 +34,35 @@ function knote_header_transparent_enabled(){
 
 
 /**
- * Sticky header
+ * Transparent header
  */
 function knote_sticky_header_enabled(){
 	$enable = get_theme_mod('knote_header_builder_sticky_enable', 0);
 
 	if ($enable) {
+		return true;
+	}
+
+	return false;
+}
+
+/**
+ * Scroll to top
+ */
+function knote_scrolltop_enabled() {
+	$enable = get_theme_mod('knote_scrolltop_enable', 1 );
+
+	if ($enable) {
+		return true;
+	}
+
+	return false;
+}
+
+function knote_scrolltop_icontype(){
+
+	$icontype = get_theme_mod( 'knote_scrolltop_type', 'icon' );
+	if( $icontype === 'text' ){
 		return true;
 	}
 
