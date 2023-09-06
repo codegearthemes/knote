@@ -233,6 +233,15 @@ function knote_public_scripts(){
 		$knote_woocommerce_sale_badge_color 			= get_theme_mod( 'knote_catalog_sale_badge_color', '#ffffff');
 		$knote_woocommerce_sale_badge_background 		= get_theme_mod( 'knote_catalog_sale_badge_background', '#121212');
 		$knote_woocommerce_product_card_background 	= get_theme_mod( 'knote_catalog_product_card_background', '#ffffff');
+
+		if( class_exists( 'KnoteToolkit' ) ) {
+			$knote_product_gallery_arrow_color 				= get_theme_mod( 'knote_single_product_gallery_arrow_color', '#000000' );
+			$knote_product_gallery_arrow_color_hover 		= get_theme_mod( 'knote_single_product_gallery_arrow_color_hover', '#121212' );
+			$knote_product_gallery_arrow_background 		= get_theme_mod( 'knote_single_product_gallery_arrow_background', '#ffffff' );
+			$knote_product_gallery_arrow_background_hover 	= get_theme_mod( 'knote_single_product_gallery_arrow_background_hover', '#ffffff' );
+			$knote_product_gallery_arrow_border_color 		= get_theme_mod( 'knote_single_product_gallery_arrow_border_color', '#ffffff' );
+			$knote_product_gallery_arrow_border_color_hover = get_theme_mod( 'knote_single_product_gallery_arrow_border_color_hover', '#ffffff' );
+		}
 	}
 
     $knote_custom_styles = "
@@ -413,6 +422,28 @@ function knote_public_scripts(){
 				--theme--woocommerce-sale-badge-background: " . esc_attr ( $knote_woocommerce_sale_badge_background ).";
 				--theme--woocommerce-product-card-background: " . esc_attr ( $knote_woocommerce_product_card_background ).";
 			}";
+
+		if( class_exists( 'KnoteToolkit' ) ) {
+			$knote_custom_styles .= "
+			:root{
+				--theme--product-gallery-arrow-color: " . esc_attr ( $knote_product_gallery_arrow_color ).";
+				--theme--product-gallery-arrow-colorhover: " . esc_attr ( $knote_product_gallery_arrow_color_hover ).";
+				--theme--product-gallery-arrow-background: " . esc_attr ( $knote_product_gallery_arrow_background ).";
+				--theme--product-gallery-arrow-background-hover: " . esc_attr ( $knote_product_gallery_arrow_background_hover ).";
+				--theme--product-gallery-arrow-border-color: " . esc_attr ( $knote_product_gallery_arrow_border_color ).";
+				--theme--product-gallery-arrow-border-color-hover: " . esc_attr ( $knote_product_gallery_arrow_border_color_hover ).";
+			}";
+		}else{
+			$knote_custom_styles .= "
+			:root{
+				--theme--product-gallery-arrow-color: " . esc_attr ( $knote_button_color ).";
+				--theme--product-gallery-arrow-color-hover: " . esc_attr ( $knote_button_color_hover ).";
+				--theme--product-gallery-arrow-background: " . esc_attr ( $knote_button_background ).";
+				--theme--product-gallery-arrow-background-hover: " . esc_attr ( $knote_button_background_hover ).";
+				--theme--product-gallery-arrow-border-color: " . esc_attr ( $knote_button_border_color ).";
+				--theme--product-gallery-arrow-border-color-hover: " . esc_attr ( $knote_button_border_color_hover ).";
+			}";
+		}
 	}
 
 	wp_enqueue_style( 'knote-google-fonts', knote_google_fonts_url(), array(), knote_google_fonts_version() );

@@ -8,7 +8,7 @@
 $wp_customize->add_panel( 'knote_header_panel',
 	array(
 		'title'         => esc_html__( 'Header', 'knote'),
-		'priority'      => 10,
+		'priority'      => 11,
 	)
 );
 

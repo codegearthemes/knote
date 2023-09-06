@@ -11,9 +11,8 @@
 ---------------------------------------------*/
 $wp_customize->add_section( 'knote_archive_section',
 	array(
-		'title'         => esc_html__( 'Archive layout', 'knote'),
-		'panel'         => 'knote_layout_panel',
-        'priority'      => 10,
+		'title'         => esc_html__( 'Archive', 'knote'),
+        'priority'      => 41,
 	)
 );
 

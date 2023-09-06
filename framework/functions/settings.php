@@ -118,7 +118,7 @@ function knote_settings_variables()
 		'title'      => esc_html__('Single Product', 'knote'),
 		'content'    => esc_html__('Set the product layout, tabs and more.', 'knote'),
 		'label' 	 => esc_html__('Customize', 'knote'),
-		'link'   	 => add_query_arg('autofocus[section]', 'knote_single_product_section', admin_url('customize.php')),
+		'link'   	 => add_query_arg('autofocus[section]', 'knote_single_product_layout_section', admin_url('customize.php')),
 	);
 
 	$settings['features'][] = array(

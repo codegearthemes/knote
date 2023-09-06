@@ -10,7 +10,7 @@
 $wp_customize->add_panel('knote_performance_panel',
 	array(
 		'title'         => esc_html__( 'Performance', 'knote'),
-		'priority'      => 45,
+		'priority'      => 72,
 	)
 );
 

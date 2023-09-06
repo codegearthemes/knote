@@ -11,8 +11,7 @@
 $wp_customize->add_section( 'knote_single_section',
 	array(
 		'title'         => esc_html__( 'Single posts', 'knote'),
-		'panel'         => 'knote_layout_panel',
-        'priority'      => 25,
+        'priority'      => 42,
 	)
 );
 

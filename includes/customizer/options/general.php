@@ -16,67 +16,6 @@ $wp_customize->add_panel(
 	)
 );
 
-$wp_customize->add_section(
-	'knote_container_section',
-	array(
-		'title'      => esc_html__('Container', 'knote'),
-		'panel'      => 'knote_general_panel',
-	)
-);
-
-$wp_customize->add_setting(
-	'knote_website_container',
-	array(
-		'default' 			=> 'container',
-		'sanitize_callback' => 'knote_sanitize_text'
-	)
-);
-
-$wp_customize->add_control(
-	new Knote_Control_RadioButtons(
-		$wp_customize,
-		'knote_website_container',
-		array(
-			'label' 		=> esc_html__('Container', 'knote'),
-			'section' 		=> 'knote_container_section',
-			'choices' => array(
-				'container' 		=> esc_html__('Contained', 'knote'),
-				'container-fluid' 	=> esc_html__('Full Width', 'knote'),
-			),
-			'priority'		  => 10
-		)
-	)
-);
-
-$wp_customize->add_setting(
-	'knote_container_width',
-	array(
-		'default'           => 1260,
-		'sanitize_callback' => 'absint',
-	)
-);
-
-$wp_customize->add_control(
-	new Knote_Control_Slider(
-		$wp_customize,
-		'knote_container_width',
-		array(
-			'label' 		=> esc_html__('Container Width', 'knote'),
-			'section' 		=> 'knote_container_section',
-			'responsive'	=> false,
-			'settings' 		=> array(
-				'size_desktop' 		=> 'knote_container_width',
-			),
-			'input_attrs' => array(
-				'min'	=> 990,
-				'max'	=> 1920,
-				'unit'  => 'px'
-			),
-			'priority'		  => 10
-		)
-	)
-);
-
 /**
  * Button
  *
@@ -374,6 +313,71 @@ $wp_customize->add_control(
 				'hover'  => 'knote_button_border_color_hover',
 			),
 			'priority' => 31
+		)
+	)
+);
+
+/**
+ * Container
+ *
+ */
+$wp_customize->add_section(
+	'knote_container_section',
+	array(
+		'title'      => esc_html__('Container', 'knote'),
+		'panel'      => 'knote_general_panel',
+	)
+);
+
+$wp_customize->add_setting(
+	'knote_website_container',
+	array(
+		'default' 			=> 'container',
+		'sanitize_callback' => 'knote_sanitize_text'
+	)
+);
+
+$wp_customize->add_control(
+	new Knote_Control_RadioButtons(
+		$wp_customize,
+		'knote_website_container',
+		array(
+			'label' 		=> esc_html__('Container', 'knote'),
+			'section' 		=> 'knote_container_section',
+			'choices' => array(
+				'container' 		=> esc_html__('Contained', 'knote'),
+				'container-fluid' 	=> esc_html__('Full Width', 'knote'),
+			),
+			'priority'		  => 35
+		)
+	)
+);
+
+$wp_customize->add_setting(
+	'knote_container_width',
+	array(
+		'default'           => 1260,
+		'sanitize_callback' => 'absint',
+	)
+);
+
+$wp_customize->add_control(
+	new Knote_Control_Slider(
+		$wp_customize,
+		'knote_container_width',
+		array(
+			'label' 		=> esc_html__('Container Width', 'knote'),
+			'section' 		=> 'knote_container_section',
+			'responsive'	=> false,
+			'settings' 		=> array(
+				'size_desktop' 		=> 'knote_container_width',
+			),
+			'input_attrs' => array(
+				'min'	=> 990,
+				'max'	=> 1920,
+				'unit'  => 'px'
+			),
+			'priority'		  => 35
 		)
 	)
 );

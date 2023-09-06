@@ -187,7 +187,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'knote_link_color',
 		array(
-			'label'    => esc_html__('Color', 'knote'),
+			'label'    => esc_html__('Link color', 'knote'),
 			'section'  => 'colors',
 			'border' 	=> true,
 			'settings' => array(

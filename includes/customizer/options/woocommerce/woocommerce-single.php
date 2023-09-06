@@ -9,17 +9,25 @@
 /**
  * General
  */
-$wp_customize->add_section(
-    'knote_single_product_section',
+$wp_customize->add_panel(
+    'knote_single_product_panel',
     array(
-        'title'    => esc_html__('Single Product', 'knote'),
-        'panel'     => 'woocommerce',
-        'priority' => 110
+        'title'    => esc_html__('Single product', 'knote'),
+        'priority' => 64
+    )
+);
+
+$wp_customize->add_section(
+    'knote_single_product_layout_section',
+    array(
+        'title'    => esc_html__('General', 'knote'),
+        'panel'     => 'knote_single_product_panel',
+        'priority' => 10
     )
 );
 
 $wp_customize->add_setting(
-    'knote_single_product_tabs',
+    'knote_single_product_layout_tabs',
     array(
         'default'           => '',
         'sanitize_callback' => 'esc_attr'
@@ -29,10 +37,10 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
     new Knote_Control_Tabs(
         $wp_customize,
-        'knote_single_product_tabs',
+        'knote_single_product_layout_tabs',
         array(
             'label'            => '',
-            'section'          => 'knote_single_product_section',
+            'section'          => 'knote_single_product_layout_section',
             'controls_general' => json_encode(array(
                 '#customize-control-knote_single_product_gallery',
                 '#customize-control-knote_single_product_gallery_slider',
@@ -40,14 +48,11 @@ $wp_customize->add_control(
                 '#customize-control-knote_single_product_gallery_divider',
                 '#customize-control-knote_single_product_breadcrumbs',
                 '#customize-control-knote_single_product_ajax_add_to_cart',
+                '#customize-control-knote_single_product_buynow_divider',
+                '#customize-control-knote_single_product_buynow_title',
+                '#customize-control-knote_single_product_buynow_enable',
                 '#customize-control-knote_single_product_elements_order',
-                '#customize-control-knote_single_product_description_tabs',
                 '#customize-control-knote_single_product_elements_divider',
-                '#customize-control-knote_single_product_upsell_products',
-                '#customize-control-knote_single_product_upsell_divider',
-                '#customize-control-knote_single_product_recently_viewed_products',
-                '#customize-control-knote_single_product_recently_viewed_divider',
-                '#customize-control-knote_single_product_related_products',
                 '#customize-control-knote_single_product_sku',
                 '#customize-control-knote_single_product_categories',
                 '#customize-control-knote_single_product_tags',
@@ -62,6 +67,13 @@ $wp_customize->add_control(
                 '#customize-control-knote_single_product_price_title',
                 '#customize-control-knote_single_product_price_size',
                 '#customize-control-knote_single_product_price_color',
+                '#customize-control-knote_single_product_gallery_style_divider',
+                '#customize-control-knote_single_product_gallery_style_title',
+                '#customize-control-knote_single_product_gallery_arrow_color',
+                '#customize-control-knote_single_product_gallery_arrow_background',
+                '#customize-control-knote_single_product_gallery_arrow_border_color',
+                '#customize-control-knote_single_product_related_products_style_divider',
+                '#customize-control-knote_single_product_related_products_style_title'
             )),
         )
     )
@@ -81,7 +93,7 @@ $wp_customize->add_control(
         'knote_single_product_gallery',
         array(
             'label'        => esc_html__('Product Image', 'knote'),
-            'section'      => 'knote_single_product_section',
+            'section'      => 'knote_single_product_layout_section',
             'choices'  => array(
                 'default' => array(
                     'label' => esc_html__('Layout 1', 'knote'),
@@ -119,7 +131,7 @@ $wp_customize->add_control(
         array(
             'label'             => esc_html__('Gallery thumbnail slider', 'knote'),
             'description'       => esc_html__('Requires page refresh after saving', 'knote'),
-            'section'           => 'knote_single_product_section',
+            'section'           => 'knote_single_product_layout_section',
             'priority'             => 30
         )
     )
@@ -139,7 +151,7 @@ $wp_customize->add_control(
         array(
             'label'             => esc_html__('Image zoom effects', 'knote'),
             'description'       => esc_html__('Requires page refresh after saving', 'knote'),
-            'section'           => 'knote_single_product_section',
+            'section'           => 'knote_single_product_layout_section',
             'priority'             => 40
         )
     )
@@ -157,7 +169,7 @@ $wp_customize->add_control(
         $wp_customize,
         'knote_single_product_gallery_divider',
         array(
-            'section'  => 'knote_single_product_section',
+            'section'  => 'knote_single_product_layout_section',
             'priority' => 45
         )
     )
@@ -176,7 +188,7 @@ $wp_customize->add_control(
         'knote_single_product_breadcrumbs',
         array(
             'label'             => esc_html__('Breadcrumbs', 'knote'),
-            'section'           => 'knote_single_product_section',
+            'section'           => 'knote_single_product_layout_section',
             'priority'             => 50
         )
     )
@@ -195,7 +207,7 @@ $wp_customize->add_control(
         'knote_single_product_ajax_add_to_cart',
         array(
             'label'    => esc_html__('Ajax Add To Cart', 'knote'),
-            'section'  => 'knote_single_product_section',
+            'section'  => 'knote_single_product_layout_section',
             'priority' => 55
         )
     )
@@ -222,7 +234,7 @@ $wp_customize->add_control(
         'knote_single_product_elements_order',
         array(
             'label'             => esc_html__('Elements', 'knote'),
-            'section'           => 'knote_single_product_section',
+            'section'           => 'knote_single_product_layout_section',
             'choices'   => array(
                 'woocommerce_product_vendor'                    => esc_html__('Brand', 'knote'),
                 'woocommerce_template_single_title'             => esc_html__('Title', 'knote'),
@@ -251,7 +263,7 @@ $wp_customize->add_control(
         'knote_single_product_sku',
         array(
             'label'             => esc_html__('SKU', 'knote'),
-            'section'           => 'knote_single_product_section',
+            'section'           => 'knote_single_product_layout_section',
             'priority'             => 65
         )
     )
@@ -270,7 +282,7 @@ $wp_customize->add_control(
         'knote_single_product_categories',
         array(
             'label'             => esc_html__('Categories', 'knote'),
-            'section'           => 'knote_single_product_section',
+            'section'           => 'knote_single_product_layout_section',
             'priority'             => 70
         )
     )
@@ -289,27 +301,8 @@ $wp_customize->add_control(
         'knote_single_product_tags',
         array(
             'label'             => esc_html__('Tags', 'knote'),
-            'section'           => 'knote_single_product_section',
+            'section'           => 'knote_single_product_layout_section',
             'priority'             => 80
-        )
-    )
-);
-
-$wp_customize->add_setting(
-    'knote_single_product_description_tabs',
-    array(
-        'default'           => 1,
-        'sanitize_callback' => 'knote_sanitize_checkbox',
-    )
-);
-$wp_customize->add_control(
-    new Knote_Control_Switch(
-        $wp_customize,
-        'knote_single_product_description_tabs',
-        array(
-            'label'             => esc_html__('Product tabs', 'knote'),
-            'section'           => 'knote_single_product_section',
-            'priority'             => 90
         )
     )
 );
@@ -326,27 +319,8 @@ $wp_customize->add_control(
         $wp_customize,
         'knote_single_product_elements_divider',
         array(
-            'section'         => 'knote_single_product_section',
+            'section'         => 'knote_single_product_layout_section',
             'priority'         => 100
-        )
-    )
-);
-
-$wp_customize->add_setting(
-    'knote_single_product_upsell_products',
-    array(
-        'default'           => 1,
-        'sanitize_callback' => 'knote_sanitize_checkbox',
-    )
-);
-$wp_customize->add_control(
-    new Knote_Control_Switch(
-        $wp_customize,
-        'knote_single_product_upsell_products',
-        array(
-            'label'             => esc_html__('Upsell products', 'knote'),
-            'section'           => 'knote_single_product_section',
-            'priority'             => 101
         )
     )
 );
@@ -363,64 +337,8 @@ $wp_customize->add_control(
         $wp_customize,
         'knote_single_product_upsell_divider',
         array(
-            'section'         => 'knote_single_product_section',
+            'section'         => 'knote_single_product_layout_section',
             'priority'         => 103
-        )
-    )
-);
-
-$wp_customize->add_setting(
-    'knote_single_product_recently_viewed_products',
-    array(
-        'default'           => 0,
-        'sanitize_callback' => 'knote_sanitize_checkbox',
-    )
-);
-$wp_customize->add_control(
-    new Knote_Control_Switch(
-        $wp_customize,
-        'knote_single_product_recently_viewed_products',
-        array(
-            'label'             => esc_html__('Recently Viewed Products', 'knote'),
-            'section'           => 'knote_single_product_section',
-            'priority'             => 104
-        )
-    )
-);
-
-$wp_customize->add_setting(
-    'knote_single_product_recently_viewed_divider',
-    array(
-        'sanitize_callback' => 'esc_attr'
-    )
-);
-
-$wp_customize->add_control(
-    new Knote_Control_Divider(
-        $wp_customize,
-        'knote_single_product_recently_viewed_divider',
-        array(
-            'section'         => 'knote_single_product_section',
-            'priority'         => 105
-        )
-    )
-);
-
-$wp_customize->add_setting(
-    'knote_single_product_related_products',
-    array(
-        'default'           => 1,
-        'sanitize_callback' => 'knote_sanitize_checkbox',
-    )
-);
-$wp_customize->add_control(
-    new Knote_Control_Switch(
-        $wp_customize,
-        'knote_single_product_related_products',
-        array(
-            'label'             => esc_html__('Related products', 'knote'),
-            'section'           => 'knote_single_product_section',
-            'priority'             => 110
         )
     )
 );
@@ -442,7 +360,7 @@ $wp_customize->add_control(
         'knote_single_product_title_title',
         array(
             'label'    => esc_html__('Product Title', 'knote'),
-            'section'  => 'knote_single_product_section',
+            'section'  => 'knote_single_product_layout_section',
             'priority' => 145
         )
     )
@@ -460,7 +378,7 @@ $wp_customize->add_control(
     'knote_single_product_title_font_style',
     array(
         'type'      => 'select',
-        'section'   => 'knote_single_product_section',
+        'section'   => 'knote_single_product_layout_section',
         'label'     => esc_html__('Font Style', 'knote'),
         'choices'   => array(
             'heading' => esc_html__('Heading', 'knote'),
@@ -492,7 +410,7 @@ $wp_customize->add_control(
         'knote_single_product_title_size',
         array(
             'label'         => esc_html__('Font Size', 'knote'),
-            'section'       => 'knote_single_product_section',
+            'section'       => 'knote_single_product_layout_section',
             'responsive'    => 1,
             'settings'      => array(
                 'size_desktop'        => 'knote_single_product_title_size_desktop',
@@ -523,7 +441,7 @@ $wp_customize->add_control(
         'knote_single_product_title_color',
         array(
             'label'             => esc_html__('Title color', 'knote'),
-            'section'           => 'knote_single_product_section',
+            'section'           => 'knote_single_product_layout_section',
             'priority'             => 145
         )
     )
@@ -540,7 +458,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'knote_single_product_title_divider',
 		array(
-			'section' 		=> 'knote_single_product_section',
+			'section' 		=> 'knote_single_product_layout_section',
 			'priority'      => 145
 		)
 	)
@@ -560,7 +478,7 @@ $wp_customize->add_control(
         'knote_single_product_price_title',
         array(
             'label'    => esc_html__('Product Price', 'knote'),
-            'section'  => 'knote_single_product_section',
+            'section'  => 'knote_single_product_layout_section',
             'priority' => 145
         )
     )
@@ -588,7 +506,7 @@ $wp_customize->add_control(
         'knote_single_product_price_size',
         array(
             'label'         => esc_html__('Font Size', 'knote'),
-            'section'         => 'knote_single_product_section',
+            'section'         => 'knote_single_product_layout_section',
             'responsive'    => 1,
             'settings'         => array(
                 'size_desktop'        => 'knote_single_product_price_size_desktop',
@@ -620,8 +538,256 @@ $wp_customize->add_control(
         'knote_single_product_price_color',
         array(
             'label'    => esc_html__('Price color', 'knote'),
-            'section'  => 'knote_single_product_section',
+            'section'  => 'knote_single_product_layout_section',
             'priority' => 145
+        )
+    )
+);
+
+// Product Tabs
+$wp_customize->add_section(
+    'knote_single_product_description_tabs',
+    array(
+        'title'     => esc_html__('Product Tabs', 'knote'),
+        'panel'     => 'knote_single_product_panel',
+        'priority'  => 11
+    )
+);
+
+$wp_customize->add_control(
+    new Knote_Control_Tabs(
+        $wp_customize,
+        'knote_single_product_description_tabs',
+        array(
+            'label'            => '',
+            'section'          => 'knote_single_product_tabs_section',
+            'controls_general' => json_encode(array(
+                '#customize-control-knote_single_product_related_products',
+            )),
+            'controls_design'  => json_encode(array(
+                '#customize-control-knote_single_product_related_products_style_title'
+            )),
+        )
+    )
+);
+
+// Product tabs
+$wp_customize->add_section(
+    'knote_single_product_tabs_section',
+    array(
+        'title'     => esc_html__('Product tabs', 'knote'),
+        'panel'     => 'knote_single_product_panel',
+        'priority'  => 11
+    )
+);
+
+
+$wp_customize->add_setting(
+    'knote_single_product_description_tabs',
+    array(
+        'default'           => '',
+        'sanitize_callback' => 'esc_attr'
+    )
+);
+
+$wp_customize->add_control(
+    new Knote_Control_Tabs(
+        $wp_customize,
+        'knote_single_product_description_tabs',
+        array(
+            'label'            => '',
+            'section'          => 'knote_single_product_tabs_section',
+            'controls_general' => json_encode(array(
+                '#customize-control-knote_single_product_related_products',
+            )),
+            'controls_design'  => json_encode(array(
+                '#customize-control-knote_single_product_related_products_style_title'
+            )),
+        )
+    )
+);
+
+$wp_customize->add_setting(
+    'knote_single_product_description_tabs',
+    array(
+        'default'           => 1,
+        'sanitize_callback' => 'knote_sanitize_checkbox',
+    )
+);
+$wp_customize->add_control(
+    new Knote_Control_Switch(
+        $wp_customize,
+        'knote_single_product_description_tabs',
+        array(
+            'label'             => esc_html__('Product tabs', 'knote'),
+            'section'           => 'knote_single_product_tabs_section',
+            'priority'             => 90
+        )
+    )
+);
+
+// Upsell products
+$wp_customize->add_section(
+    'knote_single_product_upsell_section',
+    array(
+        'title'     => esc_html__('Upsell products', 'knote'),
+        'panel'     => 'knote_single_product_panel',
+        'priority'  => 20
+    )
+);
+
+
+$wp_customize->add_setting(
+    'knote_single_product_upsell_tabs',
+    array(
+        'default'           => '',
+        'sanitize_callback' => 'esc_attr'
+    )
+);
+
+$wp_customize->add_control(
+    new Knote_Control_Tabs(
+        $wp_customize,
+        'knote_single_product_upsell_tabs',
+        array(
+            'label'            => '',
+            'section'          => 'knote_single_product_upsell_section',
+            'controls_general' => json_encode(array(
+                '#customize-control-knote_single_product_recently_viewed_products',
+            )),
+            'controls_design'  => json_encode(array(
+                '#customize-control-knote_single_product_recently_viewed_products_style_title'
+            )),
+        )
+    )
+);
+
+$wp_customize->add_setting(
+    'knote_single_product_upsell_products',
+    array(
+        'default'           => 1,
+        'sanitize_callback' => 'knote_sanitize_checkbox',
+    )
+);
+$wp_customize->add_control(
+    new Knote_Control_Switch(
+        $wp_customize,
+        'knote_single_product_upsell_products',
+        array(
+            'label'             => esc_html__('Upsell products', 'knote'),
+            'section'           => 'knote_single_product_upsell_section',
+            'priority'             => 101
+        )
+    )
+);
+
+// Related Products
+$wp_customize->add_section(
+    'knote_single_product_related_section',
+    array(
+        'title'     => esc_html__('Related products', 'knote'),
+        'panel'     => 'knote_single_product_panel',
+        'priority'  => 20
+    )
+);
+
+
+$wp_customize->add_setting(
+    'knote_single_product_related_tabs',
+    array(
+        'default'           => '',
+        'sanitize_callback' => 'esc_attr'
+    )
+);
+
+$wp_customize->add_control(
+    new Knote_Control_Tabs(
+        $wp_customize,
+        'knote_single_product_related_tabs',
+        array(
+            'label'            => '',
+            'section'          => 'knote_single_product_related_section',
+            'controls_general' => json_encode(array(
+                '#customize-control-knote_single_product_related_products',
+            )),
+            'controls_design'  => json_encode(array(
+                '#customize-control-knote_single_product_related_products_style_title'
+            )),
+        )
+    )
+);
+
+$wp_customize->add_setting(
+    'knote_single_product_related_products',
+    array(
+        'default'           => 1,
+        'sanitize_callback' => 'knote_sanitize_checkbox',
+    )
+);
+
+$wp_customize->add_control(
+    new Knote_Control_Switch(
+        $wp_customize,
+        'knote_single_product_related_products',
+        array(
+            'label'             => esc_html__('Related products', 'knote'),
+            'section'           => 'knote_single_product_related_section',
+            'priority'             => 110
+        )
+    )
+);
+
+// Recently viewed products
+$wp_customize->add_section(
+    'knote_single_product_recently_viewed_section',
+    array(
+        'title'     => esc_html__('Recently viewed products', 'knote'),
+        'panel'     => 'knote_single_product_panel',
+        'priority'  => 20
+    )
+);
+
+
+$wp_customize->add_setting(
+    'knote_single_product_recently_viewed_tabs',
+    array(
+        'default'           => '',
+        'sanitize_callback' => 'esc_attr'
+    )
+);
+
+$wp_customize->add_control(
+    new Knote_Control_Tabs(
+        $wp_customize,
+        'knote_single_product_recently_viewed_tabs',
+        array(
+            'label'            => '',
+            'section'          => 'knote_single_product_recently_viewed_section',
+            'controls_general' => json_encode(array(
+                '#customize-control-knote_single_product_recently_viewed_products',
+            )),
+            'controls_design'  => json_encode(array(
+                '#customize-control-knote_single_product_recently_viewed_products_style_title'
+            )),
+        )
+    )
+);
+
+$wp_customize->add_setting(
+    'knote_single_product_recently_viewed_products',
+    array(
+        'default'           => 0,
+        'sanitize_callback' => 'knote_sanitize_checkbox',
+    )
+);
+$wp_customize->add_control(
+    new Knote_Control_Switch(
+        $wp_customize,
+        'knote_single_product_recently_viewed_products',
+        array(
+            'label'             => esc_html__('Recently viewed products', 'knote'),
+            'section'           => 'knote_single_product_recently_viewed_section',
+            'priority'             => 104
         )
     )
 );

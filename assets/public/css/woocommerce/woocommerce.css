@@ -539,21 +539,21 @@ WooCommerce styles override
     width: 100%;
     height: 100%;
     display: flex;
+    border-radius: 32px;
     align-items: center;
     justify-content: center;
     position: relative;
     text-decoration: none;
-	background: transparent;
-    color: var(--theme--button-background-color);
-    border-radius: var(--theme--button-border-radius);
-    border: 1px solid var(--theme--button-border-color);
+    color: var(--theme--product-gallery-arrow-color);
+	background: var(--theme--product-gallery-arrow-background);
+    border: 1px solid var(--theme--product-gallery-arrow-border-color);
 }
 
 .single-product .woocommerce-product-gallery .flex-direction-nav .flex-next:hover,
 .single-product .woocommerce-product-gallery .flex-direction-nav .flex-prev:hover{
-    color: var(--theme--button-color-hover);
-    background-color: var(--theme--button-background-color-hover);
-    border-color: var(--theme--button-border-color-hover);
+    color: var(--theme--product-gallery-arrow-color-hover);
+    background: var(--theme--product-gallery-arrow-background-hover);
+    border-color: var(--theme--product-gallery-arrow-border-color-hover);
 }
 
 .single-product .woocommerce-product-gallery .flex-direction-nav .flex-next::after,
@@ -561,18 +561,19 @@ WooCommerce styles override
     content: '';
     width: 12px;
     height: 12px;
+    outline: none;
     position: relative;
     border-left: none;
     border-bottom: none;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
-    border-top: 2px solid var(--theme--button-background-color);
-    border-right: 2px solid var(--theme--button-background-color);
+    border-top: 2px solid var(--theme--product-gallery-arrow-color);
+    border-right: 2px solid var(--theme--product-gallery-arrow-color);
 }
 
 .single-product .woocommerce-product-gallery .flex-direction-nav .flex-next:hover::after,
 .single-product .woocommerce-product-gallery .flex-direction-nav .flex-prev:hover::after{
-    border-color: var(--theme--button-color-hover);
+    border-color: var(--theme--product-gallery-arrow-color-hover);
 }
 
 .single-product .woocommerce-product-gallery .flex-direction-nav .flex-next::after{

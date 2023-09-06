@@ -57,7 +57,7 @@ if ( !class_exists( 'Knote_Customizer' ) ) {
 			require get_template_directory() . '/includes/customizer/controls/text/class-control-text.php';
 			require get_template_directory() . '/includes/customizer/controls/dimensions/class-control-dimensions.php';
 			require get_template_directory() . '/includes/customizer/controls/repeater/class-control-repeater.php';
-			require get_template_directory() . '/includes/customizer/controls/class-section-title.php';
+			require get_template_directory() . '/includes/customizer/controls/class-control-section-title.php';
 			// @codingStandardsIgnoreEnd WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
 			$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
@@ -73,15 +73,14 @@ if ( !class_exists( 'Knote_Customizer' ) ) {
 			// @codingStandardsIgnoreStart WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 			require get_template_directory() . '/includes/customizer/sanitizer.php';
 			require_once get_template_directory() . '/includes/customizer/callbacks.php';
-			require get_template_directory() . '/includes/customizer/options/navigation.php';
 			require get_template_directory() . '/includes/customizer/options/general.php';
 			require get_template_directory() . '/includes/customizer/options/typography.php';
 			require get_template_directory() . '/includes/customizer/options/performance.php';
 			require get_template_directory() . '/includes/customizer/options/colors.php';
 			require get_template_directory() . '/includes/customizer/options/header.php';
 			require get_template_directory() . '/includes/customizer/options/layout.php';
-			require get_template_directory() . '/includes/customizer/options/layout/archive.php';
-			require get_template_directory() . '/includes/customizer/options/layout/single-post.php';
+			require get_template_directory() . '/includes/customizer/options/blog/archive.php';
+			require get_template_directory() . '/includes/customizer/options/blog/single-post.php';
 			require get_template_directory() . '/includes/customizer/options/footer.php';
 
 			/**
@@ -91,6 +90,8 @@ if ( !class_exists( 'Knote_Customizer' ) ) {
 				require get_template_directory() . '/includes/customizer/options/woocommerce/woocommerce.php';
 				require get_template_directory() . '/includes/customizer/options/woocommerce/woocommerce-single.php';
 			}
+
+			require get_template_directory() . '/includes/customizer/options/navigation.php';
 			// @codingStandardsIgnoreEnd WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
 
