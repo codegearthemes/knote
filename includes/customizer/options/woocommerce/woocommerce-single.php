@@ -747,7 +747,6 @@ $wp_customize->add_section(
     )
 );
 
-
 $wp_customize->add_setting(
     'knote_single_product_recently_viewed_tabs',
     array(

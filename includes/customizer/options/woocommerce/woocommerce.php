@@ -5,7 +5,9 @@
  * @package Knote
  */
 
- //General
+/*----------------------------------------------------------------
+# General
+----------------------------------------------------------------*/
  $wp_customize->add_section(
 	'knote_catalog_general_section',
 	array(
@@ -20,11 +22,11 @@ $wp_customize->get_control( 'woocommerce_category_archive_display' )->section  =
 $wp_customize->get_control( 'woocommerce_default_catalog_orderby' )->section  = 'knote_catalog_general_section';
 
 
-/**
- * Store Notice
- */
+/*----------------------------------------------------------------
+# Store Notice
+----------------------------------------------------------------*/
+$wp_customize->get_control( 'woocommerce_demo_store' )->priority  = 5;
 
-// Store notice tabs
 $wp_customize->add_setting(
 	'knote_store_notice_tabs',
 	array(
@@ -32,6 +34,7 @@ $wp_customize->add_setting(
 		'sanitize_callback' => 'esc_attr'
 	)
 );
+
 $wp_customize->add_control(
 	new Knote_Control_Tabs (
 		$wp_customize,
@@ -40,13 +43,14 @@ $wp_customize->add_control(
 			'label'            => '',
 			'section'          => 'woocommerce_store_notice',
 			'controls_general' => json_encode( array(
+				'#customize-control-woocommerce_demo_store',
 				'#customize-control-woocommerce_demo_store_notice',
-				'#customize-control-woocommerce_demo_store'
 			) ),
 			'controls_design'  => json_encode( array(
 				'#customize-control-knote_store_notice_text_color',
 				'#customize-control-knote_store_notice_link_color',
 				'#customize-control-knote_store_notice_background_color',
+				'#customize-control-knote_store_notice_color_divider',
 				'#customize-control-knote_store_notice_wrapper_padding'
 			) ),
 			'priority'         =>	-10
@@ -54,7 +58,7 @@ $wp_customize->add_control(
 	)
 );
 
-// Store notice text color
+// Styles
 $wp_customize->add_setting(
 	'knote_store_notice_text_color',
 	array(
@@ -67,14 +71,14 @@ $wp_customize->add_control(
 		$wp_customize,
 		'knote_store_notice_text_color',
 		array(
-			'label'         	=> esc_html__( 'Text color', 'knote' ),
+			'label'         	=> esc_html__( 'Color', 'knote' ),
 			'section'       	=> 'woocommerce_store_notice',
+			'border'			=> true,
 			'priority'	 		=> 52
 		)
 	)
 );
 
-// Store notice link color
 $wp_customize->add_setting(
 	'knote_store_notice_link_color',
 	array(
@@ -82,6 +86,7 @@ $wp_customize->add_setting(
 		'sanitize_callback' => 'knote_sanitize_hex_rgba'
 	)
 );
+
 $wp_customize->add_setting(
 	'knote_store_notice_link_color_hover',
 	array(
@@ -89,6 +94,7 @@ $wp_customize->add_setting(
 		'sanitize_callback' => 'knote_sanitize_hex_rgba'
 	)
 );
+
 $wp_customize->add_control(
     new Knote_Control_ColorGroup(
         $wp_customize,
@@ -100,12 +106,12 @@ $wp_customize->add_control(
                 'normal' => 'knote_store_notice_link_color',
                 'hover'  => 'knote_store_notice_link_color_hover',
             ),
+			'border'			=> true,
             'priority' => 54
         )
     )
 );
 
-// Store notice background color
 $wp_customize->add_setting(
 	'knote_store_notice_background_color',
 	array(
@@ -125,7 +131,24 @@ $wp_customize->add_control(
 	)
 );
 
-// Store notice padding
+$wp_customize->add_setting(
+    'knote_store_notice_color_divider',
+    array(
+        'sanitize_callback' => 'esc_attr'
+    )
+);
+
+$wp_customize->add_control(
+    new Knote_Control_Divider(
+        $wp_customize,
+        'knote_store_notice_color_divider',
+        array(
+            'section'  => 'woocommerce_store_notice',
+            'priority' => 60
+        )
+    )
+);
+
 $wp_customize->add_setting(
     'knote_store_notice_wrapper_padding_desktop',
     array(
@@ -174,9 +197,9 @@ $wp_customize->add_control(
 );
 
 
-/**
- * Product Catalog
- */
+/*----------------------------------------------------------------
+## Product Catalog Panel
+----------------------------------------------------------------*/
 $wp_customize->add_panel(
 	'knote_woocommerce_catalog_panel',
 	array(
@@ -185,6 +208,9 @@ $wp_customize->add_panel(
 	)
 );
 
+/*----------------------------------------------------------------
+# General
+----------------------------------------------------------------*/
 $wp_customize->add_section(
 	'knote_woocommerce_catalog_section',
 	array(
@@ -210,8 +236,8 @@ $wp_customize->add_control(
 			'section'          => 'knote_woocommerce_catalog_section',
 			'controls_general' => json_encode(
 				array(
-					'#customize-control-knote_woocommerce_catalog_columns',
 					'#customize-control-knote_woocommerce_catalog_rows',
+					'#customize-control-knote_woocommerce_catalog_columns',
 					'#customize-control-knote_woocommerce_catalog_archive_sidebar',
 					'#customize-control-knote_woocommerce_catalog_divider',
 					'#customize-control-knote_woocommerce_catalog_elements_title',
@@ -224,10 +250,39 @@ $wp_customize->add_control(
 			),
 			'controls_design'  => json_encode(
 				array(
-
+					'#customize-control-knote_woocommerce_catalog_color',
+					'#customize-control-knote_woocommerce_catalog_background'
 				)
 			),
 			'priority'         =>	-10
+		)
+	)
+);
+
+$wp_customize->add_setting(
+	'knote_woocommerce_catalog_rows',
+	array(
+		'default'   		=> 4,
+		'sanitize_callback' => 'absint'
+	)
+);
+$wp_customize->add_control(
+	new Knote_Control_Slider(
+		$wp_customize,
+		'knote_woocommerce_catalog_rows',
+		array(
+			'label' 		=> esc_html__( 'Rows', 'knote' ),
+			'section' 		=> 'knote_woocommerce_catalog_section',
+			'responsive'	=> 0,
+			'settings' 		=> array (
+				'size_desktop' 		=> 'knote_woocommerce_catalog_rows'
+			),
+			'input_attrs' => array (
+				'min'	=> 1,
+				'max'	=> apply_filters( 'knote_woocommerce_catalog_rows_max', 20 ),
+				'step'  => 1,
+			),
+			'priority'      => 82
 		)
 	)
 );
@@ -258,7 +313,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'knote_woocommerce_catalog_columns',
 		array(
-			'label' 		=> esc_html__( 'Products per row', 'knote' ),
+			'label' 		=> esc_html__( 'Columns', 'knote' ),
 			'section' 		=> 'knote_woocommerce_catalog_section',
 			'responsive'	=> 1,
 			'settings' 		=> array (
@@ -270,34 +325,6 @@ $wp_customize->add_control(
 				'min'	=> 1,
 				'max'	=> 6,
 				'step'  => 1
-			),
-			'priority'      => 82
-		)
-	)
-);
-
-$wp_customize->add_setting(
-	'knote_woocommerce_catalog_rows',
-	array(
-		'default'   		=> 4,
-		'sanitize_callback' => 'absint'
-	)
-);
-$wp_customize->add_control(
-	new Knote_Control_Slider(
-		$wp_customize,
-		'knote_woocommerce_catalog_rows',
-		array(
-			'label' 		=> esc_html__( 'Rows per page', 'knote' ),
-			'section' 		=> 'knote_woocommerce_catalog_section',
-			'responsive'	=> 0,
-			'settings' 		=> array (
-				'size_desktop' 		=> 'knote_woocommerce_catalog_rows'
-			),
-			'input_attrs' => array (
-				'min'	=> 1,
-				'max'	=> apply_filters( 'knote_woocommerce_catalog_rows_max', 20 ),
-				'step'  => 1,
 			),
 			'priority'      => 82
 		)
@@ -355,7 +382,7 @@ $wp_customize->add_control(
 	)
 );
 
-//Page elements
+// Page elements
 $wp_customize->add_setting( 'knote_woocommerce_catalog_elements_title',
 	array(
 		'default' 			=> '',
@@ -460,6 +487,7 @@ $wp_customize->add_setting(
 		'sanitize_callback' => 'knote_sanitize_checkbox',
 	)
 );
+
 $wp_customize->add_control(
 	new Knote_Control_Switch(
 		$wp_customize,
@@ -472,30 +500,88 @@ $wp_customize->add_control(
 	)
 );
 
-//Categories
-$wp_customize->add_setting( 'knote_catalog_categories_accordion',
+// Styles
+$wp_customize->add_setting( 'knote_woocommerce_catalog_color',
 	array(
-		'sanitize_callback' => 'esc_attr',
+		'default'           => '#121212',
+		'sanitize_callback' => 'knote_sanitize_hex_rgba',
+		'transport'         => 'refresh'
 	)
 );
+
 $wp_customize->add_control(
-    new Knote_Control_Accordion(
+	new Knote_Control_AlphaColor(
+		$wp_customize,
+		'knote_woocommerce_catalog_color',
+		array(
+			'label'         	=> esc_html__( 'Title color', 'knote' ),
+			'section'       	=> 'knote_woocommerce_catalog_section',
+			'priority' =>	84
+		)
+	)
+);
+
+$wp_customize->add_setting( 'knote_woocommerce_catalog_background',
+	array(
+		'default'           => '#FBFBF9',
+		'sanitize_callback' => 'knote_sanitize_hex_rgba',
+		'transport'         => 'refresh'
+	)
+);
+
+$wp_customize->add_control(
+	new Knote_Control_AlphaColor(
+		$wp_customize,
+		'knote_woocommerce_catalog_background',
+		array(
+			'label'         	=> esc_html__( 'Background', 'knote' ),
+			'section'       	=> 'knote_woocommerce_catalog_section',
+			'priority' =>	84
+		)
+	)
+);
+
+/*----------------------------------------------------------------
+# Product categories
+----------------------------------------------------------------*/
+$wp_customize->add_section(
+	'knote_woocommerce_product_categories_section',
+	array(
+		'title'     => esc_html__( 'Product categories', 'knote'),
+		'panel'		=> 'knote_woocommerce_catalog_panel',
+		'priority'  => 12,
+	)
+);
+
+$wp_customize->add_setting(
+	'knote_woocommerce_product_categories_tabs',
+	array(
+		'default'           => '',
+		'sanitize_callback' => 'esc_attr'
+	)
+);
+
+$wp_customize->add_control(
+    new Knote_Control_Tabs(
         $wp_customize,
-        'knote_catalog_categories_accordion',
+        'knote_woocommerce_product_categories_tabs',
         array(
-            'label'         => esc_html__( 'Categories', 'knote' ),
-            'section'       => 'woocommerce_product_catalog',
-			'connected'		=> json_encode( array(
+            'label'            => '',
+            'section'          => 'knote_woocommerce_product_categories_section',
+            'controls_general' => json_encode(array(
 				'#customize-control-knote_catalog_categories_layout',
 				'#customize-control-knote_catalog_categories_alignment',
 				'#customize-control-knote_catalog_categories_radius'
-			) ),
-			'priority' => 100
-
+            )),
+            'controls_design'  => json_encode(array(
+				'#customize-control-knote_catalog_categories_color',
+                '#customize-control-knote_catalog_categories_background',
+            )),
         )
     )
 );
 
+// General
 $wp_customize->add_setting(
 	'knote_catalog_categories_layout',
 	array(
@@ -509,7 +595,7 @@ $wp_customize->add_control(
 		'knote_catalog_categories_layout',
 		array(
 			'label'    	=> esc_html__( 'Layout', 'knote' ),
-			'section'  	=> 'woocommerce_product_catalog',
+			'section'  	=> 'knote_woocommerce_product_categories_section',
 			'columns'		=> 'one-half',
 			'choices'  => array(
 				'layout1' => array(
@@ -534,7 +620,7 @@ $wp_customize->add_control(
 		'knote_catalog_categories_alignment',
 		array(
 			'label'   => esc_html__( 'Text alignment', 'knote' ),
-			'section' => 'woocommerce_product_catalog',
+			'section' => 'knote_woocommerce_product_categories_section',
 			'choices' => array(
 				'left' 		=> '<svg width="16" height="13" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h10v1H0zM0 4h16v1H0zM0 8h10v1H0zM0 12h16v1H0z"/></svg>',
 				'center' 	=> '<svg width="16" height="13" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M3 0h10v1H3zM0 4h16v1H0zM3 8h10v1H3zM0 12h16v1H0z"/></svg>',
@@ -547,7 +633,6 @@ $wp_customize->add_control(
 
 $wp_customize->add_setting( 'knote_catalog_categories_radius', array(
 	'default'   		=> 3,
-	'transport'			=> 'postMessage',
 	'sanitize_callback' => 'absint',
 ) );
 
@@ -557,7 +642,7 @@ $wp_customize->add_control(
 		'knote_catalog_categories_radius',
 		array(
 			'label' 		=> esc_html__( 'Border radius', 'knote' ),
-			'section' 		=> 'woocommerce_product_catalog',
+			'section' 		=> 'knote_woocommerce_product_categories_section',
 			'responsive'	=> 0,
 			'settings' 		=> array (
 				'size_desktop' 		=> 'knote_catalog_categories_radius',
@@ -571,32 +656,88 @@ $wp_customize->add_control(
 	)
 );
 
-//Product Card
-$wp_customize->add_setting( 'knote_catalog_product_card_accordion',
+// Styles
+$wp_customize->add_setting( 'knote_catalog_categories_color',
 	array(
-		'sanitize_callback' => 'esc_attr',
+		'default'           => '#121212',
+		'sanitize_callback' => 'knote_sanitize_hex_rgba',
+		'transport'         => 'refresh'
 	)
 );
+
 $wp_customize->add_control(
-    new Knote_Control_Accordion(
+	new Knote_Control_AlphaColor(
+		$wp_customize,
+		'knote_catalog_categories_color',
+		array(
+			'label'         	=> esc_html__( 'Title color', 'knote' ),
+			'section'       	=> 'knote_woocommerce_product_categories_section',
+			'priority' =>	84
+		)
+	)
+);
+
+$wp_customize->add_setting( 'knote_catalog_categories_background',
+	array(
+		'default'           => '#FBFBF9',
+		'sanitize_callback' => 'knote_sanitize_hex_rgba',
+		'transport'         => 'refresh'
+	)
+);
+
+$wp_customize->add_control(
+	new Knote_Control_AlphaColor(
+		$wp_customize,
+		'knote_catalog_categories_background',
+		array(
+			'label'         	=> esc_html__( 'Background', 'knote' ),
+			'section'       	=> 'knote_woocommerce_product_categories_section',
+			'priority' =>	84
+		)
+	)
+);
+
+/*----------------------------------------------------------------
+# Product cards
+----------------------------------------------------------------*/
+$wp_customize->add_section(
+	'knote_woocommerce_product_card_section',
+	array(
+		'title'     => esc_html__( 'Product card', 'knote'),
+		'panel'		=> 'knote_woocommerce_catalog_panel',
+		'priority'  => 16,
+	)
+);
+
+$wp_customize->add_setting(
+	'knote_woocommerce_product_card_tabs',
+	array(
+		'default'           => '',
+		'sanitize_callback' => 'esc_attr'
+	)
+);
+
+$wp_customize->add_control(
+    new Knote_Control_Tabs(
         $wp_customize,
-        'knote_catalog_product_card_accordion',
+        'knote_woocommerce_product_card_tabs',
         array(
-            'label'         => esc_html__( 'Product card', 'knote' ),
-            'section'       => 'woocommerce_product_catalog',
-			'connected'		=> json_encode( array(
+            'label'            => '',
+            'section'          => 'knote_woocommerce_product_card_section',
+            'controls_general' => json_encode(array(
 				'#customize-control-knote_woocommerce_product_card_layout',
 				'#customize-control-knote_woocommerce_product_card_purchase_layout',
 				'#customize-control-knote_woocommerce_product_card_elements',
 				'#customize-control-knote_woocommerce_product_card_alignment',
-				'#customize-control-knote_woocommerce_product_card_element_spacing'
-			) ),
-			'priority' => 110
-
+            )),
+            'controls_design'  => json_encode(array(
+                '#customize-control-knote_catalog_product_card_background',
+            )),
         )
     )
 );
 
+// General
 $wp_customize->add_setting(
 	'knote_woocommerce_product_card_layout',
 	array(
@@ -610,7 +751,7 @@ $wp_customize->add_control(
 		'knote_woocommerce_product_card_layout',
 		array(
 			'label'    	=> esc_html__( 'Layout', 'knote' ),
-			'section'  	=> 'woocommerce_product_catalog',
+			'section'  	=> 'knote_woocommerce_product_card_section',
 			'cols'		=> 3,
 			'choices'  => array(
 				'default' => array(
@@ -630,13 +771,14 @@ $wp_customize->add_setting(
 		'sanitize_callback' => 'sanitize_key',
 	)
 );
+
 $wp_customize->add_control(
 	new Knote_Control_RadioImage(
 		$wp_customize,
 		'knote_woocommerce_product_card_purchase_layout',
 		array(
 			'label'    	=> esc_html__( 'Add to cart button', 'knote' ),
-			'section'  	=> 'woocommerce_product_catalog',
+			'section'  	=> 'knote_woocommerce_product_card_section',
 			'choices'  => array(
 				'primary' => array(
 					'label' => esc_html__( 'Layout 1', 'knote' ),
@@ -666,7 +808,7 @@ $wp_customize->add_control(
         'knote_woocommerce_product_card_elements',
         array(
             'label'             => esc_html__('Card Elements', 'knote'),
-            'section'           => 'woocommerce_product_catalog',
+            'section'           => 'knote_woocommerce_product_card_section',
             'choices'   => array(
 				'title'            => esc_html__('Title', 'knote'),
                 'price'             => esc_html__('Price', 'knote'),
@@ -679,32 +821,8 @@ $wp_customize->add_control(
     )
 );
 
-$wp_customize->add_setting( 'knote_woocommerce_product_card_alignment',
-	array(
-		'default' 			=> 'center',
-		'sanitize_callback' => 'knote_sanitize_text'
-	)
-);
-$wp_customize->add_control(
-	new Knote_Control_RadioButtons(
-		$wp_customize,
-		'knote_woocommerce_product_card_alignment',
-		array(
-			'label'   => esc_html__( 'Alignment', 'knote' ),
-			'section' => 'woocommerce_product_catalog',
-			'choices' => array(
-				'left' 		=> '<svg width="16" height="13" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h10v1H0zM0 4h16v1H0zM0 8h10v1H0zM0 12h16v1H0z"/></svg>',
-				'center' 	=> '<svg width="16" height="13" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M3 0h10v1H3zM0 4h16v1H0zM3 8h10v1H3zM0 12h16v1H0z"/></svg>',
-				'right' 	=> '<svg width="16" height="13" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M6 0h10v1H6zM0 4h16v1H0zM6 8h10v1H6zM0 12h16v1H0z"/></svg>',
-			),
-			'priority'	 => 150
-		)
-	)
-);
-
 // $wp_customize->add_setting( 'knote_woocommerce_product_card_element_spacing', array(
 // 	'default'   		=> 15,
-// 	'transport'			=> 'postMessage',
 // 	'sanitize_callback' => 'absint',
 // ) );
 
@@ -713,8 +831,8 @@ $wp_customize->add_control(
 // 		$wp_customize,
 // 		'knote_woocommerce_product_card_element_spacing',
 // 		array(
-// 			'label' 		=> esc_html__( 'Elements spacing', 'knote' ),
-// 			'section' 		=> 'woocommerce_product_catalog',
+// 			'label' 		=> esc_html__( 'Elements padding', 'knote' ),
+// 			'section' 		=> 'knote_woocommerce_product_card_section',
 // 			'responsive'	=> 0,
 // 			'settings' 		=> array (
 // 				'size_desktop' 		=> 'knote_woocommerce_product_card_element_spacing',
@@ -728,57 +846,31 @@ $wp_customize->add_control(
 // 	)
 // );
 
-//Sale tag
-$wp_customize->add_setting( 'knote_catalog_sale_badge_accordion',
+$wp_customize->add_setting( 'knote_woocommerce_product_card_alignment',
 	array(
-		'sanitize_callback' => 'esc_attr',
+		'default' 			=> 'center',
+		'sanitize_callback' => 'knote_sanitize_text'
 	)
 );
 
 $wp_customize->add_control(
-    new Knote_Control_Accordion(
-        $wp_customize,
-        'knote_catalog_sale_badge_accordion',
-        array(
-            'label'         => esc_html__( 'Sale tag', 'knote' ),
-            'section'       => 'woocommerce_product_catalog',
-			'connected'		=> json_encode( array(
-				'#customize-control-knote_catalog_sale_badge_layout',
-				'#customize-control-knote_catalog_sale_badge_spacing',
-				'#customize-control-knote_catalog_sale_badge_radius',
-				'#customize-control-knote_catalog_sale_badge_text',
-				'#customize-control-knote_catalog_sale_badge_percent'
-			) ),
-			'priority' => 210
-
-        )
-    )
-);
-
-/*----------------------------------------------------------------
-# Product categories
-----------------------------------------------------------------*/
-$wp_customize->add_section(
-	'knote_woocommerce_product_categories_section',
-	array(
-		'title'     => esc_html__( 'Product categories', 'knote'),
-		'panel'		=> 'knote_woocommerce_catalog_panel',
-		'priority'  => 12,
+	new Knote_Control_RadioButtons(
+		$wp_customize,
+		'knote_woocommerce_product_card_alignment',
+		array(
+			'label'   => esc_html__( 'Alignment', 'knote' ),
+			'section' => 'knote_woocommerce_product_card_section',
+			'choices' => array(
+				'left' 		=> '<svg width="16" height="13" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h10v1H0zM0 4h16v1H0zM0 8h10v1H0zM0 12h16v1H0z"/></svg>',
+				'center' 	=> '<svg width="16" height="13" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M3 0h10v1H3zM0 4h16v1H0zM3 8h10v1H3zM0 12h16v1H0z"/></svg>',
+				'right' 	=> '<svg width="16" height="13" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M6 0h10v1H6zM0 4h16v1H0zM6 8h10v1H6zM0 12h16v1H0z"/></svg>',
+			),
+			'priority'	 => 150
+		)
 	)
 );
 
-/*----------------------------------------------------------------
-# Product cards
-----------------------------------------------------------------*/
-$wp_customize->add_section(
-	'knote_woocommerce_product_card_section',
-	array(
-		'title'     => esc_html__( 'Product card', 'knote'),
-		'panel'		=> 'knote_woocommerce_catalog_panel',
-		'priority'  => 16,
-	)
-);
-
+// Styles
 $wp_customize->add_setting( 'knote_catalog_product_card_background',
 	array(
 		'default'           => '#ffffff',
@@ -843,11 +935,11 @@ $wp_customize->add_control(
     )
 );
 
-//General
+// General
 $wp_customize->add_setting(
 	'knote_catalog_sale_badge_layout',
 	array(
-		'default'           => 'left',
+		'default'           => 'top-left',
 		'sanitize_callback' => 'sanitize_key',
 	)
 );
