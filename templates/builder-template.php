@@ -15,8 +15,10 @@
  *
  */
 get_header();
-?>
 
+
+do_action('builder_template_before');
+?>
 <div class="builder-template">
 	<main id="main" class="site-main">
 		<?php
@@ -32,6 +34,8 @@ get_header();
 		?>
 	</main><!-- #main -->
 </div>
-
 <?php
+do_action('builder_template_after');
+
+
 get_footer();

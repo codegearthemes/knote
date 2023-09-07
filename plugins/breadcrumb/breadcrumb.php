@@ -11,6 +11,8 @@
  * @since      1.0.0
  */
 
+namespace Knote;
+
 // Do not allow directly accessing this file.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit( 'Direct script access denied.' );
@@ -162,7 +164,7 @@ class Breadcrumbs {
 	 * @since 2.2
 	 * @return object
 	 */
-	public function get_instance() {
+	public static function get_instance() {
 		if ( null === self::$instance ) {
 			self::$instance = new Breadcrumbs();
 		}

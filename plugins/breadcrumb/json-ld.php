@@ -5,6 +5,7 @@
  * @package Designer-Library
  * @since 2.2.0
  */
+namespace Knote;
 
 class Json_Ld{
 

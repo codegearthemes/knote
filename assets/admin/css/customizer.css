@@ -124,7 +124,7 @@
   background-image: url(../src/icons/home.svg);
 }
 
-#accordion-panel-knote_layout_panel .accordion-section-title:before {
+#accordion-section-knote_layout_section .accordion-section-title:before {
   background-image: url(../src/icons/layout.svg);
 }
 
