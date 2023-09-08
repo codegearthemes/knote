@@ -1,4 +1,6 @@
 <?php
+// Cannot access directly.
+if ( ! defined( 'ABSPATH' ) ) { die; }
 
 global $pagenow;
 

@@ -12,8 +12,7 @@ if (!is_admin()) {
 	return;
 }
 
-function knote_settings_variables()
-{
+function knote_settings_variables(){
 
 	$settings = array();
 

@@ -82,6 +82,10 @@ class KnoteFramework {
 
 	}
 
+	public function get_settings() {
+		return $this->settings;
+	}
+
 	public function notice(){
 		global $pagenow;
 
@@ -133,8 +137,11 @@ class KnoteFramework {
 
 		require get_template_directory() . '/framework/functions/settings.php';
 
-        require_once get_parent_theme_file_path( '/framework/views/header.php');
-        require_once get_parent_theme_file_path( '/framework/views/footer.php');
+        require_once get_parent_theme_file_path( '/framework/views/common/header.php');
+        require_once get_parent_theme_file_path( '/framework/views/common/footer.php');
+
+		require_once get_parent_theme_file_path( '/framework/views/common/aside.php');
+
     }
 
     public function admin_menu_init() {
@@ -305,7 +312,8 @@ class KnoteFramework {
     public function html(){
 
         do_action('knote_admin_content_before');
-		require get_template_directory() . '/framework/views/index.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+		require get_template_directory() . '/framework/views/content.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+		require_once get_parent_theme_file_path( '/framework/views/common/aside.php'); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
         do_action('knote_admin_content_after');
 
     }
@@ -337,4 +345,4 @@ class KnoteFramework {
 
 }
 
-new KnoteFramework();
+KnoteFramework::get_instance();
