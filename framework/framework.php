@@ -133,7 +133,7 @@ class KnoteFramework {
 
     public function includes() {
 
-		require get_template_directory() . '/framework/functions/settings.php';
+		require get_template_directory() . '/framework/options/settings.php';
 
         require_once get_parent_theme_file_path( '/framework/views/common/header.php');
         require_once get_parent_theme_file_path( '/framework/views/common/footer.php');
