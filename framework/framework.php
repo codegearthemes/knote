@@ -62,7 +62,7 @@ class KnoteFramework {
         }
 
 		add_action( 'admin_notices', array( $this , 'notice' ) );
-		add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ), 100 );
+		add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ), 50 );
 
         add_action( 'admin_menu', array( $this, 'admin_menu_init' ), 9 );
 		add_action( 'wp_ajax_knote_install_starter_plugin', array( $this, 'install_starter_plugin' ) );
@@ -77,9 +77,7 @@ class KnoteFramework {
     }
 
 	public function set_settings() {
-
 		$this->settings = apply_filters('knote_dashboard_settings', array() );
-
 	}
 
 	public function get_settings() {
@@ -313,7 +311,6 @@ class KnoteFramework {
 
         do_action('knote_admin_content_before');
 		require get_template_directory() . '/framework/views/content.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
-		require_once get_parent_theme_file_path( '/framework/views/common/aside.php'); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
         do_action('knote_admin_content_after');
 
     }

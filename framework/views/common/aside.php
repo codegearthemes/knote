@@ -6,7 +6,7 @@ if (!defined('ABSPATH')) {
 
 function knote_admin_sidebar(){
 
-$options = KnoteFramework::get_instance()->get_settings();
+$options = \KnoteFramework::get_instance()->get_settings();
 
 ?>
     <div class="panel aside">
