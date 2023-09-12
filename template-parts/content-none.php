@@ -10,7 +10,7 @@
 
 ?>
 
-<div class="content-result-none no-results not-found">
+<div class="grid__item text-left content-result-none no-results not-found">
 	<h1 class="page-title"><?php esc_html_e('Nothing Found', 'knote'); ?></h1>
 	<div class="page-content">
 		<?php
