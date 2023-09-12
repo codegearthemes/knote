@@ -76,8 +76,11 @@ Knote is distributed under the terms of the GNU GPL
 
 == Changelog ==
 
-= 0.1.8 (Released: Sepetember 10, 2023) =
+= 0.1.8 (Released: Sepetember 12, 2023) =
+
+* [New] Site logo update customizer
 * [Update] Customizer style update
+* [Update] Update no result page
 
 = 0.1.7 (Released: Sepetember 04, 2023) =
 * [New] Scroll to top added

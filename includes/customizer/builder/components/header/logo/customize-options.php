@@ -31,6 +31,7 @@ $wp_customize->add_control(
             'controls_general'		=> json_encode(
                 array_merge(
                     array(
+                        '#customize-control-knote_header_component_logo_settings',
                         '#customize-control-knote_header_component_logo_text_alignment',
                     )
                 )
@@ -49,6 +50,32 @@ $wp_customize->add_control(
             'priority' 				=> 20
         )
     )
+);
+
+
+$wp_customize->add_setting(
+    'knote_header_component_logo_settings',
+	array(
+		'default' 			=> '',
+		'sanitize_callback' => 'esc_attr'
+	)
+);
+
+$wp_customize->add_control(
+    new Knote_Control_Text(
+        $wp_customize,
+        'knote_header_component_logo_settings',
+		array(
+            'description' 	=> '
+                <span class="customize-control-title" style="font-style: normal;">' . esc_html__( 'Site identity', 'knote' ) . '</span>
+				<div class="customize-section-shortcuts">
+                    <a class="widget-area-goto-link" href="javascript:wp.customize.section( \'title_tagline\' ).focus();">' . esc_html__( 'Site identity', 'knote' ) . '<span class="dashicons dashicons-arrow-right-alt2"></span></a>
+				</div>
+			',
+			'section' 		=> 'knote_header_component_logo',
+            'priority'      => 50
+		)
+	)
 );
 
 // Text Alignment
