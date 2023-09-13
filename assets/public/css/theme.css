@@ -31,6 +31,7 @@
 # Footer
 	- Widget Menu
 	- Copyright
+# Animation
 # Media Queries
 
 --------------------------------------------------------------*/
@@ -2869,6 +2870,44 @@ h6, .h6 {
 
 .elementor-image-gallery .gallery-item{
 	max-width: unset !important;
+}
+
+/* Animation
+--------------------------------------------- */
+@keyframes scroll-horizontal-normal{
+    0% {
+      transform: translateX(0%) translateZ(0);
+    }
+    100% {
+      transform: translateX(-100%) translateZ(0);
+    }
+}
+
+@keyframes scroll-horizontal-clone {
+    0% {
+        transform: translateX(100%) translateZ(0);
+    }
+    100% {
+        transform: translateX(0%) translateZ(0);
+    }
+}
+
+@keyframes scroll-horizontal-reverse-normal {
+    0% {
+      transform: translateX(0%) translateZ(0);
+    }
+    100% {
+      transform: translateX(100%) translateZ(0);
+    }
+}
+
+@keyframes scroll-horizontal-reverse-clone {
+	0% {
+		transform: translateX(-100%) translateZ(0);
+	}
+	100% {
+		transform: translateX(0%) translateZ(0);
+	}
 }
 
 

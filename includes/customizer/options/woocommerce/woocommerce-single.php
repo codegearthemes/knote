@@ -242,7 +242,7 @@ $wp_customize->add_control(
                 'woocommerce_template_single_price'             => esc_html__('Price', 'knote'),
                 'woocommerce_template_single_excerpt'           => esc_html__('Short description ', 'knote'),
                 'woocommerce_template_single_add_to_cart'       => esc_html__('Add to cart', 'knote'),
-                'knote_woocommerce_divider_output'            => esc_html__('Divider', 'knote'),
+                'knote_woocommerce_divider_output'              => esc_html__('Divider', 'knote'),
                 'woocommerce_template_single_meta'              => esc_html__('Meta', 'knote'),
             ),
             'priority'     => 65

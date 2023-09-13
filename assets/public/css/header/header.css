@@ -483,6 +483,82 @@ body.sticky-active .header-sticky.header-sticky-below .builder-header_row_below{
     color: var(--theme--secondary-menu-color-hover);
 }
 
+/* Scrolling text
+----------------------------------------- */
+.site-header .component-scrolling_text{
+    width: 100%;
+    min-width: 100%;
+    margin: var(--theme--scrolling-text-margin-desktop);
+    padding: var(--theme--scrolling-text-padding-desktop);
+}
+
+.site-header .component-scrolling_text .scrolling-text{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.site-header .component-scrolling_text .scrolling-text__inner{
+    display: flex;
+    font-size: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.site-header .component-scrolling_text .scroll-item__normal{
+    display: flex;
+    align-items: baseline;
+    animation: scroll-horizontal-normal 30s linear infinite;
+}
+
+.site-header .component-scrolling_text .scroll-item__clone{
+    top: 0;
+    left: 0;
+    display: flex;
+    position: absolute;
+    align-items: baseline;
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateX(100%) translateZ(0);
+    animation: scroll-horizontal-clone 30s linear infinite;
+}
+
+.site-header .component-scrolling_text .scroll-item__normal[data-direction="reverse"]{
+    animation: scroll-horizontal-reverse-normal 30s linear infinite;
+}
+
+.site-header .component-scrolling_text .scroll-item__clone[data-direction="reverse"]{
+    animation: scroll-horizontal-reverse-clone 30s linear infinite;
+}
+
+.site-header .component-scrolling_text:hover .scroll-item__clone[data-pause="paused"],
+.site-header .component-scrolling_text:hover .scroll-item__normal[data-pause="paused"]{
+    animation-play-state: paused;
+}
+
+.site-header .component-scrolling_text .scroll-item__inner{
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+    padding-left: calc(60px/2);
+    padding-right: calc(60px/2);
+}
+
+.site-header .component-scrolling_text .scroll-item .content{
+    margin: 0px;
+    color: var(--color);
+}
+
+.site-header .component-scrolling_text .scroll-item .content a{
+    color: var(--link-color);
+}
+
+.site-header .component-scrolling_text .scroll-item .content a:hover{
+    color: var(--link-color-hover)
+}
+
 /* Button
 ----------------------------------------- */
 .site-header .component-button{
@@ -929,6 +1005,14 @@ body.sticky-active .header-sticky.header-sticky-below .builder-header_row_below{
         font-size: var(--theme--menu-font-size-tablet );
     }
 
+    /* Scrolling text */
+    .site-header .component-scrolling_text{
+        width: 100%;
+        min-width: 100%;
+        margin: var(--theme--scrolling-text-margin-tablet);
+        padding: var(--theme--scrolling-text-padding-tablet);
+    }
+
     /* Header Offcanvas */
     .header-offcanvas .main-navigation ul li a{
         padding: 8px 0;
@@ -1125,6 +1209,14 @@ body.sticky-active .header-sticky.header-sticky-below .builder-header_row_below{
     /* Navigation */
     .main-navigation ul li a {
         font-size: var(--theme--menu-font-size-mobile );
+    }
+
+    /* Scrolling text */
+    .site-header .component-scrolling_text{
+        width: 100%;
+        min-width: 100%;
+        margin: var(--theme--scrolling-text-margin-mobile);
+        padding: var(--theme--scrolling-text-padding-mobile);
     }
 
     /* Menu */

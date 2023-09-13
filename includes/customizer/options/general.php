@@ -476,8 +476,8 @@ $wp_customize->add_control(new Knote_Control_RadioButtons(
 $wp_customize->add_setting(
 	'knote_scrolltop_text',
 	array(
-		'sanitize_callback' => 'knote_sanitize_text',
 		'default'           => esc_html__('Back to top', 'knote'),
+		'sanitize_callback' => 'knote_sanitize_text',
 	)
 );
 $wp_customize->add_control('knote_scrolltop_text', array(
@@ -490,7 +490,7 @@ $wp_customize->add_control('knote_scrolltop_text', array(
 $wp_customize->add_setting(
 	'knote_scrolltop_icon',
 	array(
-		'default'           => 'icon1',
+		'default'           => 'icon-angle-up',
 		'sanitize_callback' => 'sanitize_key',
 	)
 );

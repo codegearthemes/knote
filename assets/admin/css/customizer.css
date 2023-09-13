@@ -726,3 +726,42 @@
   font-size: 12px !important;
   text-transform: uppercase;
 }
+
+/* Sortable */
+.customize-control-kirki-sortable .kirki-sortable-item{
+  line-height: 36px;
+  padding: 0 !important;
+  border: 1px solid var(--theme-admin-accent-color) !important;
+}
+
+.customize-control-kirki-sortable .kirki-sortable-item.invisible{
+  border-style: dotted !important;
+  border-color: var(--theme-admin-border-color) !important;
+}
+
+.customize-control-kirki-sortable .kirki-sortable-item .dashicons-menu{
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  float: left !important;
+  justify-content: center;
+  border-right: 1px solid var(--theme-admin-border-color);
+  margin-right: 8px;
+}
+
+.customize-control-kirki-sortable .kirki-sortable-item .dashicons-visibility{
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0px !important;
+  border-left: 1px solid var(--theme-admin-border-color);
+  float: right;
+}
+
+.customize-control-kirki-sortable ul.ui-sortable li.invisible .dashicons.dashicons-visibility:before,
+.customize-control-botiga-multi-list-toggle-control ul li.invisible .dashicons.dashicons-visibility:before{
+  content: "\f530";
+}

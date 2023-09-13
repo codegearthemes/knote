@@ -100,7 +100,12 @@
 .customize-control input[type=url],
 .customize-control textarea,
 .customize-control select {
+    width: 100%;
     border-radius: 0px;
+}
+
+.customize-control textarea{
+    height: 150px;
 }
 
 .customize-control button {

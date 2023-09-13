@@ -383,4 +383,37 @@
 		});
 
 	});
+
+
+	/**
+	 * TinyMCE control
+	 */
+	$( document ).ready( function ( $ ) {
+		$('.customize-control-tinymce-editor').each(function () {
+			// Get the toolbar strings that were passed from the PHP Class
+			var tinyMCEToolbar1 	= _wpCustomizeSettings.controls[$( this ).attr( 'id' )].tinymce_toolbar1;
+			var tinyMCEToolbar2 	= _wpCustomizeSettings.controls[$( this ).attr( 'id' )].tinymce_toolbar2;
+			var tinyMCEMediaButtons = _wpCustomizeSettings.controls[$( this ).attr( 'id' )].tinymce_media_buttons;
+			var tinyMCEheight 		= _wpCustomizeSettings.controls[$( this ).attr( 'id' )].tinymce_height;
+
+			wp.editor.initialize($(this).attr('id'), {
+				tinymce: {
+					wpautop: true,
+					toolbar1: tinyMCEToolbar1,
+					toolbar2: tinyMCEToolbar2,
+					height: tinyMCEheight
+				},
+				quicktags: true,
+				mediaButtons: tinyMCEMediaButtons
+			});
+		});
+
+		$(document).on('tinymce-editor-init', function (event, editor) {
+			editor.on('change', function (e) {
+				tinyMCE.triggerSave();
+				$('#' + editor.id).trigger('change');
+			});
+		});
+	})
+
 })(jQuery);
