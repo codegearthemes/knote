@@ -761,7 +761,6 @@
   float: right;
 }
 
-.customize-control-kirki-sortable ul.ui-sortable li.invisible .dashicons.dashicons-visibility:before,
-.customize-control-botiga-multi-list-toggle-control ul li.invisible .dashicons.dashicons-visibility:before{
+.customize-control-kirki-sortable ul.ui-sortable li.invisible .dashicons.dashicons-visibility:before{
   content: "\f530";
 }
