@@ -463,9 +463,9 @@ class Knote_Builder {
         switch ( $row ) {
             case 'header_row_main':
                 if( class_exists( 'Woocommerce' ) ) {
-                    $default = '{ "desktop": [["logo"], ["menu", "search", "cart"]], "mobile": [["hamburger"], ["logo"], ["cart"]] }';
+                    $default = '{ "desktop": [["logo"], ["menu"], ["search", "cart"]], "mobile": [["hamburger"], ["logo"], ["cart"]] }';
                 } else {
-                    $default = '{ "desktop": [["logo"], ["menu"]], "mobile": [["logo"], [], ["hamburger"]] }';
+                    $default = '{ "desktop": [["logo"], [], ["menu"]], "mobile": [["logo"], [], ["hamburger"]] }';
                 }
                 break;
 
@@ -787,6 +787,7 @@ class Knote_Builder {
 
         $devices = array( 'desktop', 'mobile' );
         foreach( $devices as $device ) { ?>
+            <?php do_action( 'header_builder_before'); ?>
             <div class="builder-rows builder-<?php echo esc_attr( $device ); ?>">
                 <div class="builder-inner__rows">
                     <?php
@@ -827,9 +828,9 @@ class Knote_Builder {
                                             $columns = get_theme_mod( 'knote_builder_'.$row['id'].'_columns_'.$device, 3 );
 
                                             if( $device === 'desktop' ){
-                                                $columns_layout = get_theme_mod( 'knote_builder_'.$row['id'].'_columns_layout_'.$device, 'column-2-equal' );
+                                                $columns_layout = get_theme_mod( 'knote_builder_'.$row['id'].'_columns_layout_'.$device, 'column-3-fluid' );
                                             }else{
-                                                $columns_layout_tablet = get_theme_mod( 'knote_builder_'.$row['id'].'_columns_layout_tablet', 'column-3-equal' );
+                                                $columns_layout_tablet = get_theme_mod( 'knote_builder_'.$row['id'].'_columns_layout_tablet', 'column-3-fluid' );
                                                 // $columns_layout_mobile = get_theme_mod( 'knote_builder_'.$row['id'].'_columns_layout_mobile', 'column-3-equal' );
                                                 $columns_layout = 'medium-'.$columns_layout_tablet;
                                             }
@@ -855,6 +856,7 @@ class Knote_Builder {
             <div class="builder--header-offcanvas header-offcanvas">
                 <?php $this->mobile_offcanvas_callback(); ?>
             </div>
+        <?php do_action( 'header_builder_after'); ?>
         <?php
     }
 

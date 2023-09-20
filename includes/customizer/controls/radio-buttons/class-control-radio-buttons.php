@@ -64,6 +64,16 @@ class Knote_Control_RadioButtons extends WP_Customize_Control {
 		$responsive_class = $this->responsive ? 'responsive' : 'non-responsive';
 		$responsive_class_desktop = $this->responsive ? '-desktop desktop' : '';
 
+		if( $this->responsive ) {
+			if( !isset( $this->settings[ 'tablet' ] ) ){
+				$responsive_class_desktop .= ' responsive-control-tablet';
+			}
+
+			if( !isset( $this->settings[ 'mobile' ] ) && !isset( $this->settings[ 'tablet' ] ) ){
+				$responsive_class_desktop .= ' responsive-control-mobile';
+			}
+		}
+
 		?>
 			<div class="text_radio_button_control">
 				<?php if( !empty( $this->label ) ) { ?>

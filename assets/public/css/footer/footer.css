@@ -369,6 +369,11 @@
 
 /* Payment icons
 --------------------------------------------- */
+.component-payment-icons{
+    margin: var(--theme--footer-payment-margin-desktop);
+    padding: var(--theme--footer-payment-padding-desktop);
+}
+
 .component-payment-icons .list-payment{
     margin: 0px;
     padding: 0px;
@@ -515,11 +520,8 @@
         padding: var(--theme--footer-menu-padding-tablet);
     }
 
-    .component-credits{
-        margin: var(--theme--credits-margin-tablet);
-        padding: var(--theme--credits-padding-tablet);
-    }
-
+    /* Widgets
+    --------------------------------------------- */
     .component-widget1{
         margin: var(--theme--widget1-margin-tablet);
         padding: var(--theme--widget1-padding-tablet);
@@ -540,23 +542,38 @@
         padding: var(--theme--widget4-padding-tablet);
     }
 
+    /* Credits
+    --------------------------------------------- */
     .site-footer .component-credits{
         margin: var(--theme--credits-margin-tablet, 0);
         padding: var(--theme--credits-padding-tablet, 0)
     }
 
+    /* Footer Html
+    --------------------------------------------- */
     .footer-component-html{
         margin: var(--theme--footer-html-margin-tablet);
         padding: var(--theme--footer-html-padding-tablet);
     }
 
+    /* Button
+    --------------------------------------------- */
     .footer-component-button{
         margin: var(--theme--footer-button-margin-tablet);
         padding: var(--theme--footer-button-padding-tablet);
     }
 
+    /* Footer menu
+    --------------------------------------------- */
     .block-footer-menu ul{
         gap: var(--theme--footer-menu-spacing-tablet);
+    }
+
+    /* Payment icons
+    --------------------------------------------- */
+    .component-payment-icons{
+        margin: var(--theme--footer-payment-margin-tablet);
+        padding: var(--theme--footer-payment-padding-tablet);
     }
 }
 
@@ -657,5 +674,12 @@
 
     .block-footer-menu ul{
         gap: var(--theme--footer-menu-spacing-mobile);
+    }
+
+     /* Payment icons
+    --------------------------------------------- */
+    .component-payment-icons{
+        margin: var(--theme--footer-payment-margin-mobile);
+        padding: var(--theme--footer-payment-padding-mobile);
     }
 }

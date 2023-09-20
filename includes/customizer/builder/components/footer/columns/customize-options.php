@@ -46,8 +46,8 @@ foreach( $this->footer_rows as $row ) {
                     'section'       		=> $section,
                     'controls_general'		=> json_encode(
                         array(
-                            "#customize-control-{$section}_vertical_alignment",
                             "#customize-control-{$section}_inner_layout",
+                            "#customize-control-{$section}_vertical_alignment",
                             "#customize-control-{$section}_horizontal_alignment",
                             "#customize-control-{$section}_elements_spacing",
                         )
@@ -67,54 +67,6 @@ foreach( $this->footer_rows as $row ) {
          * Layout (Tab Content)
          *
          */
-
-        // Vertical Alignment.
-        $default = Knote_Builder::get_row_column_default_customizer_value( $row[ 'id' ], $i, 'vertical_alignment' );
-
-        $wp_customize->add_setting(
-            $section . '_vertical_alignment_desktop',
-            array(
-                'default' 			=> $default,
-                'sanitize_callback' => 'knote_sanitize_text'
-            )
-        );
-        $wp_customize->add_setting(
-            $section . '_vertical_alignment_tablet',
-            array(
-                'default' 			=> $default,
-                'sanitize_callback' => 'knote_sanitize_text'
-            )
-        );
-        $wp_customize->add_setting(
-            $section . '_vertical_alignment_mobile',
-            array(
-                'default' 			=> $default,
-                'sanitize_callback' => 'knote_sanitize_text'
-            )
-        );
-        $wp_customize->add_control(
-            new Knote_Control_RadioButtons(
-                $wp_customize,
-                $section . '_vertical_alignment',
-                array(
-                    'label'         => esc_html__( 'Vertical Alignment', 'knote' ),
-                    'section'       => $section,
-                    'responsive' => true,
-                    'settings' 		=> array (
-                        'desktop' 		=> $section . '_vertical_alignment_desktop',
-                        'tablet' 		=> $section . '_vertical_alignment_tablet',
-                        'mobile' 		=> $section . '_vertical_alignment_mobile'
-                    ),
-                    'choices'       => array(
-                        'flex-align-start'    => esc_html__( 'Top', 'knote' ),
-                        'flex-align-center' => esc_html__( 'Middle', 'knote' ),
-                        'flex-align-end' => esc_html__( 'Bottom', 'knote' )
-                    ),
-                    'priority'      => 20
-                )
-            )
-        );
-
         // Inner Elements Layout.
         $default = Knote_Builder::get_row_column_default_customizer_value( $row[ 'id' ], $i, 'inner_layout' );
 
@@ -161,6 +113,53 @@ foreach( $this->footer_rows as $row ) {
             )
         );
 
+        // Vertical Alignment.
+        $default = Knote_Builder::get_row_column_default_customizer_value( $row[ 'id' ], $i, 'vertical_alignment' );
+
+        $wp_customize->add_setting(
+            $section . '_vertical_alignment_desktop',
+            array(
+                'default' 			=> $default,
+                'sanitize_callback' => 'knote_sanitize_text'
+            )
+        );
+        $wp_customize->add_setting(
+            $section . '_vertical_alignment_tablet',
+            array(
+                'default' 			=> $default,
+                'sanitize_callback' => 'knote_sanitize_text'
+            )
+        );
+        $wp_customize->add_setting(
+            $section . '_vertical_alignment_mobile',
+            array(
+                'default' 			=> $default,
+                'sanitize_callback' => 'knote_sanitize_text'
+            )
+        );
+        $wp_customize->add_control(
+            new Knote_Control_RadioButtons(
+                $wp_customize,
+                $section . '_vertical_alignment',
+                array(
+                    'label'         => esc_html__( 'Vertical Alignment', 'knote' ),
+                    'section'       => $section,
+                    'responsive' => true,
+                    'settings' 		=> array (
+                        'desktop' 		=> $section . '_vertical_alignment_desktop',
+                        'tablet' 		=> $section . '_vertical_alignment_tablet',
+                        'mobile' 		=> $section . '_vertical_alignment_mobile'
+                    ),
+                    'choices'       => array(
+                        'flex-align-start'    => esc_html__( 'Top', 'knote' ),
+                        'flex-align-center' => esc_html__( 'Middle', 'knote' ),
+                        'flex-align-end' => esc_html__( 'Bottom', 'knote' )
+                    ),
+                    'priority'      => 30
+                )
+            )
+        );
+
         // Horizontal Alignment.
         $default = Knote_Builder::get_row_column_default_customizer_value( $row[ 'id' ], $i, 'horizontal_alignment' );
 
@@ -203,7 +202,7 @@ foreach( $this->footer_rows as $row ) {
                         'flex-center' => esc_html__( 'Center', 'knote' ),
                         'flex-end'    => esc_html__( 'End', 'knote' )
                     ),
-                    'priority'      => 30
+                    'priority'      => 35
                 )
             )
         );
@@ -249,7 +248,7 @@ foreach( $this->footer_rows as $row ) {
                         'max'	=> 150,
                         'step'  => 1
                     ),
-                    'priority'     => 30
+                    'priority'     => 40
                 )
             )
         );
@@ -300,7 +299,7 @@ foreach( $this->footer_rows as $row ) {
                         'tablet'  => $section . '_margin_tablet',
                         'mobile'  => $section . '_margin_mobile'
                     ),
-                    'priority'	      	 => 32
+                    'priority'	      	 => 45
                 )
             )
         );
@@ -347,7 +346,7 @@ foreach( $this->footer_rows as $row ) {
                         'tablet'  => $section . '_padding_tablet',
                         'mobile'  => $section . '_padding_mobile'
                     ),
-                    'priority'	      	 => 32
+                    'priority'	      	 => 46
                 )
             )
         );

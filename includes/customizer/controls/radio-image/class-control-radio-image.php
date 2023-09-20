@@ -31,6 +31,16 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
             $responsive_class = $this->responsive ? 'responsive' : 'non-responsive';
             $responsive_class_desktop = $this->responsive ? 'desktop' : '';
 
+			if( $this->responsive ) {
+				if( !isset( $this->settings[ 'tablet' ] ) ){
+					$responsive_class_desktop .= ' responsive-control-tablet';
+				}
+
+				if( !isset( $this->settings[ 'mobile' ] ) && !isset( $this->settings[ 'tablet' ] ) ){
+					$responsive_class_desktop .= ' responsive-control-mobile';
+				}
+			}
+
 			?>
 			<div class="block-control__heading control-heading">
 				<div class="customize-control-title block-title <?php echo esc_attr( $responsive_class ); ?>">

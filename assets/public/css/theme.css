@@ -474,8 +474,9 @@ html {
 
 .js-drawer-open-left .drawer--left {
 	display: block;
-	-webkit-transform: translateX(375px);
+	visibility: visible;
 	transform: translateX(375px);
+	-webkit-transform: translateX(375px);
 }
 
 .js-drawer-open-left .drawer--left[class*="full"]{
@@ -485,6 +486,7 @@ html {
 
 .js-drawer-open-right .drawer--right {
 	display: block;
+	visibility: visible;
 	-webkit-transform: translateX(-375px);
 	transform: translateX(-375px);
 }
@@ -492,6 +494,10 @@ html {
 .js-drawer-open-right .drawer--right[class*="full"]{
 	-webkit-transform: translateX(-100%);
 	transform: translateX(-100%);
+}
+
+.js-drawer-open body{
+	overflow: hidden;
 }
 
 .is-transitioning{

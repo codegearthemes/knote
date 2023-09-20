@@ -48,6 +48,7 @@ body.sticky-active .header-sticky.header-sticky-below .builder-header_row_below{
 	display: flex;
 	align-items: center;
 	justify-content: center;
+    overflow: hidden;
 }
 
 .builder-column.stack{

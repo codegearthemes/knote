@@ -134,7 +134,7 @@ foreach( $this->header_rows as $row ) {
     // Columns.
     $wp_customize->add_setting( 'knote_builder_' . $row['id'] . '_columns_desktop',
         array(
-            'default' 			=> '2',
+            'default' 			=> '3',
             'sanitize_callback' => 'knote_sanitize_text'
         )
     );
@@ -169,14 +169,14 @@ foreach( $this->header_rows as $row ) {
     $wp_customize->add_setting(
         'knote_builder_' . $row['id'] . '_columns_layout_desktop',
         array(
-            'default'           => 'column-2-equal',
+            'default'           => 'column-3-fluid',
             'sanitize_callback' => 'sanitize_key'
         )
     );
     $wp_customize->add_setting(
         'knote_builder_' . $row['id'] . '_columns_layout_tablet',
         array(
-            'default'           => 'column-3-equal',
+            'default'           => 'column-3-fluid',
             'sanitize_callback' => 'sanitize_key'
         )
     );

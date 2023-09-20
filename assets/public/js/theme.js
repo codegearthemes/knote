@@ -1,9 +1,9 @@
 /**
- * Cosme Theme Scripts
+ * Scripts
  *
  * @author      CodeGearThemes
  * @category    WordPress
- * @package     Cosme
+ * @package     Knote
  * @version     0.1.0
  *
  */

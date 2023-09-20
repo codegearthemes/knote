@@ -196,7 +196,7 @@ foreach( $this->footer_rows as $row ) {
     $devices = array( 'desktop' );
     foreach( $devices as $device ) {
         $column_count = absint( get_theme_mod( 'knote_builder_' . $row['id'] . '_columns_'. $device, 3 ) );
-        $desc .= '<div class="responsive-control-'. esc_attr( $device ) .' builder-available-columns builder-available-columns-'. esc_attr( $device ) .'">';
+        $desc .= '<div class="responsive-control-'. esc_attr( $device ) .' responsive-control-tablet responsive-control-mobile builder-available-columns builder-available-columns-'. esc_attr( $device ) .'">';
             $desc .= '<div class="header-columns">';
             $desc .= '<span class="customize-control-title builder-columns-control-title" style="font-style: normal;">'. esc_html__( 'Available Columns', 'knote' ) .'</span>';
             $desc .= '<div class="customize-section-shortcuts">';
