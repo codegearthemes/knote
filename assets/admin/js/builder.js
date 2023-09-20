@@ -205,6 +205,8 @@ function _arrayLikeToArray(arr, len) {
         "sub-accordion-section-knote_header_component_secondary_menu",
         "sub-accordion-section-knote_header_component_offcanvas_menu",
         "sub-accordion-section-knote_header_component_cart",
+        "sub-accordion-section-knote_header_component_account",
+        "sub-accordion-section-knote_header_component_wishlist",
         "sub-accordion-section-knote_header_component_contact_information",
 
         //Footer
@@ -1594,6 +1596,8 @@ function _arrayLikeToArray(arr, len) {
         "knote_header_component_secondary_menu",
         "knote_header_component_contact_information",
         "knote_header_component_cart",
+        "knote_header_component_account",
+        "knote_header_component_wishlist",
 
         //Footer
         "knote_section_footer_wrapper",

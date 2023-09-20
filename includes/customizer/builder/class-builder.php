@@ -281,9 +281,9 @@ class Knote_Builder {
                 )
             ),
             'components' => array(
-                'desktop' => apply_filters( 'knote_header_builder_components', $this->header_components ),
-                'mobile'  => apply_filters( 'knote_header_builder_mobile_components', $this->header_mobile_components ),
-                'footer' => apply_filters( 'knote_footer_builder_components', $this->footer_components ),
+                'desktop'   => apply_filters( 'knote_header_builder_components', $this->header_components ),
+                'mobile'    => apply_filters( 'knote_header_builder_mobile_components', $this->header_mobile_components ),
+                'footer'    => apply_filters( 'knote_footer_builder_components', $this->footer_components ),
             ),
             'upsell_components' => array(
                 'enable' => ! defined( 'KNOTE_ACTIVE' ) && ! defined( 'KNOTE_PREMIUM_VERSION' ) ? true : false,
@@ -753,7 +753,7 @@ class Knote_Builder {
                         <div class="knote-builder-device">
                             <a href="#" class="knote-builder-device-link tablet" data-device="tablet">
                                 <span class="dashicons dashicons-smartphone"></span>
-                                <?php echo esc_html__( 'Mobile', 'knote' ); ?>
+                                <?php echo esc_html__( 'Tablet/Mobile', 'knote' ); ?>
                             </a>
                         </div>
                     </div>

@@ -226,7 +226,7 @@ function knote_public_scripts(){
 		$knote_product_price_font_size_mobile = get_theme_mod( 'knote_single_product_price_size_mobile', 18 ).'px';
 
 		$knote_woocommerce_catalog_column_tablet = get_theme_mod( 'knote_woocommerce_catalog_columns_tablet', 3);
-		$knote_woocommerce_catalog_column_mobile = get_theme_mod( 'knote_woocommerce_catalog_columns_mobile', 1);
+		$knote_woocommerce_catalog_column_mobile = get_theme_mod( 'knote_woocommerce_catalog_columns_mobile', 2);
 
 		$knote_woocommerce_sale_spacing   			= get_theme_mod( 'knote_catalog_sale_badge_spacing', 20).'px';
 		$knote_woocommerce_sale_border_radius 		= get_theme_mod( 'knote_catalog_sale_badge_radius', 0).'px';
