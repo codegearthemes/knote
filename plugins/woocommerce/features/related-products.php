@@ -15,12 +15,7 @@ function knote_related_products_hooks() {
     remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 
     if( $related_products ){
-        $knote_related_products_slider  =  get_theme_mod( 'knote_single_product_related_products_slider', 0 );
-        if( $knote_related_products_slider ) {
-            add_action( 'woocommerce_after_single_product_summary', 'knote_woocommerce_output_related_products_slider', $related_products_position );
-        }else{
-            add_action( 'woocommerce_after_single_product_summary', 'knote_woocommerce_output_related_products_slider', $related_products_position );
-        }
+        add_action( 'woocommerce_after_single_product_summary', 'knote_woocommerce_output_related_products_slider', $related_products_position );
     }
 }
 add_action( 'wp', 'knote_related_products_hooks' );
@@ -57,15 +52,14 @@ function knote_woocommerce_output_related_products_slider( $args = array() ) {
 		return;
 	}
 
-    $columns        = get_theme_mod( 'knote_related_products_column', 4 );
-	$knote_products_count = get_theme_mod( 'knote_related_products_count', 4 );
-	$knote_product_slider_nav 	= get_theme_mod( 'knote_related_products_slider_nav', 'show' );
-    $knote_products_count                 = get_theme_mod( 'knote_single_product_related_products_count', 4 );
+    $columns                        = get_theme_mod( 'knote_related_products_column', 4 );
+	$knote_products_count           = get_theme_mod( 'knote_related_products_count', 4 );
+    $knote_related_products_layout  = get_theme_mod( 'knote_single_product_related_products_layout_type', 'grid' );
 
 	$defaults = array(
-		'posts_per_page' => $knote_products_count,
+		'order'          => 'desc',
 		'orderby'        => 'rand',
-		'order'          => 'desc'
+		'posts_per_page' => $knote_products_count
 	);
 
 	$args = wp_parse_args( $args, $defaults );
@@ -94,13 +88,9 @@ function knote_woocommerce_output_related_products_slider( $args = array() ) {
                 $wrapper_atts = array();
                 $wrapper_classes = ['related--products-inner'];
 
-                $wrapper_classes[] = 'slider-items slider-carousel-items';
-
-                if( $knote_product_slider_nav === 'show' ) {
-                    $wrapper_classes[] = 'slider--items-navshow';
+                if( $knote_related_products_layout  == 'slider' ){
+                    $wrapper_classes[] = 'products-carousel';
                 }
-
-                $wrapper_atts[] = 'data-per-page="'. absint( $columns ) .'"';
 
                 // Mount related posts wrapper class
                 $wrapper_atts[] = 'class="'. esc_attr( implode( ' ', $wrapper_classes ) ) .'"';

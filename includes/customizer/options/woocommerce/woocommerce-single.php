@@ -60,7 +60,6 @@ $wp_customize->add_control(
             'controls_design'  => json_encode(array(
                 '#customize-control-knote_single_product_title_title',
                 '#customize-control-knote_single_product_title_font_style',
-                '#customize-control-knote_single_product_title_font',
                 '#customize-control-knote_single_product_title_size',
                 '#customize-control-knote_single_product_title_color',
                 '#customize-control-knote_single_product_title_divider',
@@ -72,8 +71,6 @@ $wp_customize->add_control(
                 '#customize-control-knote_single_product_gallery_arrow_color',
                 '#customize-control-knote_single_product_gallery_arrow_background',
                 '#customize-control-knote_single_product_gallery_arrow_border_color',
-                '#customize-control-knote_single_product_related_products_style_divider',
-                '#customize-control-knote_single_product_related_products_style_title'
             )),
         )
     )
@@ -359,7 +356,7 @@ $wp_customize->add_control(
         $wp_customize,
         'knote_single_product_title_title',
         array(
-            'label'    => esc_html__('Product Title', 'knote'),
+            'label'    => esc_html__('Title', 'knote'),
             'section'  => 'knote_single_product_layout_section',
             'priority' => 145
         )
@@ -477,7 +474,7 @@ $wp_customize->add_control(
         $wp_customize,
         'knote_single_product_price_title',
         array(
-            'label'    => esc_html__('Product Price', 'knote'),
+            'label'    => esc_html__('Price', 'knote'),
             'section'  => 'knote_single_product_layout_section',
             'priority' => 145
         )
@@ -709,6 +706,7 @@ $wp_customize->add_control(
             'section'          => 'knote_single_product_related_section',
             'controls_general' => json_encode(array(
                 '#customize-control-knote_single_product_related_products',
+                '#customize-control-knote_single_product_related_products_layout_type',
             )),
             'controls_design'  => json_encode(array(
                 '#customize-control-knote_single_product_related_products_style_title'

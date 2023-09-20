@@ -19,6 +19,9 @@ class Elementor {
         add_action( 'init', array( $this, 'elementor_theme_containers' ) );
         add_action( 'customize_save_after', array( $this, 'elementor_add_theme_colors' ) );
 
+        // Extend motion effects
+        add_filter( 'elementor/controls/animations/additional_animations', array( $this, 'elementor_extend_motion_effects' ) );
+
     }
 
     public function elementor_theme_containers() {
@@ -85,6 +88,17 @@ class Elementor {
         if( $clear_cache )
         Plugin::instance()->files_manager->clear_cache();
 
+    }
+
+    public function elementor_extend_motion_effects(){
+        $additional_animations[ 'General' ] = array(
+            'fade-in-up-small'      => esc_html__( 'Fade In Up Small', 'knote' ),
+            'fade-in-down-small'    => esc_html__( 'Fade In Down Small', 'knote' ),
+            'fade-in-left-small'    => esc_html__( 'Fade In Left Small', 'knote' ),
+            'fade-in-right-small'   => esc_html__( 'Fade In Right Small', 'knote' )
+        );
+
+        return $additional_animations;
     }
 
     public static function instance(){
