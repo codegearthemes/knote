@@ -541,33 +541,6 @@ $wp_customize->add_control(
     )
 );
 
-// Product Tabs
-$wp_customize->add_section(
-    'knote_single_product_description_tabs',
-    array(
-        'title'     => esc_html__('Product Tabs', 'knote'),
-        'panel'     => 'knote_single_product_panel',
-        'priority'  => 11
-    )
-);
-
-$wp_customize->add_control(
-    new Knote_Control_Tabs(
-        $wp_customize,
-        'knote_single_product_description_tabs',
-        array(
-            'label'            => '',
-            'section'          => 'knote_single_product_tabs_section',
-            'controls_general' => json_encode(array(
-                '#customize-control-knote_single_product_related_products',
-            )),
-            'controls_design'  => json_encode(array(
-                '#customize-control-knote_single_product_related_products_style_title'
-            )),
-        )
-    )
-);
-
 // Product tabs
 $wp_customize->add_section(
     'knote_single_product_tabs_section',
@@ -595,17 +568,20 @@ $wp_customize->add_control(
             'label'            => '',
             'section'          => 'knote_single_product_tabs_section',
             'controls_general' => json_encode(array(
-                '#customize-control-knote_single_product_related_products',
+                '#customize-control-knote_single_product_description_tabs_enable',
+                '#customize-control-knote_single_product_description_tabs_position',
+                '#customize-control-knote_single_product_description_tabs_layout',
+                '#customize-control-knote_single_product_description_builder_enable'
             )),
             'controls_design'  => json_encode(array(
-                '#customize-control-knote_single_product_related_products_style_title'
+                '#customize-control-'
             )),
         )
     )
 );
 
 $wp_customize->add_setting(
-    'knote_single_product_description_tabs',
+    'knote_single_product_description_tabs_enable',
     array(
         'default'           => 1,
         'sanitize_callback' => 'knote_sanitize_checkbox',
@@ -614,7 +590,7 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
     new Knote_Control_Switch(
         $wp_customize,
-        'knote_single_product_description_tabs',
+        'knote_single_product_description_tabs_enable',
         array(
             'label'             => esc_html__('Product tabs', 'knote'),
             'section'           => 'knote_single_product_tabs_section',

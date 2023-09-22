@@ -10,7 +10,7 @@
  */
 function knote_single_product_tabs_wc_hooks() {
 
-    $product_tabs_enable = get_theme_mod( 'knote_single_product_description_tabs', 1 );
+    $product_tabs_enable = get_theme_mod( 'knote_single_product_description_tabs_enable', 1 );
 
     //Product tabs
     remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs' );
