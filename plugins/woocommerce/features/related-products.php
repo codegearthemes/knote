@@ -10,7 +10,7 @@
  */
 function knote_related_products_hooks() {
     $related_products           = get_theme_mod( 'knote_single_product_related_products', 1 );
-	$related_products_position  = apply_filters( 'knote_single_related_products_order', 20 );
+	$related_products_position  = apply_filters( 'knote_single_related_products_order', 60 );
 
     remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 

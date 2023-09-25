@@ -37,7 +37,7 @@ function knote_settings_variables(){
 		'title'      => esc_html__('Layout', 'knote'),
 		'content'    => esc_html__('Set the default site layout', 'knote'),
 		'label' 	 => esc_html__('Customize', 'knote'),
-		'link'   	 => add_query_arg('autofocus[section]', 'knote_container_section', admin_url('customize.php')),
+		'link'   	 => add_query_arg('autofocus[section]', 'knote_layout_section', admin_url('customize.php')),
 	);
 
 	$settings['features'][] = array(

@@ -11,12 +11,13 @@
 function knote_single_product_tabs_wc_hooks() {
 
     $product_tabs_enable = get_theme_mod( 'knote_single_product_description_tabs_enable', 1 );
+    $product_builder_type = get_theme_mod( 'knote_single_product_description_builder_type', 'default' );
 
     //Product tabs
     remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs' );
 
 	//Single product
-	if ( is_product() && $product_tabs_enable ) {
+	if ( is_product() && $product_tabs_enable && $product_builder_type == 'default' ) {
         add_action( 'woocommerce_single_product_summary', 'knote_single_product_tabs_accordion_output', 55 );
 	}
 }

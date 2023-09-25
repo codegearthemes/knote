@@ -76,8 +76,10 @@ Knote is distributed under the terms of the GNU GPL
 
 == Changelog ==
 
-= 0.1.9 (Released: Sepetember 20, 2023) =
-[New] Header builder scrolling text widget
+= 0.1.9 (Released: Sepetember 25, 2023) =
+* [New] Header builder scrolling text widget
+* [Fix] Scroll to top icon text fix
+* [New] Multiple Site Layout
 
 = 0.1.8 (Released: Sepetember 12, 2023) =
 * [New] Site logo update customizer

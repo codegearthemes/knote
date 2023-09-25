@@ -40,7 +40,8 @@ if ( !class_exists( 'Knote_Footer' ) ) :
 		}
 
 		public function footer_markup_open() {
-			$styles = array();
+			$styles 	= array();
+			$footer 	= get_theme_mod( 'knote_footer_type', 'default' );
 			$padding    = Knote_Styles::dimensions_variables('knote_footer_builder_padding', 'padding', 'footer');
 
 			if (is_array($padding)) {
@@ -48,7 +49,7 @@ if ( !class_exists( 'Knote_Footer' ) ) :
 			}
 
 			?>
-			<footer id="footer" class="footer site-footer footer-builder__main" style="<?php echo esc_attr( implode(';', $styles ) ); ?>">
+			<footer id="footer" class="footer site-footer footer-builder__main" data-footer-type="<?php echo esc_attr( $footer ); ?>" style="<?php echo esc_attr( implode(';', $styles ) ); ?>">
 				<div class="site-footer__inner">
 			<?php
 		}

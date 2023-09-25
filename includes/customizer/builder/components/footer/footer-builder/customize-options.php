@@ -27,7 +27,8 @@ $wp_customize->add_control(
             'controls_general'		=> json_encode(
 				array(
 					'#customize-control-knote_footer_builder_goto_sections',
-					'#customize-control-knote_footer_builder_container'
+					'#customize-control-knote_footer_builder_container',
+					'#customize-control-knote_footer_type',
 				)
             ),
             'controls_design'		=> json_encode(

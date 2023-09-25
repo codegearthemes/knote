@@ -569,12 +569,12 @@ $wp_customize->add_control(
             'section'          => 'knote_single_product_tabs_section',
             'controls_general' => json_encode(array(
                 '#customize-control-knote_single_product_description_tabs_enable',
+                '#customize-control-knote_single_product_description_builder_type',
                 '#customize-control-knote_single_product_description_tabs_position',
                 '#customize-control-knote_single_product_description_tabs_layout',
-                '#customize-control-knote_single_product_description_builder_enable'
             )),
             'controls_design'  => json_encode(array(
-                '#customize-control-'
+                '#customize-control-knote_single_product_description_tabs_background'
             )),
         )
     )
@@ -592,7 +592,7 @@ $wp_customize->add_control(
         $wp_customize,
         'knote_single_product_description_tabs_enable',
         array(
-            'label'             => esc_html__('Product tabs', 'knote'),
+            'label'             => esc_html__('Enable product tabs', 'knote'),
             'section'           => 'knote_single_product_tabs_section',
             'priority'             => 90
         )
