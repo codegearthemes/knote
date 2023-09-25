@@ -28,15 +28,22 @@ $wp_customize->add_control(
 			'choices'  => array(
 				'default' => array(
 					'label' => esc_html__( 'Default', 'knote' ),
-					'url'   => '%s/assets/admin/src/layout/post-wide.svg'
+					'url'   => '%s/assets/admin/src/layout/default.svg'
                 ),
 				'boxed' => array(
+					'pro' => true,
 					'label' => esc_html__( 'Boxed', 'knote' ),
-					'url'   => '%s/assets/admin/src/layout/post-fullwidth.svg'
+					'url'   => '%s/assets/admin/src/layout/boxed.svg'
 				),
 				'fixed' => array(
+					'pro' => true,
 					'label' => esc_html__( 'Fixed', 'knote' ),
-					'url'   => '%s/assets/admin/src/layout/post-fullwidth.svg'
+					'url'   => '%s/assets/admin/src/layout/padded.svg'
+				),
+				'fluid' => array(
+					'pro' => true,
+					'label' => esc_html__( 'Fluid', 'knote' ),
+					'url'   => '%s/assets/admin/src/layout/fluid.svg'
 				)
 			),
 			'priority'  => 10

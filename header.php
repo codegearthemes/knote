@@ -27,7 +27,7 @@
 
 <?php do_action( 'knote_before_site' ); ?>
 
-<div id="page" class="site">
+<div id="page" class="site" data-site-page>
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'knote' ); ?></a>
     <div class="container-wrapper" data-container-main>
 		<?php

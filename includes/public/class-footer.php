@@ -103,9 +103,8 @@ if ( !class_exists( 'Knote_Footer' ) ) :
 					<div class="footer-scroll__inner">
 						<div class="icon-text">
 							<?php if( $type == 'text' ): ?>
-								test
 								<span class="text">
-									<?php esc_html( $scroll_icon_text ); ?>
+									<?php echo esc_html( $scroll_icon_text ); ?>
 								</span>
 							<?php endif; ?>
 							<?php knote_get_svg_icon( $scroll_icon, true, true ); ?>

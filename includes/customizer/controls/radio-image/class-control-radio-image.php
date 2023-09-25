@@ -27,7 +27,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
             if ( empty( $this->choices ) )
 				return;
 
-            $desktop = $this->responsive ? '_desktop' : '';
+			$desktop = $this->responsive ? '_desktop' : '';
+			$premium = defined( 'KNOTE_PREMIUM_VERSION' ) ? true : false;
             $responsive_class = $this->responsive ? 'responsive' : 'non-responsive';
             $responsive_class_desktop = $this->responsive ? 'desktop' : '';
 
@@ -76,10 +77,15 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
                 <div class="radio-image <?php echo esc_attr( $this->columns ); ?>">
 					<?php foreach ( $this->choices as $value => $args ) : ?>
 						<label for="<?php echo esc_attr( "{$this->id}{$desktop}-{$value}" ); ?>">
-							<input type="radio" value="<?php echo esc_attr( $value ); ?>" name="<?php echo esc_attr( "_customize-radio-{$this->id}{$desktop}" ); ?>" id="<?php echo esc_attr( "{$this->id}{$desktop}-{$value}" ); ?>" <?php $this->responsive ? $this->link( 'desktop' ) : $this->link(); ?> <?php checked( $this->responsive ? $this->value( 'desktop' ) : $this->value(), $value ); ?> />
+							<input type="radio" value="<?php echo esc_attr( $value ); ?>" name="<?php echo esc_attr( "_customize-radio-{$this->id}{$desktop}" ); ?>" id="<?php echo esc_attr( "{$this->id}{$desktop}-{$value}" ); ?>" <?php $this->responsive ? $this->link( 'desktop' ) : $this->link(); ?> <?php checked( $this->responsive ? $this->value( 'desktop' ) : $this->value(), $value ); ?> <?php if( isset( $args[ 'pro' ] ) && $args[ 'pro' ] && !$premium ){ echo esc_attr('disabled'); } ?> />
 							<img src="<?php echo esc_url( sprintf( $args['url'], get_template_directory_uri(), get_stylesheet_directory_uri() ) ); ?>" alt="<?php echo esc_attr( $args['label'] ); ?>">
 							<?php if(isset( $value )): ?>
-								<span class="screen-reader-text"><?php echo esc_html( $args['label'] ); ?></span>
+								<span class="visibility-hidden name"><?php echo esc_html( $args['label'] ); ?></span>
+							<?php endif; ?>
+							<?php if( !$premium ): ?>
+								<?php if( isset( $args[ 'pro' ] ) && $args[ 'pro' ] ): ?>
+									<span class="premium"><?php esc_html_e('Pro', 'knote'); ?></span>
+								<?php endif; ?>
 							<?php endif; ?>
 						</label>
 					<?php endforeach; ?>
@@ -93,10 +99,15 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 							<?php foreach ( $this->choices as $value => $args ) : ?>
 
 								<label for="<?php echo esc_attr( "{$this->id}_tablet-{$value}" ); ?>">
-									<input type="radio" value="<?php echo esc_attr( $value ); ?>" name="<?php echo esc_attr( "_customize-radio-{$this->id}_tablet" ); ?>" id="<?php echo esc_attr( "{$this->id}_tablet-{$value}" ); ?>" <?php $this->link( 'tablet' ); ?> <?php checked( $this->value( 'tablet' ), $value ); ?> />
+									<input type="radio" value="<?php echo esc_attr( $value ); ?>" name="<?php echo esc_attr( "_customize-radio-{$this->id}_tablet" ); ?>" id="<?php echo esc_attr( "{$this->id}_tablet-{$value}" ); ?>" <?php $this->link( 'tablet' ); ?> <?php checked( $this->value( 'tablet' ), $value ); ?> <?php if( isset( $args[ 'pro' ] ) && $args[ 'pro' ] && !defined( 'KNOTE_PREMIUM_VERSION' ) ){ echo esc_attr('disabled'); } ?> />
 									<img src="<?php echo esc_url( sprintf( $args['url'], get_template_directory_uri(), get_stylesheet_directory_uri() ) ); ?>" alt="<?php echo esc_attr( $args['label'] ); ?>">
 									<?php if(isset( $value )): ?>
-										<span class="screen-reader-text"><?php echo esc_html( $args['label'] ); ?></span>
+										<span class="visibility-hidden name"><?php echo esc_html( $args['label'] ); ?></span>
+									<?php endif; ?>
+									<?php if( $premium ): ?>
+										<?php if( isset( $args[ 'pro' ] ) && $args[ 'pro' ] ): ?>
+											<span class="premium"><?php esc_html_e('Pro', 'knote'); ?></span>
+										<?php endif; ?>
 									<?php endif; ?>
 								</label>
 
@@ -110,10 +121,15 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 						<div class="radio-image <?php echo esc_attr( $this->columns ); ?>">
 							<?php foreach ( $this->choices as $value => $args ) : ?>
 								<label for="<?php echo esc_attr( "{$this->id}_mobile-{$value}" ); ?>">
-									<input type="radio" value="<?php echo esc_attr( $value ); ?>" name="<?php echo esc_attr( "_customize-radio-{$this->id}_mobile" ); ?>" id="<?php echo esc_attr( "{$this->id}_mobile-{$value}" ); ?>" <?php $this->link( 'mobile' ); ?> <?php checked( $this->value( 'mobile' ), $value ); ?> />
+									<input type="radio" value="<?php echo esc_attr( $value ); ?>" name="<?php echo esc_attr( "_customize-radio-{$this->id}_mobile" ); ?>" id="<?php echo esc_attr( "{$this->id}_mobile-{$value}" ); ?>" <?php $this->link( 'mobile' ); ?> <?php checked( $this->value( 'mobile' ), $value ); ?> <?php if( isset( $args[ 'pro' ] ) && $args[ 'pro' ] && !defined( 'KNOTE_PREMIUM_VERSION' ) ){ echo esc_attr('disabled'); } ?> />
 									<img src="<?php echo esc_url( sprintf( $args['url'], get_template_directory_uri(), get_stylesheet_directory_uri() ) ); ?>" alt="<?php echo esc_attr( $args['label'] ); ?>">
 									<?php if(isset( $value )): ?>
-										<span class="screen-reader-text"><?php echo esc_html( $args['label'] ); ?></span>
+										<span class="visibility-hidden name"><?php echo esc_html( $args['label'] ); ?></span>
+									<?php endif; ?>
+									<?php if( $premium ): ?>
+										<?php if( isset( $args[ 'pro' ] ) && $args[ 'pro' ] ): ?>
+											<span class="premium"><?php esc_html_e('Pro', 'knote'); ?></span>
+										<?php endif; ?>
 									<?php endif; ?>
 								</label>
 							<?php endforeach; ?>
