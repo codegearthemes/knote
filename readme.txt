@@ -80,6 +80,7 @@ Knote is distributed under the terms of the GNU GPL
 * [New] Header builder scrolling text widget
 * [Fix] Scroll to top icon text fix
 * [New] Multiple Site Layout
+* [Update] WooCommerce pages refine
 
 = 0.1.8 (Released: Sepetember 12, 2023) =
 * [New] Site logo update customizer
