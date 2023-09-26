@@ -59,7 +59,7 @@ if ( !class_exists( 'Knote_Posts_Archive' ) ) :
 			$sidebar_position 	= get_theme_mod( 'knote_archive_layout_sidebar_position', 'left' );
 
 			if( $sidebar_enable ) {
-				$content_class[] = 'large--two-thirds medium-down--one-whole';
+				$content_class[] = 'large--two-thirds medium--three-quarters small--one-whole';
 
 				if( $sidebar_position === 'left' ){
 					$content_class[] = 'omega';

@@ -194,7 +194,7 @@
     text-align: right;
 }
 
-.block-posts-nextprev .block-post-next .prev-text,
+.block-posts-nextprev .block-post-prev .prev-text,
 .block-posts-nextprev .block-post-next .next-text{
     font-size: 14px;
     text-transform: uppercase;
