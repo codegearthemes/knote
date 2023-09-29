@@ -365,3 +365,36 @@ function knote_menus_arrows( $item_output, $item, $depth, $args ) {
 	return $item_output;
 }
 add_filter( 'walker_nav_menu_start_el', 'knote_menus_arrows', 10, 4 );
+
+
+function knote_header_transparent(){
+
+	if( !is_singular('post') ){
+		if( get_theme_mod( 'knote_header_builder_transparent_enable', 0 ) ){
+			return 'true';
+		}
+	}
+
+	return 'false';
+
+}
+add_filter( 'knote_transparent_header_status', 'knote_header_transparent' );
+
+function knote_header_sticky(){
+
+		if( get_theme_mod( 'knote_header_builder_sticky_enable', 0 ) ){
+			return 'true';
+		}
+
+	return 'false';
+
+}
+add_filter( 'knote_sticky_header_status', 'knote_header_sticky' );
+
+
+function knote_header_sticky_direction_type(){
+
+	return get_theme_mod( 'knote_header_builder_sticky_type', 'scroll' );
+
+}
+add_filter( 'knote_header_sticky_direction', 'knote_header_sticky_direction_type' );

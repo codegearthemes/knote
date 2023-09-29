@@ -478,6 +478,16 @@
     align-items: center;
 }
 
+/* Animation */
+@keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+}
+
 @media screen and (max-width: 992px ){
     .site-footer{
         padding: var(--theme--footer-padding-tablet, 0);

@@ -168,9 +168,17 @@ function knote_public_scripts(){
 	$knote_header_row_main_border_color = get_theme_mod( 'knote_builder_header_row_main_border_bottom_color', '#EAEAEA');
 	$knote_header_row_below_border_color = get_theme_mod( 'knote_builder_header_row_below_border_bottom_color', '#EAEAEA');
 
+	$knote_header_row_above_border_color_sticky = get_theme_mod( 'knote_builder_header_row_above_sticky_border_bottom_color', '#EAEAEA');
+	$knote_header_row_main_border_color_sticky = get_theme_mod( 'knote_builder_header_row_main_sticky_border_bottom_color', '#EAEAEA');
+	$knote_header_row_below_border_color_sticky = get_theme_mod( 'knote_builder_header_row_below_sticky_border_bottom_color', '#EAEAEA');
+
 	$knote_header_row_above_background 	= get_theme_mod( 'knote_builder_header_row_above_background_color', '#FFFFFF' );
 	$knote_header_row_main_background 	= get_theme_mod( 'knote_builder_header_row_main_background_color', '#FFFFFF' );
 	$knote_header_row_below_background 	= get_theme_mod( 'knote_builder_header_row_below_background_color', '#FFFFFF' );
+
+	$knote_header_row_above_background_sticky 	= get_theme_mod( 'knote_builder_header_row_above_sticky_background_color', '#FFFFFF' );
+	$knote_header_row_main_background_sticky 	= get_theme_mod( 'knote_builder_header_row_main_sticky_background_color', '#FFFFFF' );
+	$knote_header_row_below_background_sticky	= get_theme_mod( 'knote_builder_header_row_below_sticky_background_color', '#FFFFFF' );
 
 	$knote_archive_thumbnail_spacing 		= get_theme_mod( 'knote_archive_image_spacing', 30).'px';
 
@@ -378,10 +386,13 @@ function knote_public_scripts(){
 		:root{
 			--theme--header-row-above-border-width: " . esc_attr ( $knote_header_row_above_border_width).";
 			--theme--header-row-above-border-color: " . esc_attr ( $knote_header_row_above_border_color).";
+			--theme--header-row-above-border-color-sticky: " . esc_attr ( $knote_header_row_above_border_color_sticky).";
 			--theme--header-row-main-border-width: " . esc_attr ( $knote_header_row_main_border_width).";
 			--theme--header-row-main-border-color: " . esc_attr ( $knote_header_row_main_border_color).";
+			--theme--header-row-main-border-color-sticky: " . esc_attr ( $knote_header_row_main_border_color_sticky).";
 			--theme--header-row-below-border-width: " . esc_attr ( $knote_header_row_below_border_width).";
 			--theme--header-row-below-border-color: " . esc_attr ( $knote_header_row_below_border_color).";
+			--theme--header-row-below-border-color-sticky: " . esc_attr ( $knote_header_row_below_border_color_sticky).";
 			--theme--header-row-above-height-desktop:".esc_attr( $knote_header_row_above_height_desktop).";
 			--theme--header-row-above-height-tablet:".esc_attr( $knote_header_row_above_height_tablet).";
 			--theme--header-row-above-height-mobile:".esc_attr( $knote_header_row_above_height_mobile).";
@@ -393,8 +404,11 @@ function knote_public_scripts(){
 			--theme--header-row-below-height-mobile:".esc_attr( $knote_header_row_below_height_mobile).";
 			--theme--header-background: " . esc_attr( $knote_header_background ) .";
 			--theme--header-row-above-background: " . esc_attr( $knote_header_row_above_background ) .";
+			--theme--header-row-above-background-sticky: " . esc_attr( $knote_header_row_above_background_sticky ) .";
 			--theme--header-row-main-background: " . esc_attr( $knote_header_row_main_background ) .";
+			--theme--header-row-main-background-sticky: " . esc_attr( $knote_header_row_main_background_sticky ) .";
 			--theme--header-row-below-background: " . esc_attr( $knote_header_row_below_background ) .";
+			--theme--header-row-below-background-sticky: " . esc_attr( $knote_header_row_below_background_sticky ) .";
 			".esc_attr( implode(";",$knote_header_padding)).";
 	}";
 

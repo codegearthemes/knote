@@ -601,7 +601,7 @@ foreach( $this->header_rows as $row ) {
     $wp_customize->add_setting(
         'knote_builder_' . $row['id'] . '_sticky_background_color',
         array(
-            'default'           => '',
+            'default'           => '#FFFFFF',
             'sanitize_callback' => 'knote_sanitize_hex_rgba'
         )
     );

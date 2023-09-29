@@ -28,9 +28,12 @@ $wp_customize->add_control(
 				array(
 					'#customize-control-knote_header_builder_goto_sections',
 					'#customize-control-knote_header_builder_transparent_enable',
-					'#customize-control-knote_header_builder_transparent_row',
 					'#customize-control-knote_header_builder_container',
+					'#customize-control-knote_header_builder_container_divider',
+					'#customize-control-knote_header_builder_transparent_row',
+					'#customize-control-knote_header_builder_transparent_divider',
 					'#customize-control-knote_header_builder_sticky_enable',
+					'#customize-control-knote_header_builder_sticky_type',
 					'#customize-control-knote_header_builder_sticky_row'
 				)
             ),
@@ -80,6 +83,49 @@ $wp_customize->add_control( new Knote_Control_Text( $wp_customize, 'knote_header
 	)
 );
 
+// Header Container
+$wp_customize->add_setting(
+	'knote_header_builder_container',
+	array(
+		'default' 			=> 'container',
+		'sanitize_callback' => 'knote_sanitize_text'
+	)
+);
+
+$wp_customize->add_control(
+	new Knote_Control_RadioButtons(
+		$wp_customize,
+		'knote_header_builder_container',
+		array(
+			'label' 		=> esc_html__( 'Container', 'knote' ),
+			'section' 		=> 'knote_section_header_wrapper',
+			'choices' => array(
+				'container' 		=> esc_html__( 'Contained', 'knote' ),
+				'container-fluid' 	=> esc_html__( 'Full-width', 'knote' ),
+			),
+			'priority'		  => 20
+		)
+	)
+);
+
+$wp_customize->add_setting(
+	'knote_header_builder_container_divider',
+	array(
+		'sanitize_callback' => 'esc_attr'
+	)
+);
+
+$wp_customize->add_control(
+	new Knote_Control_Divider(
+		$wp_customize,
+		'knote_header_builder_container_divider',
+		array(
+			'section' 		=> 'knote_section_header_wrapper',
+			'priority'		  => 20
+		)
+	)
+);
+
 // Header Transparent
 $wp_customize->add_setting(
 	'knote_header_builder_transparent_enable',
@@ -102,7 +148,7 @@ $wp_customize->add_control(
 	)
 );
 
-// Header Transparent - Apply transparent header to
+// Header Transparent - Apply transparent
 $wp_customize->add_setting(
 	'knote_header_builder_transparent_row',
 	array(
@@ -126,26 +172,19 @@ $wp_customize->add_control(
 	)
 );
 
-// Header Container
 $wp_customize->add_setting(
-	'knote_header_builder_container',
+	'knote_header_builder_transparent_divider',
 	array(
-		'default' 			=> 'container',
-		'sanitize_callback' => 'knote_sanitize_text'
+		'sanitize_callback' => 'esc_attr'
 	)
 );
 
 $wp_customize->add_control(
-	new Knote_Control_RadioButtons(
+	new Knote_Control_Divider(
 		$wp_customize,
-		'knote_header_builder_container',
+		'knote_header_builder_transparent_divider',
 		array(
-			'label' 		=> esc_html__( 'Container', 'knote' ),
 			'section' 		=> 'knote_section_header_wrapper',
-			'choices' => array(
-				'container' 		=> esc_html__( 'Contained', 'knote' ),
-				'container-fluid' 	=> esc_html__( 'Full-width', 'knote' ),
-			),
 			'priority'		  => 25
 		)
 	)
@@ -168,6 +207,31 @@ $wp_customize->add_control(
 			'section'       	=> 'knote_section_header_wrapper',
 			'settings'      	=> 'knote_header_builder_sticky_enable',
 			'priority' 			=> 25
+		)
+	)
+);
+
+// Header Sticky Type
+$wp_customize->add_setting(
+	'knote_header_builder_sticky_type',
+	array(
+		'default' 			=> 'scroll',
+		'sanitize_callback' => 'knote_sanitize_text'
+	)
+);
+
+$wp_customize->add_control(
+	new Knote_Control_RadioButtons(
+		$wp_customize,
+		'knote_header_builder_sticky_type',
+		array(
+			'label' 		=> esc_html__( 'Sticky header type', 'knote' ),
+			'section' 		=> 'knote_section_header_wrapper',
+			'choices' => array(
+				'scroll' 		=> esc_html__( 'Always sticky', 'knote' ),
+				'scroll-back' 	=> esc_html__( 'Scroll back', 'knote' ),
+			),
+			'priority'		  => 25
 		)
 	)
 );
@@ -216,7 +280,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'knote_header_builder_background',
 		array(
-			'label'         	=> esc_html__( 'Background color', 'knote' ),
+			'label'         	=> esc_html__( 'Background', 'knote' ),
 			'section'       	=> 'knote_section_header_wrapper',
 			'priority'			=> 35
 		)

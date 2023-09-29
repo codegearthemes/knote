@@ -169,12 +169,24 @@ window.knote = window.knote || {};
 			}
 		}
 
-		if (header?.getAttribute('data-sticky') === 'true') {
-			const handleScroll = () => {
-				const scrollHeight = window.scrollY || document.documentElement.scrollTop;
-				const headerHeight = header.getBoundingClientRect().top;
+		if ( header?.getAttribute('data-sticky') ) {
 
-				document.body.classList.toggle('sticky-active', scrollHeight > headerHeight);
+			// Variable to keep track of the last scroll position
+			let lastScrollPosition = window.scrollY;
+
+			// Store the initial position of the header
+			const initialHeaderPosition = header.offsetTop;
+
+			const handleScroll = () => {
+
+				if( header?.getAttribute('data-sticky-direction') == 'scroll' ){
+					const scrollHeight = window.scrollY || document.documentElement.scrollTop;
+					const headerHeight = header.getBoundingClientRect().top + 1000;
+
+					header.classList.toggle('sticky-active', scrollHeight > headerHeight );
+				}else{
+					// Sticky reversed scroll
+				}
 			};
 
 			window.addEventListener('scroll', handleScroll);

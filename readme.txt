@@ -4,7 +4,7 @@ Tags: custom-menu, custom-logo, entertainment, one-column, two-columns, left-sid
 Requires at least: 5.1
 Tested up to: 6.3
 Requires PHP: 7.2
-Stable tag: 0.2.0
+Stable tag: 0.2.1
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -76,10 +76,16 @@ Knote is distributed under the terms of the GNU GPL
 
 == Changelog ==
 
-= 0.2.0 (Released: October 02, 2023) =
-* [New] Article layout
-* [New] Unlimited social icons
-* [Update] Optimize header builder styles
+= 0.2.1 (Released: Sepetember 27, 2023) =
+* [Fix] Template update fix
+* [Fix] Sticky header issue fixed
+* [Fix] Transparent header issue fixed
+* [Fix] Starter site import issue fixed
+* [New] Sticky header type feature added
+
+= 0.2.0 (Released: Sepetember 02, 2023) =
+* [Fix] Template update fix
+* [Fix] Starter site import issue fixed
 
 = 0.1.9 (Released: Sepetember 25, 2023) =
 * [New] Header builder scrolling text widget

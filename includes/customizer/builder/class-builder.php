@@ -811,7 +811,7 @@ class Knote_Builder {
                             }
 
                             if( !$hide_row ) { ?>
-                                <div class="builder-row--area builder-<?php echo esc_attr( $row['id'] ); ?>" style="<?php echo esc_attr(implode(';', $styles)); ?>">
+                                <div class="builder-row--area builder-<?php echo esc_attr( $row['id'] ); ?>" style="<?php echo esc_attr(implode(';', $styles)); ?>" builder-location="<?php echo esc_attr( $row['id'] ); ?>">
                                     <?php $this->customizer_edit_row_button( $row['id'] ); ?>
                                     <div class="builder-area-inner <?php echo esc_attr( apply_filters( 'knote_header_container', 'container' ) ); ?> ">
                                         <?php

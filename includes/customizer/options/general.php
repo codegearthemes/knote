@@ -317,6 +317,37 @@ $wp_customize->add_control(
 	)
 );
 
+/*--------------------------------------------
+	Builder
+---------------------------------------------*/
+$wp_customize->add_section(
+	'knote_builder_section',
+	array(
+		'title'      => esc_html__('Builder', 'knote'),
+		'panel'      => 'knote_general_panel',
+	)
+);
+
+$wp_customize->add_setting(
+	'knote_builder_type',
+	array(
+		'default' 			=> 'editor',
+		'sanitize_callback' => 'knote_sanitize_text'
+	)
+);
+$wp_customize->add_control(new Knote_Control_RadioButtons(
+	$wp_customize,
+	'knote_builder_type',
+	array(
+		'label' 	=> esc_html__('Activate builder', 'knote'),
+		'section' 	=> 'knote_builder_section',
+		'choices' 	=> array(
+			'editor' 		=> esc_html__('Editor', 'knote'),
+			'elementor' 	=> esc_html__('Elementor', 'knote'),
+		)
+	)
+));
+
 /**
  * Container
  *
