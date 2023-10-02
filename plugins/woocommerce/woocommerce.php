@@ -157,7 +157,7 @@ if ( ! function_exists( 'knote_woocommerce_wrapper_before' ) ) {
 	 * @return void
 	 */
 	function knote_woocommerce_wrapper_before() { ?>
-		<div class="content-inner content--woocommerce-inner">
+		<div class="content-inner content--woocommerce-inner <?php echo esc_attr( apply_filters( 'knote_woocommerce_class', '' ) ); ?>">
 			<div class="<?php echo esc_attr( apply_filters( 'knote_container_class', 'container' ) ); ?>">
 				<div class="grid">
 					<div id="primary" class="grid__item one-whole <?php echo esc_attr( apply_filters( 'knote_content_class', '' ) ); ?>content-area">

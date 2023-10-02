@@ -11,7 +11,7 @@ get_header();
 ?>
 
 <?php if ( have_posts() ) : ?>
-<header class="header-inner">
+<header class="header-inner" data-page-header>
 	<div class="<?php echo esc_attr( apply_filters( 'knote_container_class', 'container' ) ); ?>">
 		<div class="page-header entry-header">
 			<?php

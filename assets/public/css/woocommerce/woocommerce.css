@@ -44,11 +44,24 @@ WooCommerce styles override
 /*--------------------------------------------------------------
 # Page Header
 --------------------------------------------------------------*/
-.woocommerce-page-header{
-    padding: 30px 0;
-    text-align: center;
-	background: #FBFBF9;
+.header-inner[data-page-header]{
     position: relative;
+	text-align: center;
+	color: var(--theme--page-header-color);
+	background: var(--theme--page-header-background);
+	padding: var(--theme--page-header-padding-desktop);
+}
+
+@media screen and (max-width: 992px) {
+	.header-inner[data-page-header]{
+		padding: var(--theme--page-header-padding-tablet);
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.header-inner[data-page-header]{
+		padding: var(--theme--page-header-padding-mobile);
+	}
 }
 
 .woocommerce-page-header .block--header-main > img{

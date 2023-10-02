@@ -216,6 +216,13 @@ function knote_public_scripts(){
 	$knote_other_error_color = get_theme_mod( 'knote_error_color', '#C5280C' );
 	$knote_other_success_color = get_theme_mod( 'knote_success_color', '#16A679' );
 
+	$knote_page_header_color 				= get_theme_mod( 'knote_page_header_color', '#ffffff' );
+	$knote_page_header_link_color 			= get_theme_mod( 'knote_page_header_link_color', '#D0F224' );
+	$knote_page_header_link_color_hover 	= get_theme_mod( 'knote_page_header_link_color_hover', '#D0F224' );
+	$knote_page_header_background 			= get_theme_mod( 'knote_page_header_background', '#121212' );
+
+	$knote_page_header_padding 					= Knote_Styles::dimensions_variables('knote_page_header_padding', 'padding', 'page-header', '{ "unit": "px","top": "120", "right": "", "bottom": "32", "left": "" }');
+
 	if ( class_exists( 'WooCommerce' ) ) {
 
 		$knote_product_title_font = $knote_base_fonts;
@@ -250,6 +257,7 @@ function knote_public_scripts(){
 			$knote_product_gallery_arrow_border_color 		= get_theme_mod( 'knote_single_product_gallery_arrow_border_color', '#ffffff' );
 			$knote_product_gallery_arrow_border_color_hover = get_theme_mod( 'knote_single_product_gallery_arrow_border_color_hover', '#ffffff' );
 		}
+
 	}
 
     $knote_custom_styles = "
@@ -381,6 +389,15 @@ function knote_public_scripts(){
 			--theme--other-error-color: ". esc_attr ( $knote_other_error_color ) .";
 			--theme--other-success-color: ". esc_attr ( $knote_other_success_color ) .";
 		}";
+
+	$knote_custom_styles .= "
+		:root{
+			--theme--page-header-color: " . esc_attr ( $knote_page_header_color ).";
+			--theme--page-header-link-color: " . esc_attr ( $knote_page_header_link_color ).";
+			--theme--page-header-link-color-hover: " . esc_attr ( $knote_page_header_link_color_hover ).";
+			--theme--page-header-background: " . esc_attr ( $knote_page_header_background ).";
+			".esc_attr( implode(";",$knote_page_header_padding)).";
+	}";
 
 	$knote_custom_styles .= "
 		:root{

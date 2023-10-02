@@ -807,3 +807,190 @@ $wp_customize->add_control(
 		)
 	)
 );
+
+/*--------------------------------------------
+	Page Header
+---------------------------------------------*/
+$wp_customize->add_section(
+	'knote_page_header_section',
+	array(
+		'title'      => esc_html__('Header inner', 'knote'),
+		'panel'      => 'knote_general_panel',
+	)
+);
+
+$wp_customize->add_setting(
+	'knote_page_header_tabs',
+	array(
+		'default'           => '',
+		'sanitize_callback' => 'knote_sanitize_text'
+	)
+);
+
+$wp_customize->add_control(
+	new Knote_Control_Tabs(
+		$wp_customize,
+		'knote_page_header_tabs',
+		array(
+			'label' 				=> '',
+			'section'       		=> 'knote_page_header_section',
+			'controls_general'		=> json_encode(
+				array(
+					'#customize-control-knote_page_header_breadcrumb_enable',
+				)
+			),
+			'controls_design'		=> json_encode(
+				array(
+					'#customize-control-knote_page_header_color',
+					'#customize-control-knote_page_header_link_color',
+					'#customize-control-knote_page_header_background',
+					'#customize-control-knote_page_header_background_divider',
+					'#customize-control-knote_page_header_padding'
+				)
+			)
+		)
+	)
+);
+
+// Color
+$wp_customize->add_setting( 'knote_page_header_color',
+	array(
+		'default'           => '#FFFFFF',
+		'sanitize_callback' => 'knote_sanitize_hex_rgba',
+		'transport'         => 'refresh'
+	)
+);
+
+$wp_customize->add_control(
+	new Knote_Control_AlphaColor(
+		$wp_customize,
+		'knote_page_header_color',
+		array(
+			'label'         	=> esc_html__( 'Color', 'knote' ),
+			'section'       	=> 'knote_page_header_section',
+			'border'			=> true,
+            'priority' 			=> 25
+		)
+	)
+);
+
+// Link color
+$wp_customize->add_setting(
+	'knote_page_header_link_color',
+	array(
+		'default'           => '#D0F224',
+		'sanitize_callback' => 'knote_sanitize_hex_rgba'
+	)
+);
+
+$wp_customize->add_setting(
+	'knote_page_header_link_color_hover',
+	array(
+		'default'           => '#D0F224',
+		'sanitize_callback' => 'knote_sanitize_hex_rgba'
+	)
+);
+
+$wp_customize->add_control(
+	new Knote_Control_ColorGroup(
+		$wp_customize,
+		'knote_page_header_link_color',
+		array(
+			'label'    => esc_html__('Link color', 'knote'),
+			'section'  => 'knote_page_header_section',
+			'settings' => array(
+				'normal' => 'knote_page_header_link_color',
+				'hover'  => 'knote_page_header_link_color_hover',
+			),
+			'border'			=> true,
+			'priority' => 30
+		)
+	)
+);
+
+// Background
+$wp_customize->add_setting( 'knote_page_header_background',
+	array(
+		'default'           => '#121212',
+		'sanitize_callback' => 'knote_sanitize_hex_rgba',
+		'transport'         => 'refresh'
+	)
+);
+
+$wp_customize->add_control(
+	new Knote_Control_AlphaColor(
+		$wp_customize,
+		'knote_page_header_background',
+		array(
+			'label'         	=> esc_html__( 'Background', 'knote' ),
+			'section'       	=> 'knote_page_header_section',
+            'priority' 			=> 35
+		)
+	)
+);
+
+// Divider
+$wp_customize->add_setting( 'knote_page_header_background_divider',
+	array(
+		'sanitize_callback' => 'knote_sanitize_text'
+	)
+);
+
+$wp_customize->add_control(
+	new Knote_Control_Divider(
+		$wp_customize,
+		'knote_page_header_background_divider',
+		array(
+			'section' 		=> 'knote_page_header_section',
+			'priority' 			=> 40
+		)
+	)
+);
+
+// Padding
+$wp_customize->add_setting(
+    'knote_page_header_padding_desktop',
+    array(
+        'default'           => '{ "unit": "px","top": "120", "right": "", "bottom": "32", "left": "" }',
+        'sanitize_callback' => 'knote_sanitize_text'
+    )
+);
+$wp_customize->add_setting(
+    'knote_page_header_padding_tablet',
+    array(
+        'default'           => '{ "unit": "px","top": "120", "right": "", "bottom": "32", "left": "" }',
+        'sanitize_callback' => 'knote_sanitize_text'
+    )
+);
+$wp_customize->add_setting(
+    'knote_page_header_padding_mobile',
+    array(
+        'default'           => '{ "unit": "px","top": "120", "right": "", "bottom": "32", "left": "" }',
+        'sanitize_callback' => 'knote_sanitize_text'
+    )
+);
+
+$wp_customize->add_control(
+    new Knote_Control_Dimensions(
+        $wp_customize,
+        'knote_page_header_padding',
+        array(
+            'label'           	=> __( 'Padding', 'knote' ),
+            'section'         	=> 'knote_page_header_section',
+            'sides'             => array(
+                'top'    => true,
+                'right'  => true,
+                'bottom' => true,
+                'left'   => true
+            ),
+            'units'              => array( 'px', 'em', 'rem' ),
+            'responsive'   	     => true,
+            'settings'        	 => array(
+                'desktop' => 'knote_page_header_padding_desktop',
+                'tablet'  => 'knote_page_header_padding_tablet',
+                'mobile'  => 'knote_page_header_padding_mobile'
+            ),
+            'priority'	      	 => 45
+        )
+    )
+);

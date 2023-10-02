@@ -17,7 +17,7 @@ function knote_woocommerce_page_header(){
 
     if( !$page_title ) return;
     $knote_shop_page = get_option('woocommerce_shop_page_id'); ?>
-    <header class="woocommerce-products-header woocommerce-page-header page-header entry-header <?php if (has_post_thumbnail($knote_shop_page)) : ?> has-thumbnail <?php endif; ?>">
+    <header class="header-inner woocommerce-products-header woocommerce-page-header page-header entry-header <?php if (has_post_thumbnail($knote_shop_page)) : ?> has-thumbnail <?php endif; ?>" data-page-header>
         <div class="<?php echo esc_attr( apply_filters( 'knote_container_class', 'container' ) ); ?>">
             <div class="block--header-main">
                 <?php if (has_post_thumbnail($knote_shop_page)) : ?>

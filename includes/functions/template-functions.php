@@ -66,7 +66,7 @@ add_action( 'wp_head', 'knote_pingback_header' );
  */
 function knote_post_header_title(){
 	if ( is_home() && ! is_front_page() && ! empty( single_post_title( '', false ) ) ){ ?>
-		<header class="header-inner">
+		<header class="header-inner" data-page-header>
 			<div class="<?php echo esc_attr( apply_filters( 'knote_container_class', 'container' ) ); ?>">
 				<div class="page-header entry-header">
 					<?php do_action( 'knote_before_title' ); ?>
@@ -87,7 +87,7 @@ function knote_page_header_title(){
 
 	if ( is_page() && apply_filters( 'knote_page_builder_mode', true ) ){ ?>
 		<?php if( is_page_template('templates/builder-template.php') ){ return; } ?>
-		<header class="header-inner">
+		<header class="header-inner" data-page-header>
 			<div class="<?php echo esc_attr( apply_filters( 'knote_container_class', 'container' ) ); ?>">
 				<div class="page-header entry-header">
 					<?php

@@ -152,3 +152,12 @@ function knote_woocommerce_cart_icon(){
 }
 add_action( 'knote_minicart_icons', 'knote_woocommerce_cart_icon', 10);
 
+function knote_woocommerce_header_transparent(){
+
+	if( !is_product() ){
+        return 'false';
+	}
+
+}
+add_filter( 'knote_transparent_header_status', 'knote_woocommerce_header_transparent' );
+

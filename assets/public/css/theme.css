@@ -2790,10 +2790,35 @@ h6, .h6 {
 /*--------------------------------------------------------------
 # Blog & Page
 --------------------------------------------------------------*/
-.header-inner{
-	padding: 32px 0;
-    text-align: center;
-    background: var(--theme--content-card-background);
+.header-inner[data-page-header]{
+	text-align: center;
+	color: var(--theme--page-header-color);
+	background: var(--theme--page-header-background);
+	padding: var(--theme--page-header-padding-desktop);
+}
+
+@media screen and (max-width: 992px) {
+	.header-inner[data-page-header]{
+		padding: var(--theme--page-header-padding-tablet);
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.header-inner[data-page-header]{
+		padding: var(--theme--page-header-padding-mobile);
+	}
+}
+
+.header-inner[data-page-header] .entry-title{
+	color: var(--theme--page-header-color);
+}
+
+.header-inner[data-page-header] a{
+	color: var( --theme--page-header-link-color );
+}
+
+.header-inner[data-page-header] a:hover{
+	color: var( --theme--page-header-link-color-hover );
 }
 
 .header-inner .breadcrumbs{

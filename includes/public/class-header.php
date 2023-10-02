@@ -58,7 +58,7 @@ if ( !class_exists( 'Knote_Header' ) ) :
 				data-sticky="<?php echo esc_attr( apply_filters( 'knote_sticky_header_status', 'no' ) ); ?>"
 				data-location="<?php echo esc_attr(get_theme_mod( 'knote_header_builder_sticky_row', 'main' ));?>"
 				data-sticky-direction="<?php echo esc_attr( apply_filters( 'knote_header_sticky_direction', 'scroll' ) ); ?>"
-				data-transparent="<?php echo esc_attr( apply_filters( 'knote_transparent_header_status', 'no' ) ); ?>"
+				data-transparent="<?php echo esc_attr( apply_filters( 'knote_transparent_header_status', 'false' ) ); ?>"
 				data-header
 			>
 				<div class="site-header__inner" data-header-inner>
