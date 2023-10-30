@@ -2468,6 +2468,7 @@ h6, .h6 {
     width: fit-content;
 	border: 1px solid;
 	text-decoration: none;
+	justify-content: center;
 	color: var(--theme--button-color);
 	border-color: var(--theme--button-border-color);
 	font-size: var(--theme--button-desktop-font-size);
@@ -2498,6 +2499,7 @@ h6, .h6 {
 }
 
 .btn-secondary{
+	justify-content: center;
 	text-decoration: none;
 	background: transparent;
 	color: var(--theme--button-background-color);
@@ -2511,6 +2513,7 @@ h6, .h6 {
 
 .btn-full{
 	width: 100%;
+	justify-content: center;
 }
 
 /*--------------------------------------------------------------

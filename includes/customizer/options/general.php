@@ -621,7 +621,7 @@ $wp_customize->add_control(new Knote_Control_RadioButtons(
 
 $wp_customize->add_setting('knote_scrolltop_side_offset', array(
 	'default'   		=> 32,
-	'transport'			=> 'postMessage',
+	'transport'			=> 'refresh',
 	'sanitize_callback' => 'absint',
 ));
 
@@ -646,7 +646,7 @@ $wp_customize->add_control(new Knote_Control_Slider(
 
 $wp_customize->add_setting('knote_scrolltop_bottom_offset', array(
 	'default'   		=> 32,
-	'transport'			=> 'postMessage',
+	'transport'			=> 'refresh',
 	'sanitize_callback' => 'absint',
 ));
 

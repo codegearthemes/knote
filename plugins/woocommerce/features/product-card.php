@@ -34,7 +34,9 @@ function knote_product_card_hooks() {
     add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 100);
 
     if( $purchase_layout != 'hidden' ){
+        add_action( 'woocommerce_after_shop_loop_item', 'knote_purchase_loop_add_to_cart_start', 100);
         add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 101);
+        add_action( 'woocommerce_after_shop_loop_item', 'knote_purchase_loop_add_to_cart_end', 102);
     }
 
 }
@@ -105,6 +107,18 @@ function knote_product_card_content_after(){ ?>
         </div>
     </div>
     <?php
+}
+
+//Purchase Start
+function knote_purchase_loop_add_to_cart_start(){ ?>
+    <div class="purchase">
+<?php
+}
+
+//Purchase end
+function knote_purchase_loop_add_to_cart_end(){ ?>
+    </div>
+<?php
 }
 
 /**
