@@ -70,10 +70,16 @@ add_action( 'after_setup_theme', 'knote_woocommerce_setup' );
  * @return void
  */
 function knote_woocommerce_scripts() {
-	wp_enqueue_style( 'knote-woocommerce-style', get_template_directory_uri() . '/assets/public/css/woocommerce/woocommerce.css', array(), KNOTE_VERSION);
+	$min = '';
+	$minified = get_theme_mod( 'knote_load_minified_assets', 0 );
+	if( $minified ){
+		$min = '.min';
+	}
+
+	wp_enqueue_style( 'knote-woocommerce-style', get_template_directory_uri() . '/assets/public/css/woocommerce/woocommerce'.$min.'.css', array(), KNOTE_VERSION);
 
 	if( is_checkout() ){
-		wp_enqueue_style( 'knote-woocommerce-checkout-style', get_template_directory_uri() . '/assets/public/css/woocommerce/checkout.css', array(), KNOTE_VERSION );
+		wp_enqueue_style( 'knote-woocommerce-checkout-style', get_template_directory_uri() . '/assets/public/css/woocommerce/checkout'.$min.'.css', array(), KNOTE_VERSION );
 	}
 
 	$font_path   = WC()->plugin_url() . '/assets/fonts/';

@@ -12,6 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 function knote_public_scripts(){
 
+	$min = '';
 	$defaults = json_encode(
 		array(
 			'font' 			=> 'System default',
@@ -477,13 +478,18 @@ function knote_public_scripts(){
 		}
 	}
 
+	$minified = get_theme_mod( 'knote_load_minified_assets', 0 );
+	if( $minified ){
+		$min = '.min';
+	}
+
 	wp_enqueue_style( 'knote-google-fonts', knote_google_fonts_url(), array(), knote_google_fonts_version() );
-    wp_enqueue_style( 'knote-theme-style', KNOTE_THEME_URI . 'assets/public/css/theme.css', array(), KNOTE_VERSION);
-	wp_enqueue_style( 'knote-header-style', KNOTE_THEME_URI . 'assets/public/css/header/header.css', array(), KNOTE_VERSION);
+    wp_enqueue_style( 'knote-theme-style', KNOTE_THEME_URI . 'assets/public/css/theme'.$min.'.css', array(), KNOTE_VERSION);
+	wp_enqueue_style( 'knote-header-style', KNOTE_THEME_URI . 'assets/public/css/header/header'.$min.'.css', array(), KNOTE_VERSION);
     wp_add_inline_style( 'knote-theme-style', $knote_custom_styles );
 
 
-	wp_enqueue_script( 'knote-theme-script', KNOTE_THEME_URI . 'assets/public/js/theme.js', array(), KNOTE_VERSION, true );
+	wp_enqueue_script( 'knote-theme-script', KNOTE_THEME_URI . 'assets/public/js/theme'.$min.'.js', array(), KNOTE_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -500,11 +506,17 @@ add_action( 'wp_enqueue_scripts', 'knote_public_scripts' );
  */
 function knote_public_scripts_priority_low(){
 
-	if ( is_singular() ) {
-		wp_enqueue_style( 'knote-single-style', KNOTE_THEME_URI . 'assets/public/css/single/single.css', array(), KNOTE_VERSION);
+	$min = '';
+	$minified = get_theme_mod( 'knote_load_minified_assets', 0 );
+	if( $minified ){
+		$min = '.min';
 	}
 
-	wp_enqueue_style( 'knote-footer-style', KNOTE_THEME_URI . 'assets/public/css/footer/footer.css', array(), KNOTE_VERSION);
+	if ( is_singular() ) {
+		wp_enqueue_style( 'knote-single-style', KNOTE_THEME_URI . 'assets/public/css/single/single'.$min.'.css', array(), KNOTE_VERSION);
+	}
+
+	wp_enqueue_style( 'knote-footer-style', KNOTE_THEME_URI . 'assets/public/css/footer/footer'.$min.'.css', array(), KNOTE_VERSION);
 }
 add_action('wp_footer', 'knote_public_scripts_priority_low');
 

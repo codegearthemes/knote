@@ -1,3 +1,6 @@
+/*--------------------------------------------------------------
+# latest post
+--------------------------------------------------------------*/
 .wp-block-latest-posts.wp-block-latest-posts__list li{
     display: flex;
     flex-direction: column;
