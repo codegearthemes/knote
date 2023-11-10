@@ -45,7 +45,7 @@ class Knote_Theme_Notice{
 		$ignored_notice           = get_user_meta($user_id, 'knote_disable_review_notice', true);
 		$ignored_notice_partially = get_user_meta($user_id, 'delay_knote_disable_review_notice_partially', true);
 
-		if ((get_option('knote_theme_active_time') > strtotime('-14 day')) || ($ignored_notice_partially > strtotime('-14 day')) || ($ignored_notice)) {
+		if ((get_option('knote_theme_active_time') > strtotime('-16 day')) || ($ignored_notice_partially > strtotime('-16 day')) || ($ignored_notice)) {
 			return;
 		}
 		?>
