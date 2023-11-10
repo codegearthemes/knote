@@ -133,13 +133,21 @@ class KnoteFramework {
 
     public function includes() {
 
+		// Settings
 		require get_template_directory() . '/framework/options/settings.php';
 
+		// Header & footer
         require_once get_parent_theme_file_path( '/framework/views/common/header.php');
         require_once get_parent_theme_file_path( '/framework/views/common/footer.php');
 
+		// Admin aside
 		require_once get_parent_theme_file_path( '/framework/views/common/aside.php');
 
+		// Review notices
+		require_once get_parent_theme_file_path( '/framework/notices/class-notices-review.php');
+
+		// Premium upsell
+		//require_once get_parent_theme_file_path( '/framework/notices/class-notices-upgrade.php');
     }
 
     public function admin_menu_init() {

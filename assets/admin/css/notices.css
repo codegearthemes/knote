@@ -1,0 +1,47 @@
+.block-review__message{
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+.block-review__message .button{
+    height: 42px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    text-align: center;
+    min-width: 172px;
+}
+
+.block-review__message .button-primary{
+    background: #213fd4;
+    border-color: #213fd4;
+}
+
+.block-review__message .button-secondary{
+    color: #213fd4;
+    border-color: #213fd4;
+    background-color: transparent;
+}
+
+.block-review__message .button:hover{
+    color: #fff;
+    background: #213fd4;
+    border-color: #213fd4;
+}
+
+.button-tertiary{
+    color: #213fd4;
+    text-underline-offset: 3px;
+}
+
+.block-review__message .actions{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 16px;
+    flex-wrap: wrap;
+    gap: 16px;
+}

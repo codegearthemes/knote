@@ -117,7 +117,7 @@ function knote_sidebar_callback() {
 add_action( 'knote_sidebar', 'knote_sidebar_callback' );
 
 /**
- * Sidebar single
+ * Sidebar single & page
  */
 function knote_single_sidebar() {
 
@@ -127,61 +127,47 @@ function knote_single_sidebar() {
 		return;
 	}
 
-	if( ! is_singular('post') ){
-		return;
-	}
+	if ( is_single() ) {
 
-	$sidebar_single_layout   	= get_theme_mod( 'knote_single_layout', 'centered' );
-	$knote_sidebar_enable 	= get_theme_mod( 'knote_single_sidebar_enable', 0 );
+		$knote_sidebar_enable 		= get_theme_mod( 'knote_single_sidebar_enable', 0 );
+		$sidebar_single_layout   	= get_theme_mod( 'knote_single_layout', 'centered' );
 
-	if ( $sidebar_single_layout == 'centered' ) {
+		if ( $sidebar_single_layout == 'centered' ) {
 
-		add_filter( 'knote_sidebar_enable', '__return_false' );
-		add_filter( 'knote_content_class', function() { return 'one-whole centered'; } );
-
-	}else{
-
-		if( $knote_sidebar_enable ){
-			add_filter( 'knote_sidebar_enable', function() { return true; });
-			add_filter( 'knote_content_class', function() {
-
-				$sidebar_sidebar_position 	= get_theme_mod( 'knote_single_sidebar_position', 'right' );
-				$classes = 'large--two-thirds medium--three-quarters small--one-whole';
-				if ( 'left' === $sidebar_sidebar_position ){
-					$classes .= ' omega';
-				}
-				return $classes;
-
-			} );
+			add_filter( 'knote_sidebar_enable', '__return_false' );
+			add_filter( 'knote_content_class', function() { return 'one-whole centered'; } );
 
 		}else{
-			add_filter( 'knote_sidebar_enable', '__return_false' );
-			add_filter( 'knote_content_class', function() { return 'one-whole no-sidbar'; } );
+
+			if( $knote_sidebar_enable ){
+				add_filter( 'knote_sidebar_enable', function() { return true; });
+				add_filter( 'knote_content_class', function() {
+
+					$sidebar_sidebar_position 	= get_theme_mod( 'knote_single_sidebar_position', 'right' );
+					$classes = 'large--two-thirds medium--three-quarters small--one-whole';
+					if ( 'left' === $sidebar_sidebar_position ){
+						$classes .= ' omega';
+					}
+					return $classes;
+
+				} );
+
+			}else{
+				add_filter( 'knote_sidebar_enable', '__return_false' );
+				add_filter( 'knote_content_class', function() { return 'one-whole no-sidbar'; } );
+			}
+
 		}
 
+	} elseif ( is_page() ) {
+		add_filter( 'knote_sidebar_enable', '__return_false' );
+		add_filter( 'knote_content_class', function() { return 'one-whole no-sidebar'; } );
+	}else{
+		add_filter( 'knote_sidebar_enable', '__return_false' );
+		add_filter( 'knote_content_class', function() { return 'one-whole no-sidebar'; } );
 	}
 }
 add_action( 'wp', 'knote_single_sidebar', 10 );
-
-
-/**
- * Sidebar Page
- */
-function knote_page_sidebar() {
-	global $post;
-
-	if ( !isset( $post ) ) {
-		return;
-	}
-
-	if( ! is_singular('page') ){
-		return;
-	}
-
-	add_filter( 'knote_sidebar_enable', '__return_false' );
-	add_filter( 'knote_content_class', function() { return 'one-whole no-sidebar'; } );
-}
-add_action( 'wp', 'knote_page_sidebar', 100 );
 
 function knote_header_container_class(){
 
@@ -198,16 +184,6 @@ function knote_footer_container_class(){
 	return $container;
 }
 add_filter( 'knote_footer_container', 'knote_footer_container_class' );
-
-
-/**
- * Sidebar position
- */
-function knote_sidebar_position() {
-
-
-}
-add_filter( 'knote_content_class', 'knote_sidebar_position' );
 
 /**
  * Main Wrapper Start

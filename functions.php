@@ -19,7 +19,7 @@ if (!defined('ABSPATH')) {
  * Define Constants
  */
 if (!defined('KNOTE_VERSION')) {
-	define('KNOTE_VERSION', '0.2.5');
+	define('KNOTE_VERSION', '0.2.6');
 }
 define('KNOTE_THEME_DIR', trailingslashit(get_template_directory()));
 define('KNOTE_THEME_URI', trailingslashit(esc_url(get_template_directory_uri())));

@@ -25,7 +25,7 @@ function knote_settings_variables(){
 	$settings['website_link']   = 'https://codegearthemes.com.com/';
 
 	//Hero
-	$settings['hero_title']    = esc_html__('Welcome to knote', 'knote');
+	$settings['hero_title']    = esc_html__('Welcome to Knote', 'knote');
 	$settings['hero_details']  = esc_html__('Knote is now installed and ready to go. To help you with the next step, we have gathered together on this page all the resources you might need. We hope you enjoy using knote.', 'knote');
 
 
