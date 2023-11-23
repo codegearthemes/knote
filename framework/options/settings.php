@@ -310,12 +310,27 @@ function knote_settings_variables(){
 		'link'  	 => 'https://docs.codegearthemes.com/article/reading-progress-bar/'
 	);
 
-	$settings['features'][] = array(
-		'type'       => 'pro',
-		'title'      => esc_html__('White Label (Agency)', 'knote'),
-		'content'       => esc_html__('Rename and present as your own product.', 'knote'),
-		'label' => esc_html__('Learn More', 'knote'),
-		'link'  => 'https://docs.codegearthemes.com/article/white-label/',
+	//Features
+	$settings['starter'] = array();
+
+	$settings['starter'][] = array(
+		'title' 		=> esc_html__('Agency', 'knote'),
+		'thumbnail'  	=> 'https://demo.codegearthemes.com/knote/agency/wp-assets/thumb.webp',
+	);
+
+	$settings['starter'][] = array(
+		'title' 		=> esc_html__('Electrician', 'knote'),
+		'thumbnail'  	=> 'https://demo.codegearthemes.com/knote/electrician/wp-assets/thumb.webp',
+	);
+
+	$settings['starter'][] = array(
+		'title' 		=> esc_html__('Photography', 'knote'),
+		'thumbnail'  	=> 'https://demo.codegearthemes.com/knote/photography/wp-assets/thumb.webp',
+	);
+
+	$settings['starter'][] = array(
+		'title' 		=> esc_html__('Wellness', 'knote'),
+		'thumbnail'  	=> 'https://demo.codegearthemes.com/knote/wellness-yoga/wp-assets/thumb.webp',
 	);
 
 	// Review

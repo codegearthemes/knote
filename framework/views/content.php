@@ -161,10 +161,22 @@ $screen = get_current_screen(); // phpcs:ignore WPThemeReview.CoreFunctionality.
                                 </div>
                             </div>
                         </div>
-                        <div class="block-content" data-panel="compare">
+                        <div class="block-content hidden" data-panel="starter">
+                            <?php foreach($this->settings[ 'starter' ] as $starter) : // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound ?>
+                                <div class="grid__item">
+                                    <div class="image">
+                                        <img width="445" height="504" src="<?php echo esc_url( $starter['thumbnail']); ?>" alt="<?php echo esc_attr( $starter['title'] ); ?>">
+                                    </div>
+                                    <div class="content">
+                                        <h4><?php echo esc_html( $starter['title'] ); ?></h4>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                        <div class="block-content hidden" data-panel="compare">
 
                         </div>
-                        <div class="block-content" data-panel="hosting">
+                        <div class="block-content hidden" data-panel="hosting">
 
                         </div>
                     </div>
