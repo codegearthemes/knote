@@ -109,6 +109,8 @@ add_action( 'wp_enqueue_scripts', 'knote_woocommerce_scripts' );
  */
 add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
+add_filter( 'woocommerce_product_variation_title_include_attributes', '__return_false' );
+
 /**
  * Add 'woocommerce-active' class to the body tag.
  *
