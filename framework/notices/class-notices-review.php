@@ -48,6 +48,7 @@ class Knote_Theme_Notice{
 		if ((get_option('knote_theme_active_time') > strtotime('-16 day')) || ($ignored_notice_partially > strtotime('-16 day')) || ($ignored_notice)) {
 			return;
 		}
+
 		?>
 		<div class="notice notice-success theme-dashboard-notice is-dismissible" style="position:relative;">
 			<a class="notice-dismiss" href="?nag_knote_disable_review_notice=0" style="text-decoration:none;"></a>

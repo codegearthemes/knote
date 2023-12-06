@@ -265,6 +265,10 @@
   gap: 7px;
 }
 
+.block-theme__screen .block-content__premium .premium-header div{
+  display: none;
+}
+
 /* Primary */
 .block-theme__screen .primary {
   flex: 1 0 calc(100% - 296px);
