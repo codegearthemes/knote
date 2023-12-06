@@ -4,7 +4,7 @@ Tags: custom-menu, custom-logo, entertainment, one-column, two-columns, left-sid
 Requires at least: 5.1
 Tested up to: 6.3
 Requires PHP: 7.2
-Stable tag: 0.2.8
+Stable tag: 0.2.9
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -75,6 +75,12 @@ Knote is distributed under the terms of the GNU GPL
 	Folder vendor/kirki-framework https://github.com/kirki-framework, (C) kirki-framework, [MIT](https://opensource.org/licenses/MIT)
 
 == Changelog ==
+
+= 1.0.0 (Upcoming: January 01, 2024) =
+* [New] WooCommerce Swatches
+
+= 0.2.9 (Released: December 07, 2023) =
+* [Update] WooCommerce style update
 
 = 0.2.8 (Released: November 28, 2023) =
 * [Fix] Heading style fix
