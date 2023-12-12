@@ -73,7 +73,7 @@ if (!function_exists('knote_setup')) :
 			array(
 				'primary'	=> esc_html__('Primary', 'knote'),
 				'secondary' => esc_html__('Secondary Menu', 'knote'),
-				'footer' => esc_html__('Footer Menu', 'knote')
+				'footer' 	=> esc_html__('Footer Menu', 'knote')
 			)
 		);
 
