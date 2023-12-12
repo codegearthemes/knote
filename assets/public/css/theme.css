@@ -56,6 +56,7 @@
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
 	font-size: calc(var(--theme--font-scale) * 62.5%);
+	scroll-behavior: smooth;
 }
 
 /* Sections
@@ -942,7 +943,7 @@ textarea {
 .grid--rev,
 .grid--full,
 .grid-uniform {
-	*zoom: 1;
+	zoom: 1;
 }
 
 /* Manual grid__item clearfix */
