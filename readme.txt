@@ -79,6 +79,7 @@ Knote is distributed under the terms of the GNU GPL
 = 1.0.0 (Upcoming: January 01, 2024) =
 * [New] Article layout
 * [New] WooCommerce full support
+* [Update] Grid style
 
 = 0.2.9 (Released: December 07, 2023) =
 * [Update] WooCommerce style update
