@@ -66,7 +66,7 @@ if ( ! function_exists( 'knote_posted_on' ) ) :
 		);
 		$posted_on = sprintf(
 			/* translators: %s: post date */
-			__( '<span class="date-label"> </span>%s', 'knote' ),
+			__( '<span class="date-label">%s</span>', 'knote' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 

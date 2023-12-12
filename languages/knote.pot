@@ -81,7 +81,7 @@ msgstr ""
 #. %s: post date
 #: includes/functions/template-tags.php:29
 #, php-format
-msgid "<span class=\"date-label\"> </span>%s"
+msgid "<span class=\"date-label\">%s</span>"
 msgstr ""
 
 #: functions.php:198 functions.php:208 functions.php:218 functions.php:228
