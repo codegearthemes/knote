@@ -117,16 +117,18 @@ $screen = get_current_screen(); // phpcs:ignore WPThemeReview.CoreFunctionality.
                             </div>
                             <div class="block-content__premium">
                                 <div class="premium-header">
-                                    <h2><?php echo esc_html__( 'Upgrade to premium', 'knote' ); ?></h2>
-                                    <?php if( ! $this->settings[ 'premium' ] ) : ?>
-                                        <a href="<?php echo esc_url( $this->settings['upgrade_premium'] ); ?>" class="text-external-link" target="_blank">
-                                            <?php echo esc_html__( 'Upgrade now', 'knote' ); ?>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-right">
-                                                <line x1="7" y1="17" x2="17" y2="7"></line>
-                                                <polyline points="7 7 17 7 17 17"></polyline>
-                                            </svg>
-                                        </a>
-                                    <?php endif; ?>
+                                    <?php if( !class_exists( 'KnoteToolkit' )): ?>
+                                        <h2><?php echo esc_html__( 'Upgrade to premium', 'knote' ); ?></h2>
+                                        <?php if( ! $this->settings[ 'premium' ] ) : ?>
+                                            <a href="<?php echo esc_url( $this->settings['upgrade_premium'] ); ?>" class="text-external-link" target="_blank">
+                                                <?php echo esc_html__( 'Upgrade now', 'knote' ); ?>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-right">
+                                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                                </svg>
+                                            </a>
+                                        <?php endif; ?>
+                                    <?php endif ?>
                                 </div>
                                 <div class="lists block-content__inner">
                                     <?php foreach ($this->settings[ 'features' ] as $feature) : // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound
