@@ -127,7 +127,7 @@ function knote_single_sidebar() {
 		return;
 	}
 
-	if ( is_single() ) {
+	if ( is_single() && 'post' == get_post_type() ) {
 
 		$knote_sidebar_enable 		= get_theme_mod( 'knote_single_sidebar_enable', 0 );
 		$sidebar_single_layout   	= get_theme_mod( 'knote_single_layout', 'centered' );
@@ -160,11 +160,11 @@ function knote_single_sidebar() {
 		}
 
 	} elseif ( is_page() ) {
-		add_filter( 'knote_sidebar_enable', '__return_false' );
-		add_filter( 'knote_content_class', function() { return 'one-whole no-sidebar'; } );
+		add_filter( 'knote_sidebar_enable', '__return_false', 100 );
+		add_filter( 'knote_content_class', function() { return 'one-whole no-sidebar'; }, 100 );
 	}else{
-		add_filter( 'knote_sidebar_enable', '__return_false' );
-		add_filter( 'knote_content_class', function() { return 'one-whole no-sidebar'; } );
+		add_filter( 'knote_sidebar_enable', '__return_false', 100 );
+		add_filter( 'knote_content_class', function() { return 'one-whole no-sidebar'; }, 100 );
 	}
 }
 add_action( 'wp', 'knote_single_sidebar', 10 );

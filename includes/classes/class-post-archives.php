@@ -49,7 +49,7 @@ if ( !class_exists( 'Knote_Posts_Archive' ) ) :
 				add_filter( 'knote_sidebar_enable', '__return_false' );
 			}
 
-			add_filter( 'knote_content_class', array( $this, 'content_classes' ) );
+			add_filter( 'knote_content_class', array( $this, 'content_classes' ), 100 );
 		}
 
 		public function content_classes( $classes ) {

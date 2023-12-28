@@ -4,7 +4,7 @@ Tags: custom-menu, custom-logo, entertainment, one-column, two-columns, left-sid
 Requires at least: 5.1
 Tested up to: 6.4
 Requires PHP: 7.2
-Stable tag: 0.3.0
+Stable tag: 0.4.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -80,6 +80,10 @@ Knote is distributed under the terms of the GNU GPL
 * [New] Article layout
 * [New] WooCommerce full support
 * [Update] Grid style
+
+= 0.4.0 (Released: December 28, 2023) =
+* [Fix] Page layout
+* [Fix] Archive layout
 
 = 0.3.0 (Released: December 22, 2023) =
 * [Fix] Product page sidebar issue fixed
