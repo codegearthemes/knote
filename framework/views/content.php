@@ -70,18 +70,12 @@ $screen = get_current_screen(); // phpcs:ignore WPThemeReview.CoreFunctionality.
                         <div class="panel-item" data-selector="starter">
                             <h3 type="button"><?php esc_html_e('Starter sites', 'knote'); ?></h3>
                         </div>
-                        <div class="panel-item" data-selector="settings">
-                            <h3 type="button"><?php esc_html_e('Settings', 'knote'); ?></h3>
-                        </div>
                         <div class="panel-item" data-selector="compare">
                             <h3 type="button"><?php esc_html_e('Free vs Premium', 'knote'); ?></h3>
                         </div>
-                        <div class="panel-item" data-selector="hosting">
-                            <h3 type="button"><?php esc_html_e('Hosting', 'knote'); ?></h3>
-                        </div>
                     </div>
                     <div class="data-panel__content">
-                        <div class="block-content" data-panel="features">
+                        <div class="block-content block-panel-content" data-panel="features">
                             <div class="lists block-content__inner">
                                 <?php foreach ($this->settings[ 'features' ] as $feature) : // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound
                                     if( $feature[ 'type' ] !== 'free' )
@@ -163,7 +157,7 @@ $screen = get_current_screen(); // phpcs:ignore WPThemeReview.CoreFunctionality.
                                 </div>
                             </div>
                         </div>
-                        <div class="block-content hidden" data-panel="starter">
+                        <div class="block-content block-panel-content hidden" data-panel="starter">
                             <?php foreach($this->settings[ 'starter' ] as $starter) : // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound ?>
                                 <div class="grid__item">
                                     <div class="image">
@@ -175,10 +169,7 @@ $screen = get_current_screen(); // phpcs:ignore WPThemeReview.CoreFunctionality.
                                 </div>
                             <?php endforeach; ?>
                         </div>
-                        <div class="block-content hidden" data-panel="compare">
-
-                        </div>
-                        <div class="block-content hidden" data-panel="hosting">
+                        <div class="block-content block-panel-content hidden" data-panel="compare">
 
                         </div>
                     </div>

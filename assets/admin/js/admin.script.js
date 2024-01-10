@@ -81,6 +81,19 @@
         }
 
 
+        const panelTabs = document.querySelector('[data-panel-tabs]');
+        panelTabs?.querySelectorAll('.panel-item')?.forEach( (element) => {
+            element.addEventListener('click', function(){
+                const selector = element.dataset.selector;
+                [...panelTabs.querySelectorAll('.panel-item')].map( x => x.classList.remove('active'));
+                [...document.querySelectorAll('.block-panel-content')].map( x => x.classList.add('hidden'));
+
+                element.classList.add('active');
+                document.querySelector(`[data-panel="${selector}"]`).classList.remove('hidden');
+            });
+        });
+
+
     })
 
 })();
