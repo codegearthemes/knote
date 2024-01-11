@@ -38,9 +38,26 @@ function knote_product_card_hooks() {
         add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 101);
         add_action( 'woocommerce_after_shop_loop_item', 'knote_purchase_loop_add_to_cart_end', 102);
     }
-
 }
 add_action( 'wp', 'knote_product_card_hooks', 5 );
+
+/**
+ * Adds custom classes to the array of body classes.
+ *
+ * @param array $classes Classes for the body element.
+ * @return array
+ */
+function knote_woocommerce_body_classes( $classes ) {
+
+    $builder_type = get_theme_mod( 'knote_builder_type', 'editor' );
+    if( $builder_type === 'editor' ){
+        $product_card_layout    = get_theme_mod( 'knote_woocommerce_product_card_purchase_layout', 'secondary' );
+        $classes[] = 'product-card__'.$product_card_layout;
+    }
+
+	return $classes;
+}
+add_filter( 'body_class', 'knote_woocommerce_body_classes' );
 
 /**
  * Loop product structure

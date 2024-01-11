@@ -512,6 +512,11 @@ function knote_public_scripts_priority_low(){
 		$min = '.min';
 	}
 
+	$builder_type = get_theme_mod( 'knote_builder_type', 'editor' );
+    if( $builder_type === 'editor' ){
+		wp_enqueue_style( 'knote-theme-editor-style', KNOTE_THEME_URI . 'assets/public/css/theme.editor'.$min.'.css', array(), KNOTE_VERSION);
+    }
+
 	if ( is_singular() ) {
 		wp_enqueue_style( 'knote-single-style', KNOTE_THEME_URI . 'assets/public/css/single/single'.$min.'.css', array(), KNOTE_VERSION);
 	}

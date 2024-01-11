@@ -147,13 +147,14 @@ WooCommerce styles override
 }
 
 .products .product h2{
-	font-size: 16px;
-    text-transform: capitalize;
-    font-family: var(--theme--body-fonts);
+    font-size: 16px;
 	line-height: 1.2;
-    margin-bottom: 10px;
     margin-top: 10px;
-	color: #1b1a1a;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    color: var(--theme--heading-color);
+    font-family: var(--theme--base-font-family);
+    font-weight: var(--theme--base-font-weight);
 }
 
 .products .product img{
@@ -164,6 +165,7 @@ WooCommerce styles override
 }
 
 .products .product .price{
+    color: var(--theme--base-color);
 	display: inline-flex;
     align-items: center;
     justify-content: inherit;
@@ -1033,10 +1035,10 @@ table.shop_table_responsive tr td.download-actions .button {
 }
 
 .woocommerce-cart-form th {
+    border-top: 0;
     border-left: 0;
     border-right: 0;
-    border-top: 0;
-    text-transform: uppercase;
+    text-transform: none;
     background-color: transparent;
 }
 
