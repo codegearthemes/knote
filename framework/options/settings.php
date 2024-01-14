@@ -17,7 +17,7 @@ function knote_settings_variables(){
 	$settings = array();
 
 	//General
-	$settings['premium']        = false;
+	$settings['has_pro']        = false;
 	$settings['menu_slug']      = 'knote';
 	$settings['starter_slug']   = 'codegear-starter';
 	$settings['starter_menu_slug']   = 'starter';
@@ -137,7 +137,7 @@ function knote_settings_variables(){
 	);
 
 	//Premium
-	$settings['upgrade_premium'] = 'https://codegearthemes.com/upgrade?utm_source=theme_info&utm_medium=link&utm_campaign=knote';
+	$settings['upgrade_premium'] = 'https://codegearthemes.com/upgrade';
 
 
 	// Premium features.
@@ -334,13 +334,13 @@ function knote_settings_variables(){
 	);
 
 	// Review
+	$settings['theme_link']			= 'https://wordpress.org/themes/knote/';
 	$settings['support_link']	   	= 'https://wordpress.org/support/theme/knote/';
 	$settings['review_link']       	= 'https://wordpress.org/support/theme/knote/reviews/';
-	$settings['theme_link']			= 'https://wordpress.org/themes/knote/';
 	$settings['suggest_idea_link'] 	= 'https://codegearthemes.com/pages/feature-request/';
 
 	// Documentation
-	$settings['docs_link'] = 'https://docs.codegearthemes.com/knote';
+	$settings['docs_link'] 		= 'https://docs.codegearthemes.com/knote';
 	$settings['changelog_link'] = 'https://codegearthemes.com/pages/changelog-knote/';
 
 	// Community

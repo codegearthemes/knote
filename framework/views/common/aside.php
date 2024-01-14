@@ -101,7 +101,7 @@ $options = \KnoteFramework::get_instance()->get_settings();
                 <div class="panel-head">
                     <h3 class="panel-title">
                         <?php esc_html_e('Changelog', 'knote'); ?>
-                        <span class="version"><?php echo esc_html((!$options['premium']) ? KNOTE_VERSION : KNOTE_VERSION_PRO); ?></span>
+                        <span class="version"><?php echo esc_html( KNOTE_VERSION ); ?></span>
                     </h3>
                 </div>
                 <div class="panel-content">

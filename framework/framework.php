@@ -76,10 +76,19 @@ class KnoteFramework {
 
     }
 
+	/**
+     * Settings
+     *
+     * @param array $settings
+     */
 	public function set_settings() {
 		$this->settings = apply_filters('knote_dashboard_settings', array() );
 	}
 
+	/**
+     * Settings
+     *
+     */
 	public function get_settings() {
 		return $this->settings;
 	}
