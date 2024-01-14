@@ -23,7 +23,7 @@ $settings = \KnoteFramework::get_instance()->get_settings();
                     </div>
                     <div class="hero-title">
                         <?php echo wp_kses_post($settings['hero_title']); ?>
-                        <?php if ( $settings['has_pro'] ) { ?>
+                        <?php if( class_exists( 'KnotePro' ) ){ ?>
                             <span class="badge badge-success"><?php esc_html_e('Pro', 'knote'); ?></span>
                         <?php } else { ?>
                             <span class="badge badge-upgrade"><?php esc_html_e('Free', 'knote'); ?></span>
@@ -72,9 +72,11 @@ $settings = \KnoteFramework::get_instance()->get_settings();
                         <div class="panel-item" data-selector="starter">
                             <h3 type="button"><?php esc_html_e('Starter sites', 'knote'); ?></h3>
                         </div>
-                        <div class="panel-item" data-selector="compare">
-                            <h3 type="button"><?php esc_html_e('Free vs Premium', 'knote'); ?></h3>
-                        </div>
+                        <?php if( !class_exists( 'KnotePro' ) ): ?>
+                            <div class="panel-item" data-selector="compare">
+                                <h3 type="button"><?php esc_html_e('Free vs Premium', 'knote'); ?></h3>
+                            </div>
+                        <?php endif; ?>
                     </div>
                     <div class="data-panel__content">
                         <div class="block-content block-panel-content" data-panel="features">
@@ -181,9 +183,11 @@ $settings = \KnoteFramework::get_instance()->get_settings();
                                 </div>
                             <?php endforeach; ?>
                         </div>
+                        <?php if( !class_exists( 'KnotePro' ) ): ?>
                         <div class="block-content block-panel-content hidden" data-panel="compare">
 
                         </div>
+                        <?php endif; ?>
                     </div>
                 </div>
 

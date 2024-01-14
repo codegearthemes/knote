@@ -21,7 +21,7 @@ $settings = \KnoteFramework::get_instance()->get_settings();
                     </div>
                     <div class="hero-title">
                         <?php echo wp_kses_post($settings['hero_title']); ?>
-                        <?php if ( $settings['has_pro'] ) { ?>
+                        <?php if( class_exists( 'KnotePro' ) ){ ?>
                             <span class="badge badge-success"><?php esc_html_e('Pro', 'knote'); ?></span>
                         <?php } else { ?>
                             <span class="badge badge-upgrade"><?php esc_html_e('Free', 'knote'); ?></span>

@@ -444,8 +444,27 @@
   align-items: center;
 }
 
+/* Block Status */
 .block-theme__screen .panel .block-status {
-  margin-bottom: 30px
+  margin-bottom: 32px
+}
+
+.block-theme__screen .panel .block-status .column-inner{
+  padding: 24px 24px 48px; 
+}
+
+.block-theme__screen .block-status .column-inner table{
+  border-radius: 4px;
+  border-color: #f0f0f1;
+}
+
+.block-theme__screen .block-status .column-inner table td,
+.block-theme__screen .block-status .column-inner table th {
+    padding: 15px
+}
+
+.block-theme__screen .block-status table tr:nth-child(2n) td {
+    background: #f8f8f8
 }
 
 /* Premium */
