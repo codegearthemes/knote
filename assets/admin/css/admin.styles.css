@@ -5,6 +5,17 @@
 
 /* Root */
 :root{
+
+  --theme-admin-primary-color: #213fd4;
+  --theme-admin-secondary-color: #f1f2f4;
+
+  --theme-admin-accent-color: #213fd4;
+  --theme-admin-border-color: #dde0e4;
+
+  --theme-admin-color: #1e1e1e;
+  --theme-admin-color-light: #ffffff;
+  --theme-admin-background-color: #ffffff;
+
   --theme--white-color: #ffffff;
   --theme--black-color: #000000;
 }
@@ -15,7 +26,31 @@
   position: relative;
 }
 
-.theme-dashboard-notice{
+#toplevel_page_knote .wp-menu-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#toplevel_page_knote .wp-menu-image img{
+  width: 20px;
+  padding-top: 0px;
+}
+
+#toplevel_page_knote > ul.wp-submenu{
+  padding-bottom: 0px;
+}
+
+#toplevel_page_knote > .wp-submenu a[href="admin.php?page=license"],
+#toplevel_page_knote > .wp-submenu a[href="admin.php?page=plugins"],
+#toplevel_page_knote > .wp-submenu a[href="admin.php?page=status"],
+#toplevel_page_knote > .wp-submenu a[href="admin.php?page=support"] {
+  padding-left: 20px;
+  background-color: rgba(255, 255, 255, .2);
+  box-shadow: -5px 0 0 0 rgb(255 255 255 / 10%);
+}
+
+.theme-knote .theme-dashboard-notice{
   border-color: #213fd4;
 }
 
@@ -40,7 +75,7 @@
   text-decoration: none;
 }
 
-/* Codegear */
+/* Container */
 .block-theme__screen .page-width{
   margin: 0 auto;
   max-width: 1460px;
@@ -269,34 +304,6 @@
   display: none;
 }
 
-/* Starter Templates */
-.block-theme__screen [data-panel="starter"]:not(.hidden){
-  display: flex;
-  flex-wrap: wrap;
-  gap: 32px;
-}
-
-.block-theme__screen [data-panel="starter"] .grid__item{
-  flex: 0 1 50%;
-  max-width: calc( 50% - 16px );
-}
-
-.block-theme__screen [data-panel="starter"] .grid__item img{
-  width: 100%;
-  height: auto;
-  position: relative;
-  vertical-align: bottom;
-}
-
-.block-theme__screen [data-panel="starter"] .grid__item .content{
-  padding: 12px 16px;
-}
-
-.block-theme__screen [data-panel="starter"] .grid__item .content h4{
-  margin: 0px;
-  font-size: 16px;
-}
-
 /* Primary */
 .block-theme__screen .primary {
   flex: 1 0 calc(100% - 296px);
@@ -508,16 +515,22 @@
 /* Footer */
 .section-footer .footer-center{
   padding: 24px;
-  max-width: 430px;
   background: #fff;
-  margin: 48px auto;
+  margin: 24px auto 64px;
   text-align: center;
   border-radius: 8px;
 }
 
-.section-footer .footer-center h4,
-.section-footer .footer-center p{
+.section-footer .footer-center .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-footer .footer-center .content h4,
+.section-footer .footer-center .content p{
   margin: 0px;
+  text-align: left;
 }
 
 .section-footer .footer-center .text-link{
@@ -534,6 +547,149 @@
   border-radius: 4px;
   background: #213fd4;
 }
+
+/* Metabox */
+#_page_options,
+#_post_options {
+  box-shadow: 0 1px 1px #e0e0e0;
+}
+
+#_page_options .handle-order-higher,
+#_page_options .handle-order-lower,
+#_post_options .handle-order-higher,
+#_post_options .handle-order-lower {
+  display: none;
+}
+
+#_page_options .postbox-header,
+#_post_options .postbox-header {
+  cursor: pointer;
+  overflow: hidden;
+  border-top: 0px !important;
+}
+
+#_page_options .postbox-header:hover,
+#_page_options .postbox-header:active,
+#_post_options .postbox-header:hover,
+#_post_options .postbox-header:active {
+  border-radius: 0;
+  border-left: 0px;
+  border-right: 0px;
+  box-shadow: inset 0 0 0 var(--wp-admin-border-width-focus)
+    var(--wp-components-color-accent, var(--wp-admin-theme-color, #007cba));
+}
+
+#_page_options .postbox-header h2,
+#_post_options .postbox-header h2  {
+  font-size: 13px;
+  padding: 16px !important;
+}
+
+#_page_options .postbox-header .toggle-indicator,
+#_post_options .postbox-header .toggle-indicator {
+  display: none;
+}
+
+#_page_options .inside,
+#_page_options .postbox-header .inside,
+#_post_options .inside,
+#_post_options .postbox-header .inside {
+  padding: 0 16px;
+}
+
+#_page_options .handle-actions .handlediv[type="button"],
+#_post_options .handle-actions .handlediv[type="button"] {
+  background: url("../src/icons/arrow-down.svg");
+  box-shadow: unset !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  position: relative;
+  right: 8px;
+}
+
+#_page_options.closed .handle-actions .handlediv[type="button"],
+#_post_options.closed .handle-actions .handlediv[type="button"] {
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  box-shadow: unset !important;
+}
+
+#_page_options .components-form-toggle input[type="checkbox"],
+#_post_options .components-form-toggle input[type="checkbox"]{
+  position: absolute;
+  visibility: hidden;
+}
+
+#_page_options .block-metabox--content,
+#_post_options .block-metabox--content {
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+#_page_options .block-metabox--inner.switcher,
+#_post_options .block-metabox--inner.switcher {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+#_page_options .block-metabox--inner:last-child,
+#_post_options .block-metabox--inner:last-child {
+  border-bottom: unset;
+}
+
+#_page_options .block-metabox--inner .details-text,
+#_post_options .block-metabox--inner .details-text {
+  width: 100%;
+}
+
+#_page_options .components-form-toggle,
+#_post_options .components-form-toggle {
+  cursor: pointer;
+  position: relative;
+}
+
+#_page_options
+  input[type="checkbox"]:checked
+  + .components-form-toggle__track,
+#_post_options
+  input[type="checkbox"]:checked
+  + .components-form-toggle__track {
+  border-color: var(--theme-admin-primary-color);
+  background-color: var(--theme-admin-primary-color);
+}
+
+#_page_options
+  input[type="checkbox"]:checked
+  + .components-form-toggle__track
+  span,
+#_post_options
+  input[type="checkbox"]:checked
+  + .components-form-toggle__track
+  span  {
+  border-color: #fff;
+  background-color: #fff;
+  transform: translate(18px, 0);
+  -webkit-transform: translate(18px, 0);
+}
+
+/* Terms Metafield */
+.product-image-uploader{
+  max-width: 250px;
+  margin-bottom: 32px;
+}
+
+.product-image-uploader .product-image__preview{
+  max-width: 100%;
+}
+
 
 /* Animation */
 @-webkit-keyframes rotating {

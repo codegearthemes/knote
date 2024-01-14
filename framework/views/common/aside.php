@@ -27,7 +27,7 @@ $options = \KnoteFramework::get_instance()->get_settings();
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M29.4428 36.2766L39.8391 24.5044L41.2445 25.7455L29.5627 38.9734L23.2302 32.9722L24.52 31.6112L29.4428 36.2766Z" fill="#fff"></path>
                         </svg>
                     </div>
-                    <?php if( !class_exists( 'KnoteToolkit' )): ?>
+                    <?php if( !class_exists( 'KnotePro' )): ?>
                         <a class="button" href="<?php echo esc_url($options['upgrade_premium']); ?>" target="_blank">
                             <?php esc_html_e('Upgrade now', 'knote'); ?>
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-right">
@@ -101,7 +101,7 @@ $options = \KnoteFramework::get_instance()->get_settings();
                 <div class="panel-head">
                     <h3 class="panel-title">
                         <?php esc_html_e('Changelog', 'knote'); ?>
-                        <span class="version"><?php echo esc_html((!$options['premium']) ? KNOTE_VERSION : KNOTE_PREMIUM_VERSION); ?></span>
+                        <span class="version"><?php echo esc_html((!$options['premium']) ? KNOTE_VERSION : KNOTE_VERSION_PRO); ?></span>
                     </h3>
                 </div>
                 <div class="panel-content">

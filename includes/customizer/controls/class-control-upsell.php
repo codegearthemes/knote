@@ -29,7 +29,7 @@ class Knote_Control_Upsell extends WP_Customize_Control {
 	 * Render the control in the customizer
 	 */
 	public function render_content() {
-		if( class_exists( 'KnoteToolkit' ) ) { return ''; }
+		if( class_exists( 'KnotePro' ) ) { return ''; }
 		?>
 		<div class="block-upsell__feature">
 			<?php if( ! empty( $this->title ) ) : ?>

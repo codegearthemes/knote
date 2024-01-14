@@ -286,7 +286,7 @@ class Knote_Builder {
                 'footer'    => apply_filters( 'knote_footer_builder_components', $this->footer_components ),
             ),
             'upsell_components' => array(
-                'enable' => ! defined( 'KNOTE_ACTIVE' ) && ! defined( 'KNOTE_PREMIUM_VERSION' ) ? true : false,
+                'enable' => ! defined( 'KNOTE_ACTIVE' ) && ! defined( 'KNOTE_VERSION_PRO' ) ? true : false,
                 'header' => apply_filters( 'knote_header_builder_upsell_components', $this->header_components_upsell ),
                 'footer' => apply_filters( 'knote_footer_builder_upsell_components', $this->footer_components_upsell ),
                 'title'  => esc_html__( 'Permium Components', 'knote' ),

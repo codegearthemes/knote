@@ -125,7 +125,7 @@ class KnoteFramework {
     }
 
 	public static function premium() {
-		if( class_exists( 'KnoteToolkit' ) )
+		if( class_exists( 'KnotePro' ) )
 			return true;
 
 		return false;

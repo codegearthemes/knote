@@ -111,7 +111,7 @@ $screen = get_current_screen(); // phpcs:ignore WPThemeReview.CoreFunctionality.
                             </div>
                             <div class="block-content__premium">
                                 <div class="premium-header">
-                                    <?php if( !class_exists( 'KnoteToolkit' )): ?>
+                                    <?php if( !class_exists( 'KnotePro' )): ?>
                                         <h2><?php echo esc_html__( 'Upgrade to premium', 'knote' ); ?></h2>
                                         <?php if( ! $this->settings[ 'premium' ] ) : ?>
                                             <a href="<?php echo esc_url( $this->settings['upgrade_premium'] ); ?>" class="text-external-link" target="_blank">

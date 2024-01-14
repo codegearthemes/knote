@@ -62,7 +62,7 @@ if ( ! function_exists( 'knote_woocommerce_header_cart' ) ) {
 		}
 		?>
 
-        <?php if( class_exists( 'KnoteToolkit' ) ): ?>
+        <?php if( class_exists( 'KnotePro' ) ): ?>
             <?php do_action( 'knote_minicart' ); ?>
         <?php else: ?>
             <div class="block-minicart">

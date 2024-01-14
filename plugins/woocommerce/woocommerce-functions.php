@@ -139,7 +139,7 @@ add_filter( 'product_cat_class', 'knote_woocommerce_category_class', 21, 3 );
 function knote_woocommerce_cart_icon(){
 
     $knote_cart_icon = 'icon-bag';
-    if( defined( 'KNOTE_PREMIUM_VERSION' ) ){
+    if( defined( 'KNOTE_VERSION_PRO' ) ){
         $knote_cart_icon = get_theme_mod( 'knote_header_component_cart_icons', 'icon-bag' );
     }
 

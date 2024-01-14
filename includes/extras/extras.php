@@ -250,7 +250,7 @@ function knote_public_scripts(){
 		$knote_woocommerce_sale_badge_background 		= get_theme_mod( 'knote_catalog_sale_badge_background', '#121212');
 		$knote_woocommerce_product_card_background 	= get_theme_mod( 'knote_catalog_product_card_background', '#ffffff');
 
-		if( class_exists( 'KnoteToolkit' ) ) {
+		if( class_exists( 'KnotePro' ) ) {
 			$knote_product_gallery_arrow_color 				= get_theme_mod( 'knote_single_product_gallery_arrow_color', '#000000' );
 			$knote_product_gallery_arrow_color_hover 		= get_theme_mod( 'knote_single_product_gallery_arrow_color_hover', '#121212' );
 			$knote_product_gallery_arrow_background 		= get_theme_mod( 'knote_single_product_gallery_arrow_background', '#ffffff' );
@@ -455,7 +455,7 @@ function knote_public_scripts(){
 				--theme--woocommerce-product-card-background: " . esc_attr ( $knote_woocommerce_product_card_background ).";
 			}";
 
-		if( class_exists( 'KnoteToolkit' ) ) {
+		if( class_exists( 'KnotePro' ) ) {
 			$knote_custom_styles .= "
 			:root{
 				--theme--product-gallery-arrow-color: " . esc_attr ( $knote_product_gallery_arrow_color ).";
