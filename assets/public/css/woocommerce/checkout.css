@@ -49,8 +49,13 @@ form.woocommerce-checkout {
   flex: 1 0 60%;
 }
 
+.woocommerce-checkout #customer_details .col-2{
+  margin-top: 32px;
+}
+
 .woocommerce-checkout #customer_details h3 {
-  margin-top: 0px;
+  margin-top: 0;
+  font-size: var(--theme--heading-size5);
 }
 
 .woocommerce form .form-row .required{
@@ -244,6 +249,44 @@ form.woocommerce-checkout {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/*--------------------------------------------------------------
+# Checkout Notice
+--------------------------------------------------------------*/
+.woocommerce-checkout .woocommerce-notices-wrapper .woocommerce-message{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  color: var(--theme--content-card-color);
+  background: var(--theme--content-card-background);
+  padding: 16px 24px;
+  margin-bottom: 32px;
+  gap: 16px;
+}
+
+/*--------------------------------------------------------------
+# Payment Method
+--------------------------------------------------------------*/
+.woocommerce-checkout-payment fieldset{
+  border: 0;
+  padding: 0;
+  margin-top: 16px;
+}
+
+/* Square Payment */
+.woocommerce-checkout-payment #wc-square-digital-wallet{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--theme--border-color);
+  max-width: 60%;
+  padding: 16px;
+}
+
+.woocommerce-checkout-payment #wc-square-wallet-divider{
+  display: none;
 }
 
 /*--------------------------------------------------------------
