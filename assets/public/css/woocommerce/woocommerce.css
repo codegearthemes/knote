@@ -357,6 +357,11 @@ WooCommerce styles override
 	position: relative;
 }
 
+.single-product .content-area{
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .single-product__content{
 	display: flex;
 	align-items: flex-start;

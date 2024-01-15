@@ -903,6 +903,19 @@ textarea {
 	max-width: var(--theme--site-width);
 }
 
+.product-container__full{
+	margin: 0 auto;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+.container-fluid{
+	margin: 0 auto;
+	padding-left: 16px;
+	padding-right: 16px;
+	width: calc( 100% - 48px );
+}
+
 .container-medium{
 	margin: 0 auto;
 	max-width: 1024px;
@@ -911,13 +924,6 @@ textarea {
 .container-narrow{
 	margin: 0 auto;
 	max-width: 992px;
-}
-
-.container-fluid{
-	margin: 0 auto;
-	padding-left: 16px;
-	padding-right: 16px;
-	width: calc( 100% - 48px );
 }
 
 .site-content .content-inner{

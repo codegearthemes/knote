@@ -79,6 +79,7 @@ Knote is distributed under the terms of the GNU GPL
 == Changelog ==
 
 = 0.5.2 (January 22, 2024) =
+* [Fix] Product container issue
 * [Update] Checkout style
 
 = 0.5.0 (January 10, 2024) =

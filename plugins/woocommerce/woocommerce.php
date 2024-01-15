@@ -225,7 +225,7 @@ add_action( 'woocommerce_after_main_content', 'knote_woocommerce_wrapper_after' 
 if ( ! function_exists( 'knote_woocommerce_product_class' ) ) {
 	function knote_woocommerce_product_class() {
 		if( is_product() ){
-			return 'main-content main-container';
+			return 'main-content main-container product-container__full';
 		}
 
 		return get_theme_mod( 'knote_website_container', 'container' );
