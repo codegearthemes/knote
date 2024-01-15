@@ -114,6 +114,10 @@ form.woocommerce-checkout {
   background: var(--theme--content-card-background);
 }
 
+.woocommerce-checkout .col-2 .woocommerce-additional-fields{
+  margin-top: 0;
+}
+
 .woocommerce-checkout .woocommerce-additional-fields h3 {
   margin-top: 0px;
   color: var(--theme--content-card-heading-color);
