@@ -659,7 +659,7 @@ WooCommerce styles override
 .single-product__content .variations tbody{
     display: flex;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-direction: column;
     gap: 16px;
 }
@@ -667,7 +667,6 @@ WooCommerce styles override
 .single-product__content .variations tbody tr{
     display: flex;
     flex-direction: column;
-    flex: 1 1 50%;
 }
 
 .single-product__content .variations .label > label{
@@ -737,15 +736,28 @@ WooCommerce styles override
     border: 1px solid var(--theme--border-color);
     border-radius: var(--theme--button-border-radius);
     text-decoration: none;
-    min-width: 42px;
-    padding: 12px;
-    height: 42px;
+    min-width: 48px;
+    height: 48px;
 }
 
-.single-product__content .variations .block-variants .variant-item input[type="radio"]:checked + label{
+.single-product__content .variations .variant-item input[type="radio"]:checked + label{
     color: var(--theme--button-color);
     border-color: var(--theme--button-border-color);
     background: var(--theme--button-background-color);
+}
+
+.single-product__content .variations [data-type="image"] .variant-item input[type="radio"] + label .variant-inner,
+.single-product__content .variations [data-type="color"] .variant-item input[type="radio"] + label .variant-inner{
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    background: var(--background-color);
+    border-radius: var(--theme--button-border-radius);
+}
+
+.single-product__content .variations [data-type="image"] .variant-item input[type="radio"]:checked + label,
+.single-product__content .variations [data-type="color"] .variant-item input[type="radio"]:checked + label{
+    background: transparent;
 }
 
 .single-product__content .variations .reset_variations{
