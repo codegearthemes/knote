@@ -98,13 +98,17 @@ function knote_preconnect_google_fonts() {
 		)
 	);
 
-	$knote_body_fonts		= get_theme_mod( 'knote-base-website-font', $defaults );
-	$knote_heading_fonts 	= get_theme_mod( 'knote-heading-website-font', $defaults );
+	$knote_body_fonts		= get_theme_mod( 'knote_base_font', $defaults );
+	$knote_heading_fonts 	= get_theme_mod( 'knote_heading_font', $defaults );
+	$knote_navigation_fonts = get_theme_mod( 'knote_menu_font', $defaults );
 
 	$knote_body_fonts 		= json_decode( $knote_body_fonts, true );
 	$knote_heading_fonts 	= json_decode( $knote_heading_fonts, true );
 
-	if ( 'System default' === $knote_body_fonts['font'] && 'System default' === $knote_heading_fonts['font'] ) {
+	$knote_googlefont_load_locally = get_theme_mod('knote_load_google_fonts_locally', 0);
+	if( $knote_googlefont_load_locally ) return;
+
+	if ( 'System default' === $knote_body_fonts['font'] && 'System default' === $knote_heading_fonts['font'] && 'System default' === $knote_navigation_fonts) {
 		return;
 	}
 

@@ -55,8 +55,7 @@ $wp_customize->add_section(
 $wp_customize->add_setting( 'knote_heading_font',
     array(
         'default'           => '{"font":"System default","regularweight":"700","category":"sans-serif"}',
-        'sanitize_callback' => 'knote_google_fonts_sanitize',
-        'transport'	 		=> 'postMessage'
+        'sanitize_callback' => 'knote_google_fonts_sanitize'
     )
 );
 
@@ -80,8 +79,7 @@ $wp_customize->add_control(
 
 $wp_customize->add_setting( 'knote_heading_font_style', array(
 	'default' 			=> 'normal',
-	'sanitize_callback' => 'knote_sanitize_select',
-	'transport'	 		=> 'postMessage'
+	'sanitize_callback' => 'knote_sanitize_select'
 ) );
 
 $wp_customize->add_control( 'knote_heading_font_style', array(
@@ -651,7 +649,6 @@ $wp_customize->add_setting( 'knote_base_font',
     array(
         'default'           => '{"font":"System default","regularweight":"400","category":"sans-serif"}',
         'sanitize_callback' => 'knote_google_fonts_sanitize',
-        'transport'	 		=> 'postMessage'
     )
 );
 
@@ -677,7 +674,6 @@ $wp_customize->add_setting( 'knote_base_font_style',
 	array(
 		'sanitize_callback' => 'knote_sanitize_select',
 		'default' 			=> 'normal',
-		'transport'	 		=> 'postMessage'
 	)
 );
 
