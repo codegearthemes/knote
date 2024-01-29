@@ -52,11 +52,13 @@ if ( is_array( $padding ) ){
         $styles[] = '--html-link-sticky-hover-color:'.esc_attr( $knote_html_link_sticky_hover_color );
 
     ?>
+    <?php do_action('knote_component_html_before'); ?>
     <div class="header-component__html <?php echo esc_attr( $classes ); ?>"
             style="<?php echo esc_attr( implode(';', $styles ) );?>"
     >
         <?php echo wp_kses_post( $knote_header_html_content ); ?>
     </div>
+    <?php do_action('knote_component_html_before'); ?>
 </div>
 
 

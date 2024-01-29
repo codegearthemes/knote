@@ -22,7 +22,6 @@ if ( is_array( $padding ) ){
 }
 
 ?>
-
 <div class="builder-item component-button" style="<?php echo esc_attr( implode(';', $styles ) ); ?>" data-element-id="button" data-component>
     <?php $this->customizer_edit_button(  'button' );
 
@@ -73,6 +72,7 @@ if ( is_array( $padding ) ){
     }
 
     ?>
+        <?php do_action('knote_component_button_before'); ?>
         <a <?php echo esc_html( $knote_link_target ); ?>
             class="button<?php echo esc_attr( ( $knote_button_class ? ' '. $knote_button_class : '' ) ); ?>"
             href="<?php echo esc_url( $knote_button_url ); ?>"
@@ -80,4 +80,5 @@ if ( is_array( $padding ) ){
         >
             <?php echo esc_html( $knote_button_text ); ?>
         </a>
+        <?php do_action('knote_component_button_after'); ?>
 </div>

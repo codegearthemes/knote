@@ -466,7 +466,7 @@ $wp_customize->add_section(
 
 $wp_customize->add_setting( 'knote_menu_font',
     array(
-        'default'           => get_theme_mod( 'knote_base_font', '{"font":"System default","regularweight":"400","category":"sans-serif"}' ),
+        'default'           =>'{"font":"System default","regularweight":"400","category":"sans-serif"}',
         'sanitize_callback' => 'knote_google_fonts_sanitize'
     )
 );
