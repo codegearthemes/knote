@@ -854,7 +854,11 @@ class Knote_Builder {
             </div>
         <?php } ?>
             <div class="builder--header-offcanvas header-offcanvas">
-                <?php $this->mobile_offcanvas_callback(); ?>
+                <?php
+                    do_action( 'knote_offcanvas_start' );
+                    $this->mobile_offcanvas_callback();
+                    do_action( 'knote_offcanvas_end' )
+                ?>
             </div>
         <?php do_action( 'header_builder_after'); ?>
         <?php
