@@ -150,16 +150,16 @@ function knote_public_scripts(){
 
 
 	$knote_header_row_above_height_desktop = get_theme_mod( 'knote_builder_header_row_above_height_desktop', 80).'px';
-    $knote_header_row_above_height_tablet = get_theme_mod( 'knote_builder_header_row_above_height_desktop', 80).'px';
-	$knote_header_row_above_height_mobile = get_theme_mod( 'knote_builder_header_row_above_height_desktop', 80).'px';
+    $knote_header_row_above_height_tablet = get_theme_mod( 'knote_builder_header_row_above_height_tablet', 80).'px';
+	$knote_header_row_above_height_mobile = get_theme_mod( 'knote_builder_header_row_above_height_mobile', 80).'px';
 
 	$knote_header_row_main_height_desktop = get_theme_mod( 'knote_builder_header_row_main_height_desktop', 80).'px';
-    $knote_header_row_main_height_tablet = get_theme_mod( 'knote_builder_header_row_main_height_desktop', 80).'px';
-	$knote_header_row_main_height_mobile = get_theme_mod( 'knote_builder_header_row_main_height_desktop', 80).'px';
+    $knote_header_row_main_height_tablet = get_theme_mod( 'knote_builder_header_row_main_height_tablet', 80).'px';
+	$knote_header_row_main_height_mobile = get_theme_mod( 'knote_builder_header_row_main_height_mobile', 80).'px';
 
 	$knote_header_row_below_height_desktop = get_theme_mod( 'knote_builder_header_row_below_height_desktop', 80).'px';
-    $knote_header_row_below_height_tablet = get_theme_mod( 'knote_builder_header_row_below_height_desktop', 80).'px';
-	$knote_header_row_below_height_mobile = get_theme_mod( 'knote_builder_header_row_below_height_desktop', 80).'px';
+    $knote_header_row_below_height_tablet = get_theme_mod( 'knote_builder_header_row_below_height_tablet', 80).'px';
+	$knote_header_row_below_height_mobile = get_theme_mod( 'knote_builder_header_row_below_height_mobile', 80).'px';
 
 	$knote_header_row_above_border_width = get_theme_mod( 'knote_builder_header_row_above_border_bottom', 0).'px';
 	$knote_header_row_main_border_width = get_theme_mod( 'knote_builder_header_row_main_border_bottom', 0).'px';
