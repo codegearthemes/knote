@@ -4,7 +4,7 @@ Tags: custom-menu, custom-logo, entertainment, one-column, two-columns, left-sid
 Requires at least: 5.1
 Tested up to: 6.4
 Requires PHP: 7.2
-Stable tag: 0.5.5
+Stable tag: 0.5.6
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -78,8 +78,9 @@ Knote is distributed under the terms of the GNU GPL
 
 == Changelog ==
 
-= 0.5.5 (February 26, 2024) =
+= 0.5.6 (February 26, 2024) =
 * [New] Breadcrumb
+* [Fix] Remove breadcrumb print
 
 = 0.5.4 (February 15, 2024) =
 * [Fix] Header row height fix

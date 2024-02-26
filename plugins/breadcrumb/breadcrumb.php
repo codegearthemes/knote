@@ -143,8 +143,6 @@ class Breadcrumbs {
 		// Setup a filter for changeable variables and merge it with the defaults.
 		$defaults = apply_filters( 'breadcrumbs_defaults', $defaults );
 
-		print_r( $defaults );
-
 		if ( ! empty( $element_args ) ) {
 			$defaults = wp_parse_args( $element_args, $defaults );
 		}
