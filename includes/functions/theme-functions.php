@@ -43,10 +43,9 @@ add_filter( 'excerpt_more', 'knote_excerpts_auto' );
 
 if ( ! function_exists( 'knote_breadcrumb' ) ) :
     function knote_breadcrumb() {
-
+		Knote\Breadcrumbs::get_instance()->get_breadcrumbs();
     }
 endif;
-
 
 if ( ! function_exists( 'knote_excerpt_more' ) ) :
 	/**

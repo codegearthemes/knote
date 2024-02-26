@@ -8,7 +8,7 @@
  * @author      CodeGearThemes
  * @category    WordPress
  * @package     Knote
- * @version     0.5.4
+ * @version     0.5.5
  *
  */
 if (!defined('ABSPATH')) {
@@ -19,7 +19,7 @@ if (!defined('ABSPATH')) {
  * Define Constants
  */
 if (!defined('KNOTE_VERSION')) {
-	define('KNOTE_VERSION', '0.5.4');
+	define('KNOTE_VERSION', '0.5.5');
 }
 define('KNOTE_THEME_DIR', trailingslashit(get_template_directory()));
 define('KNOTE_THEME_URI', trailingslashit(esc_url(get_template_directory_uri())));
@@ -246,6 +246,12 @@ require_once get_parent_theme_file_path('vendor/autoload.php');
 require_once get_parent_theme_file_path('framework/framework.php');
 
 /**
+ * Breadcrumb
+ */
+require get_template_directory() . '/plugins/breadcrumb/breadcrumb.php';
+require get_template_directory() . '/plugins/breadcrumb/json-ld.php';
+
+/**
  * SVG Icons
  */
 require get_template_directory() . '/includes/classes/class-svg-icons.php';
@@ -307,12 +313,6 @@ if (defined('JETPACK__VERSION')) {
 if (class_exists('WooCommerce')) {
 	require get_template_directory() . '/plugins/woocommerce/woocommerce.php';
 }
-
-/**
- * Breadcrumb
- */
-require get_template_directory() . '/plugins/breadcrumb/breadcrumb.php';
-require get_template_directory() . '/plugins/breadcrumb/json-ld.php';
 
 /**
  * Archives

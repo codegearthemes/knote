@@ -19,6 +19,7 @@ get_header();
 				the_archive_title( '<h1 class="entry-title">', '</h1>' );
 				do_action( 'knote_after_title' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
+
 			?>
 		</div>
 	</div>
