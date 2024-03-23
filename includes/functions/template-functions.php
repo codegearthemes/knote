@@ -197,7 +197,6 @@ add_action( 'knote_main_wrapper_start', 'knote_main_wrapper_start_cb', 5 );
  * Main Wrapper End
  */
 function knote_main_wrapper_end_cb(){
-		echo '</div>';
 	echo '</div>';
 }
 add_action( 'knote_main_wrapper_end', 'knote_main_wrapper_end_cb', 5 );
