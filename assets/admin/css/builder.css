@@ -327,7 +327,7 @@
 }
 
 .wp-color-result-text {
-    display: none;
+    display: none !important;
 }
 
 .customize-control-color,
