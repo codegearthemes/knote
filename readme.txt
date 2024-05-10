@@ -2,7 +2,7 @@
 Contributors: CodeGearThemes
 Tags: custom-menu, custom-logo, entertainment, one-column, two-columns, left-sidebar, e-commerce, right-sidebar, custom-colors, editor-style, featured-images, full-width-template, threaded-comments, translation-ready, blog
 Requires at least: 5.1
-Tested up to: 6.4
+Tested up to: 6.5
 Requires PHP: 7.2
 Stable tag: 0.5.9
 License: GNU General Public License v2 or later
