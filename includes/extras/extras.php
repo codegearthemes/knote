@@ -43,6 +43,8 @@ function knote_public_scripts(){
 		$knote_base_fonts			= $font_body['font'];
 	}
 
+	$knote_base_fonts = apply_filters( 'knote_base_fonts', $knote_base_fonts );
+
 	$knote_desktop_logo_size 	= get_theme_mod( 'knote_logo_size_desktop', '250'). 'px';
 	$knote_tablet_logo_size 	= get_theme_mod( 'knote_logo_size_tablet' , '175'). 'px';
 	$knote_mobile_logo_size 	= get_theme_mod( 'knote_logo_size_mobile' , '125'). 'px';
@@ -69,6 +71,8 @@ function knote_public_scripts(){
 	}else{
 		$knote_heading_fonts			= $font_heading['font'];
 	}
+
+	$knote_heading_fonts = apply_filters( 'knote_heading_fonts', $knote_heading_fonts );
 
 	$knote_heading_font_weight = 'bold';
 	if( isset( $font_heading['regularweight'] ) ){
@@ -133,6 +137,8 @@ function knote_public_scripts(){
 	}else{
 		$knote_menu_fonts			= $font_menu['font'];
 	}
+
+	$knote_menu_fonts = apply_filters( 'knote_menu_fonts', $knote_menu_fonts );
 
 	$knote_menu_font_weight = 'normal';
 	if( isset( $font_menu['regularweight'] ) ){
