@@ -161,7 +161,7 @@ window.knote = window.knote || {};
 			while (!self.classList.contains('menu')) {
 
 				// On li elements toggle the class .focus.
-				if (self.tagName.toLowerCase() === 'li') {
+				if( self.classList.contains('sub-menu-toggle') ) {
 					self.classList.toggle('focus');
 				}
 
@@ -263,7 +263,6 @@ window.knote = window.knote || {};
 			subNavToggle.addEventListener('click', function(event) {
 				event.preventDefault();
 				this.closest('li').classList.toggle('expanded');
-				this.closest('li').classList.remove('focus');
 			});
 		});
 	};
