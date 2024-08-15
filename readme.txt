@@ -4,7 +4,7 @@ Tags: custom-menu, custom-logo, entertainment, one-column, two-columns, left-sid
 Requires at least: 5.1
 Tested up to: 6.5
 Requires PHP: 7.2
-Stable tag: 0.6.2
+Stable tag: 0.6.3
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -75,6 +75,9 @@ Knote is distributed under the terms of the GNU GPL
 	Folder vendor/kirki-framework https://github.com/kirki-framework, (C) kirki-framework, [MIT](https://opensource.org/licenses/MIT)
 
 == Changelog ==
+
+= 0.6.3 (August 15, 2024) =
+* [Fix] Fix sortable
 
 = 0.6.2 (August 14, 2024) =
 * [Fix] Fix hamburger submenu
