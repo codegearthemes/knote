@@ -145,10 +145,10 @@ add_filter( 'body_class', 'knote_woocommerce_active_body_class' );
 function knote_woocommerce_product_sidebar(){
 	if( is_product() ){
 		add_filter( 'knote_sidebar_enable', '__return_false' );
-		add_filter( 'knote_content_class', function() { return 'no-sidebar'; } );
+		add_filter( 'knote_woocommerce_content_class', function() { return 'no-sidebar'; } );
 	}
 }
-add_filter( 'knote_content_class', 'knote_woocommerce_product_sidebar', 100 );
+add_filter( 'woocommerce_before_main_content', 'knote_woocommerce_product_sidebar', 100 );
 
 remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
@@ -194,7 +194,7 @@ if ( ! function_exists( 'knote_woocommerce_wrapper_before' ) ) {
 		<div class="content-inner content--woocommerce-inner <?php echo esc_attr( apply_filters( 'knote_woocommerce_class', '' ) ); ?>">
 			<div class="<?php echo esc_attr( apply_filters( 'knote_container_class', 'container' ) ); ?>">
 				<div class="grid">
-					<div id="primary" class="grid__item one-whole <?php echo esc_attr( apply_filters( 'knote_content_class', '' ) ); ?> content-area">
+					<div id="primary" class="grid__item one-whole <?php echo esc_attr( apply_filters( 'knote_woocommerce_content_class', '' ) ); ?> content-area">
 						<main id="main" class="site-main">
 		<?php
 	}

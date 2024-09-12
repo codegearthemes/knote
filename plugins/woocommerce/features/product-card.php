@@ -161,7 +161,7 @@ function knote_product_card_content_class( $classes ) {
 
 add_action( 'wp', function(){
 	if ( is_shop() || is_product_category() || is_product_tag() || is_product_taxonomy() ) {
-		add_filter( 'knote_content_class', 'knote_product_card_content_class' );
+		add_filter( 'knote_woocommerce_content_class', 'knote_product_card_content_class' );
 	}
 } );
 

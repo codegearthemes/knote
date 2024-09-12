@@ -76,8 +76,10 @@ Knote is distributed under the terms of the GNU GPL
 
 == Changelog ==
 
-= 0.6.4 (August 24, 2024) =
-* [Update] Dependency library
+= 0.6.4 (September 12, 2024) =
+* [Fix] Issue with content class with woocommerce
+* [Update] Single post image style update
+* [Update] Update google fonts
 
 = 0.6.3 (August 15, 2024) =
 * [Fix] Fix sortable

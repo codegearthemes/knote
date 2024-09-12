@@ -2693,9 +2693,9 @@ h6, .h6 {
 }
 
 .single-article .centered .post-thumbnail.alignwide img{
-    width: 100vw;
-	margin: 0px calc(50% - 50vw);
-    max-width: calc( 100vw - 100px );
+	width: 100vw;
+    margin: 0px calc(50% - 50vw);
+    max-width: calc( var(--theme--site-width) - 32px);
 }
 
 .comments-area .comment-respond {

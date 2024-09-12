@@ -8,7 +8,6 @@
  */
 
 get_header();
-
 ?>
 
 <div class="content-inner single-article">
