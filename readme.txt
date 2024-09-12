@@ -79,6 +79,7 @@ Knote is distributed under the terms of the GNU GPL
 = 0.6.4 (September 12, 2024) =
 * [Fix] Issue with content class with woocommerce
 * [Update] Single post image style update
+* [Update] Update social profiles
 * [Update] Update google fonts
 
 = 0.6.3 (August 15, 2024) =

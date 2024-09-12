@@ -2041,15 +2041,20 @@ textarea {
 	width: 100%;
 	height: 100%;
 	background-color: var(--theme--base-color);
+	mask-image: url('../src/arrow-left.svg');
     -webkit-mask-image: url('../src/arrow-left.svg');
+	mask-repeat: no-repeat;
     -webkit-mask-repeat: no-repeat;
+	mask-position: center;
     -webkit-mask-position: center;
+	mask-size: 20px;
     -webkit-mask-size: 20px;
 	top: 0;
     left: 0;
 }
 
 .posts-navigation .next-post-link a:after{
+	mask-image: url('../src/arrow-right.svg');
 	-webkit-mask-image: url('../src/arrow-right.svg');
 }
 
@@ -2658,10 +2663,14 @@ h6, .h6 {
 	width: 100%;
 	height: 100%;
 	background-color: var(--theme--base-color);
+	mask-image: url('../src/search.svg');
     -webkit-mask-image: url('../src/search.svg');
     -webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
     -webkit-mask-position: center;
+	mask-position: center;
     -webkit-mask-size: 20px;
+	mask-size: 20px;
 	top: 0;
     left: 0;
 }
