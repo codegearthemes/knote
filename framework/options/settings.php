@@ -340,7 +340,7 @@ function knote_settings_variables(){
 	$settings['suggest_idea_link'] 	= 'https://codegearthemes.com/pages/feature-request/';
 
 	// Documentation
-	$settings['docs_link'] 		= 'https://docs.codegearthemes.com/knote';
+	$settings['docs_link'] 		= 'https://github.com/codegearthemes/knote/wiki';
 	$settings['changelog_link'] = 'https://codegearthemes.com/pages/changelog-knote/';
 
 	// Community
