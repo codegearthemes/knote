@@ -54,6 +54,11 @@
   font-weight: 400;
 }
 
+#customize-theme-controls .accordion-section-title{
+  display: flex;
+  align-items: center;
+}
+
 #customize-controls .control-section.open .accordion-section-title,
 #customize-controls .control-section:hover > .accordion-section-title,
 #customize-controls .control-section .accordion-section-title:hover,
@@ -63,10 +68,20 @@
   color: var(--theme-admin-accent-color);
 }
 
-#customize-theme-controls
-  .accordion-section-title
-  #customize-outer-theme-controls
-  .accordion-section-title {
+#customize-controls .control-section .accordion-section-title button:focus, 
+#customize-controls .control-section .accordion-section-title button:hover, 
+#customize-controls .control-section.open .accordion-section-title, 
+#customize-controls .control-section:hover>.accordion-section-title{
+  color: unset;
+  background: unset;
+  border-left-color: unset;
+}
+
+#customize-controls .customize-pane-parent > .accordion-section .accordion-section-title button{
+  padding-left: 20px;
+}
+
+#customize-theme-controls .accordion-section-title #customize-outer-theme-controls .accordion-section-title {
   background: transparent;
 }
 
@@ -81,10 +96,12 @@
 }
 
 .customize-pane-parent > li.control-section .accordion-section-title:before {
+  left: 16px;
   content: "";
   width: 16px;
   height: 16px;
   margin-right: 4px;
+  position: relative;
   display: inline-block;
   vertical-align: middle;
   background-size: 100%;
