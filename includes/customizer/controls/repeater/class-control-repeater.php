@@ -2,7 +2,7 @@
 /**
  * Radio Image Customizer Control.
  *
- * @author      CodeGearThemes
+ * @author      CodegearThemes
  * @category    WordPress
  * @package     Knote
  * @subpackage  Controls

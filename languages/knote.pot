@@ -7,7 +7,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-10 06:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: CodeGearThemes <support@codegearthemes.com>\n"
+"Last-Translator: CodegearThemes <support@CodegearThemes.com>\n"
 "Language-Team: \n"
 "Language: \n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
@@ -152,7 +152,7 @@ msgid "Close"
 msgstr ""
 
 #. Author of the theme
-msgid "CodeGearThemes"
+msgid "CodegearThemes"
 msgstr ""
 
 #: includes/customizer/options/layout.php:141
@@ -420,11 +420,11 @@ msgid "g a"
 msgstr ""
 
 #. Author URI of the theme
-msgid "https://codegearthemes.com/"
+msgid "https://CodegearThemes.com/"
 msgstr ""
 
 #. URI of the theme
-msgid "https://www.codegearthemes.com/products/knote"
+msgid "https://www.CodegearThemes.com/products/knote"
 msgstr ""
 
 #: functions.php:152

@@ -22,7 +22,7 @@ function knote_settings_variables(){
 	$settings['starter_slug']   = 'codegear-starter';
 	$settings['starter_menu_slug']   = 'starter';
 	$settings['starter_path']   = 'codegear-starter/codegear-starter.php';
-	$settings['website_link']   = 'https://codegearthemes.com.com/';
+	$settings['website_link']   = 'https://CodegearThemes.com.com/';
 
 	//Hero
 	$settings['hero_title']    = esc_html__('Welcome to Knote', 'knote');
@@ -137,7 +137,7 @@ function knote_settings_variables(){
 	);
 
 	//Premium
-	$settings['upgrade_premium'] = 'https://codegearthemes.com/upgrade';
+	$settings['upgrade_premium'] = 'https://CodegearThemes.com/upgrade';
 
 
 	// Premium features.
@@ -147,7 +147,7 @@ function knote_settings_variables(){
 		'content'       => esc_html__('Upload your own custom fonts.', 'knote'),
 		'label'         => esc_html__('Learn more', 'knote'),
 		'link'          => add_query_arg('autofocus[section]', 'knote_section_typography_general', admin_url('customize.php')),
-		'docs_link'     => 'https://docs.codegearthemes.com/article/custom-fonts/'
+		'docs_link'     => 'https://docs.CodegearThemes.com/article/custom-fonts/'
 	);
 
 	$settings['features'][] = array(
@@ -155,7 +155,7 @@ function knote_settings_variables(){
 		'title'  	=> esc_html__('Table of Contents', 'knote'),
 		'content'   => esc_html__('Display a table of contents inside your article.', 'knote'),
 		'label' 	=> esc_html__('Learn More', 'knote'),
-		'link' 		=> 'https://docs.codegearthemes.com/article/single-post-table-of-contents/'
+		'link' 		=> 'https://docs.CodegearThemes.com/article/single-post-table-of-contents/'
 	);
 
 	$settings['features'][] = array(
@@ -163,7 +163,7 @@ function knote_settings_variables(){
 		'title'      => esc_html__('Drawer cart', 'knote'),
 		'content'    => esc_html__('Enable drawer cart for conversion.', 'knote'),
 		'label' 	 => esc_html__('Learn more', 'knote'),
-		'link'  	 => 'https://docs.codegearthemes.com/article/drawer-cart/'
+		'link'  	 => 'https://docs.CodegearThemes.com/article/drawer-cart/'
 	);
 
 	$settings['features'][] = array(
@@ -171,7 +171,7 @@ function knote_settings_variables(){
 		'title'      => esc_html__('Drawer cart upsell', 'knote'),
 		'content'    => esc_html__('Enable upsell on empty drawer cart.', 'knote'),
 		'label' 	 => esc_html__('Learn more', 'knote'),
-		'link'  	 => 'https://docs.codegearthemes.com/article/drawer-cart-upsell/'
+		'link'  	 => 'https://docs.CodegearThemes.com/article/drawer-cart-upsell/'
 	);
 
 	$settings['features'][] = array(
@@ -179,7 +179,7 @@ function knote_settings_variables(){
 		'title'      => esc_html__('Checkout upsell', 'knote'),
 		'content'    => esc_html__('Enable upsell on checkout.', 'knote'),
 		'label' 	 => esc_html__('Learn more', 'knote'),
-		'link'  	 => 'https://docs.codegearthemes.com/article/checkout-upsell/'
+		'link'  	 => 'https://docs.CodegearThemes.com/article/checkout-upsell/'
 	);
 
 	$settings['features'][] = array(
@@ -187,7 +187,7 @@ function knote_settings_variables(){
 		'title'      => esc_html__('Post purchase upsell', 'knote'),
 		'content'    => esc_html__('Enable upsell after purchase.', 'knote'),
 		'label' 	 => esc_html__('Learn more', 'knote'),
-		'link'  	 => 'https://docs.codegearthemes.com/article/post-checkout-upsell/'
+		'link'  	 => 'https://docs.CodegearThemes.com/article/post-checkout-upsell/'
 	);
 
 	$settings['features'][] = array(
@@ -195,7 +195,7 @@ function knote_settings_variables(){
 		'title'      => esc_html__('Product color swatch', 'knote'),
 		'content'    => esc_html__('Enable this options to show product swatches.', 'knote'),
 		'label'      => esc_html__('Learn more', 'knote'),
-		'link'  	 => 'https://docs.codegearthemes.com/article/product-swatch/'
+		'link'  	 => 'https://docs.CodegearThemes.com/article/product-swatch/'
 	);
 
 	$settings['features'][] = array(
@@ -203,7 +203,7 @@ function knote_settings_variables(){
 		'title'      => esc_html__('Product image hover', 'knote'),
 		'content'    => esc_html__('Swap the product image on mouse over.', 'knote'),
 		'label' 	 => esc_html__('Learn more', 'knote'),
-		'link'  	 => 'https://docs.codegearthemes.com/article/product-image-hover/'
+		'link'  	 => 'https://docs.CodegearThemes.com/article/product-image-hover/'
 	);
 
 	$settings['features'][] = array(
@@ -211,7 +211,7 @@ function knote_settings_variables(){
 		'title'      => esc_html__('Product trust badge', 'knote'),
 		'content'    => esc_html__('Increase conversion with product trust badge.', 'knote'),
 		'label' 	 => esc_html__('Learn more', 'knote'),
-		'link'  	 => 'https://docs.codegearthemes.com/article/product-trust-badge/'
+		'link'  	 => 'https://docs.CodegearThemes.com/article/product-trust-badge/'
 	);
 
 	$settings['features'][] = array(
@@ -219,7 +219,7 @@ function knote_settings_variables(){
 		'title'      => esc_html__('Related product slider', 'knote'),
 		'content'    => esc_html__('Showcase more products with related product slider.', 'knote'),
 		'label' 	 => esc_html__('Learn more', 'knote'),
-		'link'  	 => 'https://docs.codegearthemes.com/article/related-product-slider/'
+		'link'  	 => 'https://docs.CodegearThemes.com/article/related-product-slider/'
 	);
 
 	$settings['features'][] = array(
@@ -227,7 +227,7 @@ function knote_settings_variables(){
 		'title'      => esc_html__('Upsell product slider', 'knote'),
 		'content'    => esc_html__('Showcase more products with upsell product slider.', 'knote'),
 		'label' 	 => esc_html__('Learn more', 'knote'),
-		'link'  	 => 'https://docs.codegearthemes.com/article/upsell-product-slider/'
+		'link'  	 => 'https://docs.CodegearThemes.com/article/upsell-product-slider/'
 	);
 
 	$settings['features'][] = array(
@@ -235,7 +235,7 @@ function knote_settings_variables(){
 		'title'      => esc_html__('Product builder', 'knote'),
 		'content'    => esc_html__('Create a landing page for a product', 'knote'),
 		'label' 	 => esc_html__('Learn more', 'knote'),
-		'link'  	 => 'https://docs.codegearthemes.com/article/product-landing-page/'
+		'link'  	 => 'https://docs.CodegearThemes.com/article/product-landing-page/'
 	);
 
 	$settings['features'][] = array(
@@ -243,7 +243,7 @@ function knote_settings_variables(){
 		'title'      => esc_html__('Advanced review', 'knote'),
 		'content'    => esc_html__('Showcase customer review in different layout.', 'knote'),
 		'label' 	 => esc_html__('Learn more', 'knote'),
-		'link'  	 => 'https://docs.codegearthemes.com/article/advanced-product-review/'
+		'link'  	 => 'https://docs.CodegearThemes.com/article/advanced-product-review/'
 	);
 
 	$settings['features'][] = array(
@@ -251,7 +251,7 @@ function knote_settings_variables(){
 		'title'      => esc_html__('Product tab style', 'knote'),
 		'content'    => esc_html__('Set the tab layout, position, alignment and more.', 'knote'),
 		'label' 	 => esc_html__('Learn more', 'knote'),
-		'link'  	 => 'https://docs.codegearthemes.com/article/advanced-product-review/'
+		'link'  	 => 'https://docs.CodegearThemes.com/article/advanced-product-review/'
 	);
 
 	$settings['features'][] = array(
@@ -259,7 +259,7 @@ function knote_settings_variables(){
 		'title'      => esc_html__('Buy now', 'knote'),
 		'content'    => esc_html__('Enable buy now button for product.', 'knote'),
 		'label' 	 => esc_html__('Learn more', 'knote'),
-		'link'  	 => 'https://docs.codegearthemes.com/article/product-buy-now/'
+		'link'  	 => 'https://docs.CodegearThemes.com/article/product-buy-now/'
 	);
 
 	$settings['features'][] = array(
@@ -267,7 +267,7 @@ function knote_settings_variables(){
 		'title'      => esc_html__('Mega menu', 'knote'),
 		'content'    => esc_html__('Create megamenu to add more links.', 'knote'),
 		'label' 	 => esc_html__('Learn more', 'knote'),
-		'link'  	 => 'https://docs.codegearthemes.com/article/mega-menu/'
+		'link'  	 => 'https://docs.CodegearThemes.com/article/mega-menu/'
 	);
 
 	$settings['features'][] = array(
@@ -275,7 +275,7 @@ function knote_settings_variables(){
 		'title'      => esc_html__('Weekly sale', 'knote'),
 		'content'    => esc_html__('Enable countdown for weekly sale.', 'knote'),
 		'label' 	 => esc_html__('Learn more', 'knote'),
-		'link'  	 => 'https://docs.codegearthemes.com/article/weekly-sale/'
+		'link'  	 => 'https://docs.CodegearThemes.com/article/weekly-sale/'
 	);
 
 	$settings['features'][] = array(
@@ -283,7 +283,7 @@ function knote_settings_variables(){
 		'title'      => esc_html__('Daily sale', 'knote'),
 		'content'    => esc_html__('Enable daily sale for urgency.', 'knote'),
 		'label' 	 => esc_html__('Learn more', 'knote'),
-		'link'  	 => 'https://docs.codegearthemes.com/article/daily-sale/'
+		'link'  	 => 'https://docs.CodegearThemes.com/article/daily-sale/'
 	);
 
 	$settings['features'][] = array(
@@ -291,7 +291,7 @@ function knote_settings_variables(){
 		'title'      => esc_html__('Free shipping progress bar', 'knote'),
 		'content'    => esc_html__('Enable shipping progress bar for conversion.', 'knote'),
 		'label' 	 => esc_html__('Learn more', 'knote'),
-		'link'  	 => 'https://docs.codegearthemes.com/article/free-shipping-bar/'
+		'link'  	 => 'https://docs.CodegearThemes.com/article/free-shipping-bar/'
 	);
 
 	$settings['features'][] = array(
@@ -299,7 +299,7 @@ function knote_settings_variables(){
 		'title'      => esc_html__('Payment icons', 'knote'),
 		'content'    => esc_html__('Add payment icons for information.', 'knote'),
 		'label' 	 => esc_html__('Learn more', 'knote'),
-		'link'  	 => 'https://docs.codegearthemes.com/article/payment-icons/'
+		'link'  	 => 'https://docs.CodegearThemes.com/article/payment-icons/'
 	);
 
 	$settings['features'][] = array(
@@ -307,7 +307,7 @@ function knote_settings_variables(){
 		'title'      => esc_html__('Reading progress bar', 'knote'),
 		'content'    => esc_html__('Enable reading progress bar.', 'knote'),
 		'label' 	 => esc_html__('Learn more', 'knote'),
-		'link'  	 => 'https://docs.codegearthemes.com/article/reading-progress-bar/'
+		'link'  	 => 'https://docs.CodegearThemes.com/article/reading-progress-bar/'
 	);
 
 	//Features
@@ -315,33 +315,33 @@ function knote_settings_variables(){
 
 	$settings['starter'][] = array(
 		'title' 		=> esc_html__('Agency', 'knote'),
-		'thumbnail'  	=> 'https://demo.codegearthemes.com/knote/agency/wp-assets/thumb.webp',
+		'thumbnail'  	=> 'https://demo.CodegearThemes.com/knote/agency/wp-assets/thumb.webp',
 	);
 
 	$settings['starter'][] = array(
 		'title' 		=> esc_html__('Electrician', 'knote'),
-		'thumbnail'  	=> 'https://demo.codegearthemes.com/knote/electrician/wp-assets/thumb.webp',
+		'thumbnail'  	=> 'https://demo.CodegearThemes.com/knote/electrician/wp-assets/thumb.webp',
 	);
 
 	$settings['starter'][] = array(
 		'title' 		=> esc_html__('Photography', 'knote'),
-		'thumbnail'  	=> 'https://demo.codegearthemes.com/knote/photography/wp-assets/thumb.webp',
+		'thumbnail'  	=> 'https://demo.CodegearThemes.com/knote/photography/wp-assets/thumb.webp',
 	);
 
 	$settings['starter'][] = array(
 		'title' 		=> esc_html__('Wellness', 'knote'),
-		'thumbnail'  	=> 'https://demo.codegearthemes.com/knote/wellness-yoga/wp-assets/thumb.webp',
+		'thumbnail'  	=> 'https://demo.CodegearThemes.com/knote/wellness-yoga/wp-assets/thumb.webp',
 	);
 
 	// Review
 	$settings['theme_link']			= 'https://wordpress.org/themes/knote/';
 	$settings['support_link']	   	= 'https://wordpress.org/support/theme/knote/';
 	$settings['review_link']       	= 'https://wordpress.org/support/theme/knote/reviews/';
-	$settings['suggest_idea_link'] 	= 'https://codegearthemes.com/pages/feature-request/';
+	$settings['suggest_idea_link'] 	= 'https://CodegearThemes.com/pages/feature-request/';
 
 	// Documentation
-	$settings['docs_link'] 		= 'https://github.com/codegearthemes/knote/wiki';
-	$settings['changelog_link'] = 'https://codegearthemes.com/pages/changelog-knote/';
+	$settings['docs_link'] 		= 'https://github.com/CodegearThemes/knote/wiki';
+	$settings['changelog_link'] = 'https://CodegearThemes.com/pages/changelog-knote/';
 
 	// Community
 	$settings['community_link'] = 'https://www.facebook.com/groups/codegearonline/';

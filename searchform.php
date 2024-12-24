@@ -2,7 +2,7 @@
 /**
  * Template for displaying search forms in Theme
  *
- * @author      CodeGearThemes
+ * @author      CodegearThemes
  * @category    WordPress
  * @package     Knote
  * @version     0.1.0

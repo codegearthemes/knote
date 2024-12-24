@@ -3,9 +3,9 @@
  * Customizer Control: Heading
  *
  * @package     Knote
- * @author      CodeGearThemes
+ * @author      CodegearThemes
  * @copyright   Copyright (c) 2020, Knote
- * @link        https://codegearthemes.com/
+ * @link        https://CodegearThemes.com/
  * @since       0.1.0
  */
 

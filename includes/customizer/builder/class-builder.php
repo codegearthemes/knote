@@ -292,7 +292,7 @@ class Knote_Builder {
                 'title'  => esc_html__( 'Permium Components', 'knote' ),
                 'total'  => esc_html__( '10+ Components Available', 'knote' ),
                 'button' => esc_html__( 'Get Knote Premium Now!', 'knote' ),
-                'link'   => 'https://codegearthemes.com/knote-upgrade?utm_source=theme_customizer_deep&utm_medium=button&utm_campaign=Knote'
+                'link'   => 'https://CodegearThemes.com/knote-upgrade?utm_source=theme_customizer_deep&utm_medium=button&utm_campaign=Knote'
             ),
             'i18n' => array(
                 'elementsMessage' => esc_html__( 'It looks like you already are using all available components.', 'knote' )

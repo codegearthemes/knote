@@ -5,10 +5,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @author      CodeGearThemes
+ * @author      CodegearThemes
  * @category    WordPress
  * @package     Knote
- * @version     0.6.6
+ * @version     0.6.8
  *
  */
 if (!defined('ABSPATH')) {
@@ -19,7 +19,7 @@ if (!defined('ABSPATH')) {
  * Define Constants
  */
 if (!defined('KNOTE_VERSION')) {
-	define('KNOTE_VERSION', '0.6.6');
+	define('KNOTE_VERSION', '0.6.8');
 }
 define('KNOTE_THEME_DIR', trailingslashit(get_template_directory()));
 define('KNOTE_THEME_URI', trailingslashit(esc_url(get_template_directory_uri())));
@@ -35,14 +35,6 @@ if (!function_exists('knote_setup')) :
 	 */
 	function knote_setup()
 	{
-
-		/*
-		* Make theme available for translation.
-		* Translations can be filed in the /languages/ directory.
-		* If you're building a theme based on Knote, use a find and replace
-		* to change 'knote' to the name of your theme in all the template files.
-		*/
-		load_theme_textdomain('knote', get_template_directory() . '/languages');
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support('automatic-feed-links');
@@ -76,6 +68,14 @@ if (!function_exists('knote_setup')) :
 				'footer' 	=> esc_html__('Footer Menu', 'knote')
 			)
 		);
+
+		/*
+		* Make theme available for translation.
+		* Translations can be filed in the /languages/ directory.
+		* If you're building a theme based on Knote, use a find and replace
+		* to change 'knote' to the name of your theme in all the template files.
+		*/
+		load_theme_textdomain('knote', get_template_directory() . '/languages');
 
 		/*
 		* Switch default core markup for search form, comment form, and comments

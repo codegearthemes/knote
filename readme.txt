@@ -1,10 +1,10 @@
 === Knote ===
-Contributors: CodeGearThemes
+Contributors: CodegearThemes
 Tags: custom-menu, custom-logo, entertainment, one-column, two-columns, left-sidebar, e-commerce, right-sidebar, custom-colors, editor-style, featured-images, full-width-template, threaded-comments, translation-ready, blog
 Requires at least: 5.1
-Tested up to: 6.6
+Tested up to: 6.7
 Requires PHP: 7.2
-Stable tag: 0.6.6
+Stable tag: 0.6.8
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -26,7 +26,7 @@ Knote includes support for Infinite Scroll in Jetpack, WooCommerce.
 
 == Copyright ==
 
-Knote WordPress Theme, Copyright 2022-2023 CodeGearThemes
+Knote WordPress Theme, Copyright 2022-2023 CodegearThemes
 Knote is distributed under the terms of the GNU GPL
 
 == Credits ==
@@ -50,7 +50,7 @@ Knote is distributed under the terms of the GNU GPL
 
 	[CC0](http://creativecommons.org/publicdomain/zero/1.0/deed.en)
 
-	All assets in assets/public/src & assets/admin/src are made for this theme https://codegearthemes.com, (C) CodeGearThemes, [CC0](http://creativecommons.org/publicdomain/zero/1.0/deed.en)
+	All assets in assets/public/src & assets/admin/src are made for this theme https://CodegearThemes.com, (C) CodegearThemes, [CC0](http://creativecommons.org/publicdomain/zero/1.0/deed.en)
 
 * Fonts
 	Roboto
@@ -75,6 +75,13 @@ Knote is distributed under the terms of the GNU GPL
 	Folder vendor/kirki-framework https://github.com/kirki-framework, (C) kirki-framework, [MIT](https://opensource.org/licenses/MIT)
 
 == Changelog ==
+
+= 0.6.8 (December 26, 2024) =
+* [Fix] Header height issue mobile
+
+= 0.6.7 (December 23, 2024) =
+* [Fix] Textdomain issue fix
+* [Update] Header & Footer Optimization
 
 = 0.6.6 (November 22, 2024) =
 * [Fix] Customizer style

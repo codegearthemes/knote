@@ -2,7 +2,7 @@
 /**
  * Template Name: Wishlist
  *
- * @author      CodeGearThemes
+ * @author      CodegearThemes
  * @category    WordPress
  * @package     Knote
  * @version     0.1.9

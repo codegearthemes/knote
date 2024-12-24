@@ -5,7 +5,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @author      CodeGearThemes
+ * @author      CodegearThemes
  * @category    WordPress
  * @package     Knote
  * @version     0.1.0

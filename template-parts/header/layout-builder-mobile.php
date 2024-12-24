@@ -3,7 +3,7 @@
  *
  * Header Mobile Layout Builder
  *
- * @author      CodeGearThemes
+ * @author      CodegearThemes
  * @category    WordPress
  * @package     knote
  * @version     0.1.0

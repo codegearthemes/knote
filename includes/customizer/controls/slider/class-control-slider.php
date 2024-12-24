@@ -4,9 +4,9 @@
  * Customizer Control: Slider
  *
  * @package     Knote
- * @author      CodeGearThemes
+ * @author      CodegearThemes
  * @copyright   Copyright (c) 2020, Knote
- * @link        https://codegearthemes.com/
+ * @link        https://CodegearThemes.com/
  * @since       0.1.0
  */
 class Knote_Control_Slider extends WP_Customize_Control

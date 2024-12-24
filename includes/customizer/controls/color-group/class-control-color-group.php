@@ -3,8 +3,8 @@
  * Customizer Control: Color Group
  *
  * @package     Knote
- * @author      CodeGearThemes
- * @link        https://codegearthemes.com/
+ * @author      CodegearThemes
+ * @link        https://CodegearThemes.com/
  * @since       0.1.0
  */
 class Knote_Control_ColorGroup extends WP_Customize_Control {

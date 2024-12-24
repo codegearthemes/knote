@@ -13,7 +13,7 @@ function knote_admin_footer(){ ?>
                             <p><?php esc_html_e('Got an idea for how to improve Knote? Let us know.', 'knote'); ?></p>
                         </div>
                         <div class="content-left">
-                            <a href="<?php echo esc_url('https://codegearthemes.com/contact'); ?>" target="_blank" class="text-link text-customize-link" target="_blank">
+                            <a href="<?php echo esc_url('https://CodegearThemes.com/contact'); ?>" target="_blank" class="text-link text-customize-link" target="_blank">
                                 <?php esc_html_e('Suggest an idea', 'knote'); ?>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-right">
                                     <line x1="7" y1="17" x2="17" y2="7"></line>
