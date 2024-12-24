@@ -5,8 +5,7 @@
  *
  * @author     CodegearThemes
  * @copyright  (c) Copyright by CodegearThemes
- * @link       https://CodegearThemes.com
- * @package    CodeGear-Library
+ * @link       https://codegearthemes.com
  * @subpackage Core
  * @since      1.0.0
  */

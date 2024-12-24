@@ -48,7 +48,7 @@ if ( is_array( $padding ) ){
     <div class="footer-component__html html <?php echo esc_attr( implode(' ', $knote_html_class ) ); ?>"
             style="<?php echo esc_attr( implode(';', $styles ) ); ?>"
     >
-        <?php echo wp_kses_post( $knote_footer_html_content ); ?>
+        <?php echo do_shortcode( wp_kses_post( $knote_footer_html_content ) ); ?>
     </div>
 </div>
 

@@ -6,7 +6,7 @@
  * @package     Knote
  * @author      CodegearThemes
  * @copyright   Copyright (c) 2020, Knote
- * @link        https://CodegearThemes.com/
+ * @link        https://codegearthemes.com/
  * @since       0.1.0
  */
 class Knote_Control_Slider extends WP_Customize_Control

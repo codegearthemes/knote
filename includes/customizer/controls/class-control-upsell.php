@@ -12,7 +12,7 @@ class Knote_Control_Upsell extends WP_Customize_Control {
 	public $title         = '';
 	public $button_text   = '';
 	public $type          = 'knote-upsell';
-	public $button_link   = 'https://CodegearThemes.com/upgrade?utm_source=theme_customizer_deep&utm_medium=button&utm_campaign=Knote';
+	public $button_link   = 'https://codegearthemes.com/upgrade?utm_source=theme_customizer_deep&utm_medium=button&utm_campaign=Knote';
 	public $features_list = array();
 
 	/**

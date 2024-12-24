@@ -50,7 +50,7 @@ Knote is distributed under the terms of the GNU GPL
 
 	[CC0](http://creativecommons.org/publicdomain/zero/1.0/deed.en)
 
-	All assets in assets/public/src & assets/admin/src are made for this theme https://CodegearThemes.com, (C) CodegearThemes, [CC0](http://creativecommons.org/publicdomain/zero/1.0/deed.en)
+	All assets in assets/public/src & assets/admin/src are made for this theme https://codegearthemes.com, (C) CodegearThemes, [CC0](http://creativecommons.org/publicdomain/zero/1.0/deed.en)
 
 * Fonts
 	Roboto
@@ -78,6 +78,8 @@ Knote is distributed under the terms of the GNU GPL
 
 = 0.6.8 (December 26, 2024) =
 * [Fix] Header height issue mobile
+* [New] Shortcode support header html element
+* [New] Shortcode support footer html element
 
 = 0.6.7 (December 23, 2024) =
 * [Fix] Textdomain issue fix

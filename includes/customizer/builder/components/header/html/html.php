@@ -56,7 +56,7 @@ if ( is_array( $padding ) ){
     <div class="header-component__html <?php echo esc_attr( $classes ); ?>"
             style="<?php echo esc_attr( implode(';', $styles ) );?>"
     >
-        <?php echo wp_kses_post( $knote_header_html_content ); ?>
+        <?php echo do_shortcode( wp_kses_post( $knote_header_html_content ) ); ?>
     </div>
     <?php do_action('knote_component_html_before'); ?>
 </div>

@@ -123,7 +123,7 @@ function knote_copyright_cb(){
 	$credits 	= get_theme_mod( 'knote_footer_credits', sprintf( __( '%1$1s. <small class="credit">Proudly powered by %2$2s</small>', 'knote' ), '{copyright} {year} {site_title}', '{theme_author}' ) );
 
 	$tags 		= array( '{theme_author}', '{site_title}', '{copyright}', '{year}' );
-	$replace 	= array( '<a rel="nofollow" target="_blank" href="https://CodegearThemes.com/products/knote/">' . esc_html__( 'Knote', 'knote' ) . '</a>', get_bloginfo( 'name' ), '&copy;', date('Y') );
+	$replace 	= array( '<a rel="nofollow" target="_blank" href="https://codegearthemes.com/products/knote/">' . esc_html__( 'Knote', 'knote' ) . '</a>', get_bloginfo( 'name' ), '&copy;', date('Y') );
 
 	$credits 	= str_replace( $tags, $replace, $credits );
 

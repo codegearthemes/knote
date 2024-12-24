@@ -36,7 +36,7 @@ $options = \KnoteFramework::get_instance()->get_settings();
                             </svg>
                         </a>
                     <?php else: ?>
-                        <a class="button" href="mailto:support@CodegearThemes.com" target="_blank">
+                        <a class="button" href="mailto:support@codegearthemes.com" target="_blank">
                             <?php esc_html_e('Email now', 'knote'); ?>
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-right">
                                 <line x1="7" y1="17" x2="17" y2="7"></line>

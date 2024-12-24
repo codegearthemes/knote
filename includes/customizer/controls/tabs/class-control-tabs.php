@@ -5,7 +5,7 @@
  * @package     Knote
  * @author      CodegearThemes
  * @copyright   Copyright (c) 2020, Knote
- * @link        https://CodegearThemes.com/
+ * @link        https://codegearthemes.com/
  * @since       0.1.0
  */
 

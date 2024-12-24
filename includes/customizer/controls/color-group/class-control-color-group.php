@@ -4,7 +4,7 @@
  *
  * @package     Knote
  * @author      CodegearThemes
- * @link        https://CodegearThemes.com/
+ * @link        https://codegearthemes.com/
  * @since       0.1.0
  */
 class Knote_Control_ColorGroup extends WP_Customize_Control {

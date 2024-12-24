@@ -2,8 +2,7 @@
 /**
  * JSON-LD handler.
  *
- * @package Designer-Library
- * @since 2.2.0
+ * @since 0.2.0
  */
 namespace Knote;
 
