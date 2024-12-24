@@ -182,6 +182,7 @@ if (!function_exists('knote_setup')) :
 		 * Responsive embeds
 		 */
 		add_theme_support('responsive-embeds');
+
 		update_option('elementor_onboarded', true);
 
 		/*
@@ -194,6 +195,11 @@ if (!function_exists('knote_setup')) :
 		 * Page templates with blocks
 		 */
 		add_theme_support('block-templates');
+
+		/**
+		 * Appearance tools.
+		 */
+		add_theme_support( 'appearance-tools' );
 	}
 endif;
 add_action('after_setup_theme', 'knote_setup');
@@ -236,6 +242,9 @@ function knote_set_elementor_defaults()
 	update_option('elementor_disable_color_schemes', 'yes');
 	update_option('elementor_disable_typography_schemes', 'yes');
 	update_option('elementor_container_width', 1160);
+	
+	// Deactivate Elementor Wizard.
+	update_option( 'elementor_onboarded', true );
 }
 add_action('after_switch_theme', 'knote_set_elementor_defaults');
 
