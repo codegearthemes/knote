@@ -8,7 +8,7 @@
  * @author      CodegearThemes
  * @category    WordPress
  * @package     Knote
- * @version     0.6.8
+ * @version     1.0.0
  *
  */
 if (!defined('ABSPATH')) {
@@ -19,7 +19,7 @@ if (!defined('ABSPATH')) {
  * Define Constants
  */
 if (!defined('KNOTE_VERSION')) {
-	define('KNOTE_VERSION', '0.6.8');
+	define('KNOTE_VERSION', '1.0.0');
 }
 define('KNOTE_THEME_DIR', trailingslashit(get_template_directory()));
 define('KNOTE_THEME_URI', trailingslashit(esc_url(get_template_directory_uri())));
@@ -290,6 +290,14 @@ require get_template_directory() . '/includes/functions/template-functions.php';
  */
 require get_template_directory() . '/includes/customizer/customizer.php';
 require get_template_directory() . '/includes/customizer/builder/class-builder.php';
+
+function knote_load_builder(){
+	/**
+	 * Initialize class
+	 */
+	Knote_Builder::get_instance();
+}
+add_action('init', 'knote_load_builder');
 
 /**
  * Header & Footer

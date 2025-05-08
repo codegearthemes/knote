@@ -72,11 +72,6 @@ $settings = \KnoteFramework::get_instance()->get_settings();
                         <div class="panel-item" data-selector="starter">
                             <h3 type="button"><?php esc_html_e('Starter sites', 'knote'); ?></h3>
                         </div>
-                        <?php if( !class_exists( 'KnotePro' ) ): ?>
-                            <div class="panel-item" data-selector="compare">
-                                <h3 type="button"><?php esc_html_e('Free vs Premium', 'knote'); ?></h3>
-                            </div>
-                        <?php endif; ?>
                     </div>
                     <div class="data-panel__content">
                         <div class="block-content block-panel-content" data-panel="features">
@@ -114,20 +109,6 @@ $settings = \KnoteFramework::get_instance()->get_settings();
                                 <?php endforeach; ?>
                             </div>
                             <div class="block-content__premium">
-                                <div class="premium-header">
-                                    <?php if( !class_exists( 'KnotePro' )): ?>
-                                        <h2><?php echo esc_html__( 'Upgrade to premium', 'knote' ); ?></h2>
-                                        <?php if( ! $settings[ 'has_pro' ] ) : ?>
-                                            <a href="<?php echo esc_url( $settings['upgrade_premium'] ); ?>" class="text-external-link" target="_blank">
-                                                <?php echo esc_html__( 'Upgrade now', 'knote' ); ?>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-right">
-                                                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                                                    <polyline points="7 7 17 7 17 17"></polyline>
-                                                </svg>
-                                            </a>
-                                        <?php endif; ?>
-                                    <?php endif ?>
-                                </div>
                                 <div class="lists block-content__inner">
                                     <?php foreach ($settings[ 'features' ] as $feature) : // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound
                                         if( $feature[ 'type' ] !== 'pro' )
@@ -183,11 +164,6 @@ $settings = \KnoteFramework::get_instance()->get_settings();
                                 </div>
                             <?php endforeach; ?>
                         </div>
-                        <?php if( !class_exists( 'KnotePro' ) ): ?>
-                        <div class="block-content block-panel-content hidden" data-panel="compare">
-
-                        </div>
-                        <?php endif; ?>
                     </div>
                 </div>
 

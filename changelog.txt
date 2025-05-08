@@ -1,5 +1,10 @@
 *** Knote Changelog ***
 
+= 1.0.0 (May 20, 2025) =
+* [Update] Update CSS Variable
+* [New] Toolkit Plugin Integration 
+* [New] Elementor Widgets
+
 = 0.6.8 (December 26, 2024) =
 * [Fix] Header height issue mobile
 * [New] Shortcode support header html element

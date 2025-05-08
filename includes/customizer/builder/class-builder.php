@@ -1095,8 +1095,3 @@ class Knote_Builder {
     }
 
 }
-
-/**
- * Initialize class
- */
-Knote_Builder::get_instance();
