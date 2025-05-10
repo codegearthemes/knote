@@ -53,17 +53,17 @@ foreach( $row_data->$device as $col_id => $elements ) :
 	}
 
 	$styles 	= array();
-	$margin 	= Knote_Styles::dimensions_variables( $column_option_id.'_margin', 'margin', $style_variable.'-column'.$column_index );
-	$padding 	= Knote_Styles::dimensions_variables( $column_option_id.'_padding', 'padding', $style_variable.'-column'.$column_index );
+	$margin 	= Knote_Styles::spacing_variables( $column_option_id.'_margin', '--header-margin-col' );
+	$padding 	= Knote_Styles::spacing_variables( $column_option_id.'_padding', '--header-padding-col' );
 	if( $device == 'desktop' ){
-		$spacing_desktop 	= get_theme_mod( $column_option_id.'_elements_spacing_desktop', 15).'px';
-		$styles[] = '--theme--'.$style_variable.'-column'.$column_index.'-'.$device.'-spacing:'.$spacing_desktop;
+		$spacing_desktop 	= get_theme_mod( $column_option_id.'_elements_spacing_desktop', 16).'px';
+		$styles[] = '--theme-column-spacing-lg:'.$spacing_desktop;
 	}else{
-		$spacing_tablet 	= get_theme_mod( $column_option_id.'_elements_spacing_tablet', 15).'px';
-		$spacing_mobile 	= get_theme_mod( $column_option_id.'_elements_spacing_mobile', 15).'px';
+		$spacing_tablet 	= get_theme_mod( $column_option_id.'_elements_spacing_tablet', 12).'px';
+		$spacing_mobile 	= get_theme_mod( $column_option_id.'_elements_spacing_mobile', 12).'px';
 
-		$styles[] = '--theme--'.$style_variable.'-column'.$column_index.'-tablet-spacing:'.$spacing_tablet;
-		$styles[] = '--theme--'.$style_variable.'-column'.$column_index.'-mobile-spacing:'.$spacing_mobile;
+		$styles[] = '--theme-column-spacing-md:'.$spacing_tablet;
+		$styles[] = '--theme-column-spacing-sm:'.$spacing_mobile;
 	}
 
 	if ( is_array( $margin ) ){

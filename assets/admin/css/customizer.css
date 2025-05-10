@@ -95,6 +95,10 @@
   border: none;
 }
 
+#customize-theme-controls .control-panel-themes > .accordion-section-title .customize-action{
+  margin-right: 8px;
+}
+
 .customize-pane-parent > li.control-section .accordion-section-title:before {
   left: 16px;
   content: "";
@@ -104,80 +108,77 @@
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  background-size: 100%;
   background-repeat: no-repeat;
-  background-image: url(../src/icons/default.svg);
+  background-image: url(../src/icons/icons.svg);
+  background-size: 162px;
+  background-position: -63px 0;
 }
 
 #accordion-section-colors .accordion-section-title:before {
-  background-image: url(../src/icons/colors.svg);
+  background-position: -20px 0;
 }
 
 #accordion-panel-knote_typography_panel .accordion-section-title:before {
-  background-image: url(../src/icons/typography.svg);
+  background-position: -104px -20px;
 }
 
 #accordion-panel-knote_header_panel .accordion-section-title:before {
-  background-image: url(../src/icons/header.svg);
+  background-position: -146px 0px;
 }
 
 #accordion-panel-knote_footer_panel .accordion-section-title:before {
-  background-image: url(../src/icons/footer.svg);
+  background-position: -83px 0;
 }
 
 #accordion-panel-knote_performance_panel .accordion-section-title:before {
-  background-image: url(../src/icons/performance.svg);
+  background-position: -62px -20px;
 }
 
 #accordion-panel-nav_menus .accordion-section-title:before {
-  background-image: url(../src/icons/menu.svg);
+  background-position: -41px -20px;
 }
 
 #accordion-panel-widgets .accordion-section-title:before {
-  background-image: url(../src/icons/widget.svg);
+  background-position: -125px -20px;
 }
 
 #accordion-section-static_front_page .accordion-section-title:before {
-  background-image: url(../src/icons/home.svg);
+  background-position: 0 -20px;
 }
 
 #accordion-section-knote_layout_section .accordion-section-title:before {
-  background-image: url(../src/icons/layout.svg);
+  background-position: -20px;
 }
 
 #accordion-section-custom_css .accordion-section-title:before {
-  background-image: url(../src/icons/code.svg);
-}
-
-#accordion-section-knote_catalog_general_section .accordion-section-title:before {
-  background-image: url(../src/icons/general.svg);
+  background-position: 0 0;
 }
 
 #accordion-section-woocommerce_store_notice .accordion-section-title:before {
-  background-image: url(../src/icons/bell.svg);
+  background-position: 0 -40px;
 }
 
 #accordion-section-knote_archive_section .accordion-section-title:before,
 #accordion-section-woocommerce_product_catalog .accordion-section-title:before,
 #accordion-panel-knote_woocommerce_catalog_panel .accordion-section-title:before{
-  background-image: url(../src/icons/grid.svg);
+  background-position: -125px 0;
 }
 
 #accordion-panel-knote_single_product_panel .accordion-section-title:before {
-  background-image: url(../src/icons/product.svg);
+  background-position: -83px -20px;
 }
 
 #accordion-section-background_image .accordion-section-title:before,
 #accordion-section-woocommerce_product_images .accordion-section-title:before {
-  background-image: url(../src/icons/background.svg);
+  background-position: -147px -20px;
 }
 
 #accordion-section-woocommerce_checkout .accordion-section-title:before {
-  background-image: url(../src/icons/credit-card.svg);
+  background-position: -42px 0;
 }
 
 #accordion-section-knote_single_section .accordion-section-title:before {
-  background-image: url(../src/icons/book.svg);
+  background-position: -21px -40px;
 }
 
 #customize-theme-controls

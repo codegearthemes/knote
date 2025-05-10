@@ -211,14 +211,14 @@ foreach( $this->footer_rows as $row ) {
         $wp_customize->add_setting(
             $section . '_elements_spacing_desktop',
             array(
-                'default'   		=> 24,
+                'default'   		=> 16,
                 'sanitize_callback' => 'absint'
             )
         );
         $wp_customize->add_setting(
             $section . '_elements_spacing_tablet',
             array(
-                'default'   		=> 16,
+                'default'   		=> 12,
                 'sanitize_callback' => 'absint'
             )
         );

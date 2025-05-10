@@ -85,8 +85,8 @@
 }
 
 .builder-header_row_above{
-    margin: var(--theme--header-row-above-margin-desktop, 0px);
-    padding: var(--theme--header-row-above-padding-desktop, 0px);
+    margin: var(--header-margin-row-desktop, 0px);
+    padding: var(--header-padding-row-desktop, 0px);
     background: var( --theme--header-row-above-background );
     border-bottom-width: var(--theme--header-row-above-border-width);
     border-bottom-color: var(--theme--header-row-above-border-color);
@@ -99,45 +99,9 @@ body.sticky-active .builder-header_row_above{
     border-color: var(--theme--header-row-above-border-color-sticky);
 }
 
-.builder-header_row_above .builder-column-1{
-    margin: var( --theme--header-row-above-column1-margin-desktop, 0px  );
-    padding: var( --theme--header-row-above-column1-padding-desktop, 0px );
-    gap: var( --theme--header-row-above-column1-desktop-spacing);
-}
-
-.builder-header_row_above .builder-column-2{
-    margin: var( --theme--header-row-above-column2-margin-desktop, 0px  );
-    padding: var( --theme--header-row-above-column2-padding-desktop, 0px );
-    gap: var( --theme--header-row-above-column2-desktop-spacing);
-}
-
-.builder-header_row_above .builder-column-3{
-    margin: var( --theme--header-row-above-column3-margin-desktop, 0px  );
-    padding: var( --theme--header-row-above-column3-padding-desktop, 0px );
-    gap: var( --theme--header-row-above-column3-desktop-spacing);
-}
-
-.builder-header_row_above .builder-column-4{
-    margin: var( --theme--header-row-above-column4-margin-desktop, 0px  );
-    padding: var( --theme--header-row-above-column4-padding-desktop, 0px );
-    gap: var( --theme--header-row-above-column4-desktop-spacing);
-}
-
-.builder-header_row_above .builder-column-5{
-    margin: var( --theme--header-row-above-column5-margin-desktop, 0px  );
-    padding: var( --theme--header-row-above-column5-padding-desktop, 0px );
-    gap: var( --theme--header-row-above-column5-desktop-spacing);
-}
-
-.builder-header_row_above .builder-column-6{
-    margin: var( --theme--header-row-above-column6-margin-desktop, 0px  );
-    padding: var( --theme--header-row-above-column6-padding-desktop, 0px );
-    gap: var( --theme--header-row-above-column6-desktop-spacing);
-}
-
 .builder-header_row_main{
-    margin: var(--theme--header-row-main-margin-desktop, 0px);
-    padding: var(--theme--header-row-main-padding-desktop, 0px);
+    margin: var(--header-margin-row-desktop, 0px);
+    padding: var(--header-padding-row-desktop, 0px);
     background: var( --theme--header-row-main-background );
     min-height: var(--theme--header-row-main-height-desktop);
     border-bottom-style: solid;
@@ -150,45 +114,9 @@ body.sticky-active .builder-header_row_main{
     border-color: var(--theme--header-row-main-border-color-sticky);
 }
 
-.builder-header_row_main .builder-column-1{
-    margin: var( --theme--header-row-main-column1-margin-desktop, 0px  );
-    padding: var( --theme--header-row-main-column1-padding-desktop, 0px );
-    gap: var( --theme--header-row-main-column1-desktop-spacing);
-}
-
-.builder-header_row_main .builder-column-2{
-    margin: var( --theme--header-row-main-column2-margin-desktop, 0px  );
-    padding: var( --theme--header-row-main-column2-padding-desktop, 0px );
-    gap: var( --theme--header-row-main-column2-desktop-spacing);
-}
-
-.builder-header_row_main .builder-column-3{
-    margin: var( --theme--header-row-main-column3-margin-desktop, 0px  );
-    padding: var( --theme--header-row-main-column3-padding-desktop, 0px );
-    gap: var( --theme--header-row-main-column3-desktop-spacing);
-}
-
-.builder-header_row_main .builder-column-4{
-    margin: var( --theme--header-row-main-column4-margin-desktop, 0px  );
-    padding: var( --theme--header-row-main-column4-padding-desktop, 0px );
-    gap: var( --theme--header-row-main-column4-desktop-spacing);
-}
-
-.builder-header_row_main .builder-column-5{
-    margin: var( --theme--header-row-main-column5-margin-desktop, 0px  );
-    padding: var( --theme--header-row-main-column5-padding-desktop, 0px );
-    gap: var( --theme--header-row-main-column5-desktop-spacing);
-}
-
-.builder-header_row_main .builder-column-6{
-    margin: var( --theme--header-row-main-column6-margin-desktop, 0px  );
-    padding: var( --theme--header-row-main-column6-padding-desktop, 0px );
-    gap: var( --theme--header-row-main-column6-desktop-spacing);
-}
-
 .builder-header_row_below{
-    margin: var(--theme--header-row-below-margin-desktop, 0px);
-    padding: var(--theme--header-row-below-padding-desktop, 0px);
+    margin: var(--header-margin-row-desktop, 0px);
+    padding: var(--header-padding-row-desktop, 0px);
     background: var( --theme--header-row-below-background );
     min-height: var(--theme--header-row-below-height-desktop);
     border-bottom-style: solid;
@@ -201,40 +129,27 @@ body.sticky-active .builder-header_row_below{
     border-color: var(--theme--header-row-below-border-color-sticky);
 }
 
-.builder-header_row_below .builder-column-1{
-    margin: var( --theme--header-row-below-column1-margin-desktop, 0px  );
-    padding: var( --theme--header-row-below-column1-padding-desktop, 0px );
-    gap: var( --theme--header-row-below-column1-desktop-spacing);
-}
-
-.builder-header_row_below .builder-column-2{
-    margin: var( --theme--header-row-below-column2-margin-desktop, 0px  );
-    padding: var( --theme--header-row-below-column2-padding-desktop, 0px );
-    gap: var( --theme--header-row-below-column2-desktop-spacing);
-}
-
-.builder-header_row_below .builder-column-3{
-    margin: var( --theme--header-row-below-column3-margin-desktop, 0px  );
-    padding: var( --theme--header-row-below-column3-padding-desktop, 0px );
-    gap: var( --theme--header-row-below-column3-desktop-spacing);
-}
-
-.builder-header_row_below .builder-column-4{
-    margin: var( --theme--header-row-below-column4-margin-desktop, 0px  );
-    padding: var( --theme--header-row-below-column4-padding-desktop, 0px );
-    gap: var( --theme--header-row-below-column4-desktop-spacing);
-}
-
-.builder-header_row_below .builder-column-5{
-    margin: var( --theme--header-row-below-column5-margin-desktop, 0px  );
-    padding: var( --theme--header-row-below-column5-padding-desktop, 0px );
-    gap: var( --theme--header-row-below-column5-desktop-spacing);
-}
-
-.builder-header_row_below .builder-column-6{
-    margin: var( --theme--header-row-below-column6-margin-desktop, 0px  );
-    padding: var( --theme--header-row-below-column6-padding-desktop, 0px );
-    gap: var( --theme--header-row-below-column6-desktop-spacing);
+.builder-header_row_main .builder-column-1,
+.builder-header_row_main .builder-column-2,
+.builder-header_row_main .builder-column-3,
+.builder-header_row_main .builder-column-4,
+.builder-header_row_main .builder-column-5,
+.builder-header_row_main .builder-column-6,
+.builder-header_row_below .builder-column-1,
+.builder-header_row_below .builder-column-2,
+.builder-header_row_below .builder-column-3,
+.builder-header_row_below .builder-column-4,
+.builder-header_row_below .builder-column-5,
+.builder-header_row_below .builder-column-6,
+.builder-header_row_above .builder-column-1,
+.builder-header_row_above .builder-column-2,
+.builder-header_row_above .builder-column-3,
+.builder-header_row_above .builder-column-4,
+.builder-header_row_above .builder-column-5,
+.builder-header_row_above .builder-column-6{
+    margin: var(--header-margin-col-desktop, 0px  );
+    padding: var(--header-padding-col-desktop, 0px );
+    gap: var(--theme-column-spacing-lg);
 }
 
 .builder-inner.column-1-equal,
@@ -885,135 +800,50 @@ body.sticky-active .builder-header_row_below{
     }
 
     .builder-header_row_above{
-        margin: var(--theme--header-row-above-margin-tablet, 0px);
-        padding: var(--theme--header-row-above-padding-tablet, 0px);
+        margin: var(--header-margin-row-tablet, 0px);
+        padding: var(--header-padding-row-tablet, 0px);
         min-height: var(--theme--header-row-above-height-tablet);
     }
 
-    .builder-header_row_above .builder-column-1{
-        margin: var( --theme--header-row-above-column1-margin-tablet, 0px  );
-        padding: var( --theme--header-row-above-column1-padding-tablet, 0px );
-        gap: var( --theme--header-row-above-column1-tablet-spacing);
-    }
-
-    .builder-header_row_above .builder-column-2{
-        margin: var( --theme--header-row-above-column2-margin-tablet, 0px  );
-        padding: var( --theme--header-row-above-column2-padding-tablet, 0px );
-        gap: var( --theme--header-row-above-column2-tablet-spacing);
-    }
-
-    .builder-header_row_above .builder-column-3{
-        margin: var( --theme--header-row-above-column3-margin-tablet, 0px  );
-        padding: var( --theme--header-row-above-column3-padding-tablet, 0px );
-        gap: var( --theme--header-row-above-column3-tablet-spacing);
-    }
-
-    .builder-header_row_above .builder-column-4{
-        margin: var( --theme--header-row-above-column4-margin-tablet, 0px  );
-        padding: var( --theme--header-row-above-column4-padding-tablet, 0px );
-        gap: var( --theme--header-row-above-column4-tablet-spacing);
-    }
-
-    .builder-header_row_above .builder-column-5{
-        margin: var( --theme--header-row-above-column5-margin-tablet, 0px  );
-        padding: var( --theme--header-row-above-column5-padding-tablet, 0px );
-        gap: var( --theme--header-row-above-column4-tablet-spacing);
-    }
-
-    .builder-header_row_above .builder-column-6{
-        margin: var( --theme--header-row-above-column6-margin-tablet, 0px  );
-        padding: var( --theme--header-row-above-column6-padding-tablet, 0px );
-        gap: var( --theme--header-row-above-column6-tablet-spacing);
-    }
-
     .builder-header_row_main{
-        margin: var(--theme--header-row-main-margin-tablet, 0px);
-        padding: var(--theme--header-row-main-padding-tablet, 0px);
+        margin: var(--header-margin-row-tablet, 0px);
+        padding: var(--header-padding-row-tablet, 0px);
         min-height: var(--theme--header-row-main-height-tablet);
     }
 
-    .builder-header_row_main .builder-column-1{
-        margin: var( --theme--header-row-main-column1-margin-tablet, 0px  );
-        padding: var( --theme--header-row-main-column1-padding-tablet, 0px );
-        gap: var( --theme--header-row-main-column1-tablet-spacing);
-    }
-
-    .builder-header_row_main .builder-column-2{
-        margin: var( --theme--header-row-main-column2-margin-tablet, 0px  );
-        padding: var( --theme--header-row-main-column2-padding-tablet, 0px );
-        gap: var( --theme--header-row-main-column2-tablet-spacing);
-    }
-
-    .builder-header_row_main .builder-column-3{
-        margin: var( --theme--header-row-main-column3-margin-tablet, 0px  );
-        padding: var( --theme--header-row-main-column3-padding-tablet, 0px );
-        gap: var( --theme--header-row-main-column3-tablet-spacing);
-    }
-
-    .builder-header_row_main .builder-column-4{
-        margin: var( --theme--header-row-main-column4-margin-tablet, 0px  );
-        padding: var( --theme--header-row-main-column4-padding-tablet, 0px );
-        gap: var( --theme--header-row-main-column4-tablet-spacing);
-    }
-
-    .builder-header_row_main .builder-column-5{
-        margin: var( --theme--header-row-main-column5-margin-tablet, 0px  );
-        padding: var( --theme--header-row-main-column5-padding-tablet, 0px );
-        gap: var( --theme--header-row-main-column5-tablet-spacing);
-    }
-
-    .builder-header_row_main .builder-column-6{
-        margin: var( --theme--header-row-main-column6-margin-tablet, 0px  );
-        padding: var( --theme--header-row-main-column6-padding-tablet, 0px );
-        gap: var( --theme--header-row-main-column6-tablet-spacing);
-    }
-
     .builder-header_row_below{
-        margin: var(--theme--header-row-below-margin-tablet, 0px);
-        padding: var(--theme--header-row-below-padding-tablet, 0px);
+        margin: var(--header-margin-row-tablet, 0px);
+        padding: var(--header-padding-row-tablet, 0px);
         min-height: var(--theme--header-row-below-height-tablet);
     }
 
-    .builder-header_row_below .builder-column-1{
-        margin: var( --theme--header-row-below-column1-margin-tablet, 0px  );
-        padding: var( --theme--header-row-below-column1-padding-tablet, 0px );
-        gap: var( --theme--header-row-below-column1-tablet-spacing);
-    }
-
-    .builder-header_row_below .builder-column-2{
-        margin: var( --theme--header-row-below-column2-margin-tablet, 0px  );
-        padding: var( --theme--header-row-below-column2-padding-tablet, 0px );
-        gap: var( --theme--header-row-below-column2-tablet-spacing);
-    }
-
-    .builder-header_row_below .builder-column-3{
-        margin: var( --theme--header-row-below-column3-margin-tablet, 0px  );
-        padding: var( --theme--header-row-below-column3-padding-tablet, 0px );
-        gap: var( --theme--header-row-below-column3-tablet-spacing);
-    }
-
-    .builder-header_row_below .builder-column-4{
-        margin: var( --theme--header-row-below-column4-margin-tablet, 0px  );
-        padding: var( --theme--header-row-below-column4-padding-tablet, 0px );
-        gap: var( --theme--header-row-below-column4-tablet-spacing);
-    }
-
-    .builder-header_row_below .builder-column-5{
-        margin: var( --theme--header-row-below-column5-margin-tablet, 0px  );
-        padding: var( --theme--header-row-below-column5-padding-tablet, 0px );
-        gap: var( --theme--header-row-below-column5-tablet-spacing);
-    }
-
-    .builder-header_row_below .builder-column-6{
-        margin: var( --theme--header-row-below-column6-margin-tablet, 0px  );
-        padding: var( --theme--header-row-below-column6-padding-tablet, 0px );
-        gap: var( --theme--header-row-below-column6-tablet-spacing);
+    .builder-header_row_main .builder-column-1,
+    .builder-header_row_main .builder-column-2,
+    .builder-header_row_main .builder-column-3,
+    .builder-header_row_main .builder-column-4,
+    .builder-header_row_main .builder-column-5,
+    .builder-header_row_main .builder-column-6,
+    .builder-header_row_below .builder-column-1,
+    .builder-header_row_below .builder-column-2,
+    .builder-header_row_below .builder-column-3,
+    .builder-header_row_below .builder-column-4,
+    .builder-header_row_below .builder-column-5,
+    .builder-header_row_below .builder-column-6,
+    .builder-header_row_above .builder-column-1,
+    .builder-header_row_above .builder-column-2,
+    .builder-header_row_above .builder-column-3,
+    .builder-header_row_above .builder-column-4,
+    .builder-header_row_above .builder-column-5,
+    .builder-header_row_above .builder-column-6{
+        margin: var(--header-margin-col-tablet, 0px  );
+        padding: var(--header-padding-col-tablet, 0px );
+        gap: var(--theme-column-spacing-md);
     }
 
     /* Logo */
     .site-header .component-logo{
-        margin: var(--theme--button-margin-tablet);
-        padding: var(--theme--button-padding-tablet);
+        margin: var(--theme--logo-margin-tablet);
+        padding: var(--theme--logo-padding-tablet);
     }
 
     /* Navigation */
@@ -1099,135 +929,50 @@ body.sticky-active .builder-header_row_below{
 
 @media screen and (max-width: 767px) {
     .builder-header_row_above{
-        margin: var(--theme--header-row-above-margin-mobile, 0px);
-        padding: var(--theme--header-row-above-padding-mobile, 0px);
+        margin: var(--header-margin-row-mobile, 0px);
+        padding: var(--header-padding-row-mobile, 0px);
         min-height: var(--theme--header-row-above-height-mobile);
     }
 
-    .builder-header_row_above .builder-column-1{
-        margin: var( --theme--header-row-above-column1-margin-mobile, 0px  );
-        padding: var( --theme--header-row-above-column1-padding-mobile, 0px );
-        gap: var( --theme--header-row-above-column1-mobile-spacing);
-    }
-
-    .builder-header_row_above .builder-column-2{
-        margin: var( --theme--header-row-above-column2-margin-mobile, 0px  );
-        padding: var( --theme--header-row-above-column2-padding-mobile, 0px );
-        gap: var( --theme--header-row-above-column1-mobile-spacing);
-    }
-
-    .builder-header_row_above .builder-column-3{
-        margin: var( --theme--header-row-above-column3-margin-mobile, 0px  );
-        padding: var( --theme--header-row-above-column3-padding-mobile, 0px );
-        gap: var( --theme--header-row-above-column1-mobile-spacing);
-    }
-
-    .builder-header_row_above .builder-column-4{
-        margin: var( --theme--header-row-above-column4-margin-mobile, 0px  );
-        padding: var( --theme--header-row-above-column4-padding-mobile, 0px );
-        gap: var( --theme--header-row-above-column1-mobile-spacing);
-    }
-
-    .builder-header_row_above .builder-column-5{
-        margin: var( --theme--header-row-above-column5-margin-mobile, 0px  );
-        padding: var( --theme--header-row-above-column5-padding-mobile, 0px );
-        gap: var( --theme--header-row-above-column1-mobile-spacing);
-    }
-
-    .builder-header_row_above .builder-column-6{
-        margin: var( --theme--header-row-above-column6-margin-mobile, 0px  );
-        padding: var( --theme--header-row-above-column6-padding-mobile, 0px );
-        gap: var( --theme--header-row-above-column1-mobile-spacing);
-    }
-
     .builder-header_row_main{
-        margin: var(--theme--header-row-main-margin-mobile, 0px);
-        padding: var(--theme--header-row-main-padding-mobile, 0px);
+         margin: var(--header-margin-row-mobile, 0px);
+        padding: var(--header-padding-row-mobile, 0px);
         min-height: var(--theme--header-row-main-height-mobile);
     }
 
-    .builder-header_row_main .builder-column-1{
-        margin: var( --theme--header-row-main-column1-margin-mobile, 0px  );
-        padding: var( --theme--header-row-main-column1-padding-mobile, 0px );
-        gap: var( --theme--header-row-main-column1-mobile-spacing);
-    }
-
-    .builder-header_row_main .builder-column-2{
-        margin: var( --theme--header-row-main-column2-margin-mobile, 0px  );
-        padding: var( --theme--header-row-main-column2-padding-mobile, 0px );
-        gap: var( --theme--header-row-main-column2-mobile-spacing);
-    }
-
-    .builder-header_row_main .builder-column-3{
-        margin: var( --theme--header-row-main-column3-margin-mobile, 0px  );
-        padding: var( --theme--header-row-main-column3-padding-mobile, 0px );
-        gap: var( --theme--header-row-main-column3-mobile-spacing);
-    }
-
-    .builder-header_row_main .builder-column-4{
-        margin: var( --theme--header-row-main-column4-margin-mobile, 0px  );
-        padding: var( --theme--header-row-main-column4-padding-mobile, 0px );
-        gap: var( --theme--header-row-main-column4-mobile-spacing);
-    }
-
-    .builder-header_row_main .builder-column-5{
-        margin: var( --theme--header-row-main-column5-margin-mobile, 0px  );
-        padding: var( --theme--header-row-main-column5-padding-mobile, 0px );
-        gap: var( --theme--header-row-main-column5-mobile-spacing);
-    }
-
-    .builder-header_row_main .builder-column-6{
-        margin: var( --theme--header-row-main-column6-margin-mobile, 0px  );
-        padding: var( --theme--header-row-main-column6-padding-mobile, 0px );
-        gap: var( --theme--header-row-main-column6-mobile-spacing);
-    }
-
     .builder-header_row_below{
-        margin: var(--theme--header-row-below-margin-mobile, 0px);
-        padding: var(--theme--header-row-below-padding-mobile, 0px);
+        margin: var(--header-margin-row-mobile, 0px);
+        padding: var(--header-padding-row-mobile, 0px);
         min-height: var(--theme--header-row-below-height-mobile);
     }
 
-    .builder-header_row_below .builder-column-1{
-        margin: var( --theme--header-row-below-column1-margin-mobile, 0px  );
-        padding: var( --theme--header-row-below-column1-padding-mobile, 0px );
-        gap: var( --theme--header-row-below-column1-mobile-spacing);
-    }
-
-    .builder-header_row_below .builder-column-2{
-        margin: var( --theme--header-row-below-column2-margin-mobile, 0px  );
-        padding: var( --theme--header-row-below-column2-padding-mobile, 0px );
-        gap: var( --theme--header-row-below-column2-mobile-spacing);
-    }
-
-    .builder-header_row_below .builder-column-3{
-        margin: var( --theme--header-row-below-column3-margin-mobile, 0px  );
-        padding: var( --theme--header-row-below-column3-padding-mobile, 0px );
-        gap: var( --theme--header-row-below-column3-mobile-spacing);
-    }
-
-    .builder-header_row_below .builder-column-4{
-        margin: var( --theme--header-row-below-column4-margin-mobile, 0px  );
-        padding: var( --theme--header-row-below-column4-padding-mobile, 0px );
-        gap: var( --theme--header-row-below-column4-mobile-spacing);
-    }
-
-    .builder-header_row_below .builder-column-5{
-        margin: var( --theme--header-row-below-column5-margin-mobile, 0px  );
-        padding: var( --theme--header-row-below-column5-padding-mobile, 0px );
-        gap: var( --theme--header-row-below-column5-mobile-spacing);
-    }
-
-    .builder-header_row_below .builder-column-6{
-        margin: var( --theme--header-row-below-column6-margin-mobile, 0px  );
-        padding: var( --theme--header-row-below-column6-padding-mobile, 0px );
-        gap: var( --theme--header-row-below-column6-mobile-spacing);
+    .builder-header_row_main .builder-column-1,
+    .builder-header_row_main .builder-column-2,
+    .builder-header_row_main .builder-column-3,
+    .builder-header_row_main .builder-column-4,
+    .builder-header_row_main .builder-column-5,
+    .builder-header_row_main .builder-column-6,
+    .builder-header_row_below .builder-column-1,
+    .builder-header_row_below .builder-column-2,
+    .builder-header_row_below .builder-column-3,
+    .builder-header_row_below .builder-column-4,
+    .builder-header_row_below .builder-column-5,
+    .builder-header_row_below .builder-column-6,
+    .builder-header_row_above .builder-column-1,
+    .builder-header_row_above .builder-column-2,
+    .builder-header_row_above .builder-column-3,
+    .builder-header_row_above .builder-column-4,
+    .builder-header_row_above .builder-column-5,
+    .builder-header_row_above .builder-column-6{
+        margin: var(--header-margin-col-mobile, 0px  );
+        padding: var(--header-padding-col-mobile, 0px );
+        gap: var(--theme-column-spacing-sm);
     }
 
     /* Logo */
     .site-header .component-logo{
-        margin: var(--theme--button-margin-mobile);
-        padding: var(--theme--button-padding-mobile);
+        margin: var(--theme--logo-margin-mobile);
+        padding: var(--theme--logo-padding-mobile);
     }
 
     /* Navigation */

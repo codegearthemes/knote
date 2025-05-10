@@ -799,8 +799,8 @@ class Knote_Builder {
                             // if( str_contains( $row['id'], 'main' ) ){
                             //     $default    = '{ "unit": "px","top": "15", "right": "", "bottom": "15", "left": "" }' ;
                             // }
-                            $margin     = Knote_Styles::dimensions_variables('knote_builder_'.$row['id'].'_margin', 'margin', $select );
-                            $padding    = Knote_Styles::dimensions_variables('knote_builder_'.$row['id'].'_padding', 'padding', $select, $default);
+                            $margin     = Knote_Styles::spacing_variables('knote_builder_'.$row['id'].'_margin', '--header-margin-row');
+                            $padding    = Knote_Styles::spacing_variables('knote_builder_'.$row['id'].'_padding', '--header-padding-row', $default);
 
                             if (is_array($margin)) {
                                 $styles = array_merge($styles, $margin);

@@ -142,7 +142,7 @@ if ( !class_exists( 'Knote_Customizer' ) ) {
 		}
 
 		public function knote_scripts() {
-			wp_enqueue_style( 'knote-customizer-styles', get_template_directory_uri() . '/assets/admin/css/customizer.css', array(), KNOTE_VERSION,'all' );
+			wp_enqueue_style( 'knote-customizer-styles', get_template_directory_uri() . '/assets/admin/css/customizer.min.css', array(), KNOTE_VERSION,'all' );
 			wp_enqueue_script( 'knote-customizer-scripts', get_template_directory_uri() . '/assets/admin/js/customizer.js', array( 'jquery', 'jquery-ui-core' ), KNOTE_VERSION, true );
 		}
 
