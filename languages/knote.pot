@@ -791,5 +791,5 @@ msgid "You can use the following tags: {copyright}, {year}, {site_title}"
 msgstr ""
 
 #: includes/functions/template-functions.php:132
-msgid "Youtube"
+msgid "YouTube"
 msgstr ""

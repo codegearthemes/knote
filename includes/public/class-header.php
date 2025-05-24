@@ -54,7 +54,7 @@ if ( !class_exists( 'Knote_Header' ) ) :
 			?>
 			<header
 				id="masthead"
-				class="site-header header-builder__main <?php echo esc_attr( implode(' ', apply_filters( 'knote_header_class', '' ) ) ); ?>"
+				class="site-header header-builder header-builder__main <?php echo esc_attr( implode(' ', apply_filters( 'knote_header_class', '' ) ) ); ?>"
 				data-sticky="<?php echo esc_attr( apply_filters( 'knote_sticky_header_status', 'no' ) ); ?>"
 				data-location="<?php echo esc_attr(get_theme_mod( 'knote_header_builder_sticky_row', 'main' ));?>"
 				data-sticky-direction="<?php echo esc_attr( apply_filters( 'knote_header_sticky_direction', 'scroll' ) ); ?>"

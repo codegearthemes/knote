@@ -129,24 +129,7 @@ body.sticky-active .builder-header_row_below{
     border-color: var(--theme--header-row-below-border-color-sticky);
 }
 
-.builder-header_row_main .builder-column-1,
-.builder-header_row_main .builder-column-2,
-.builder-header_row_main .builder-column-3,
-.builder-header_row_main .builder-column-4,
-.builder-header_row_main .builder-column-5,
-.builder-header_row_main .builder-column-6,
-.builder-header_row_below .builder-column-1,
-.builder-header_row_below .builder-column-2,
-.builder-header_row_below .builder-column-3,
-.builder-header_row_below .builder-column-4,
-.builder-header_row_below .builder-column-5,
-.builder-header_row_below .builder-column-6,
-.builder-header_row_above .builder-column-1,
-.builder-header_row_above .builder-column-2,
-.builder-header_row_above .builder-column-3,
-.builder-header_row_above .builder-column-4,
-.builder-header_row_above .builder-column-5,
-.builder-header_row_above .builder-column-6{
+.header-builder .builder-column{
     margin: var(--header-margin-col-desktop, 0px  );
     padding: var(--header-padding-col-desktop, 0px );
     gap: var(--theme-column-spacing-lg);
@@ -817,24 +800,7 @@ body.sticky-active .builder-header_row_below{
         min-height: var(--theme--header-row-below-height-tablet);
     }
 
-    .builder-header_row_main .builder-column-1,
-    .builder-header_row_main .builder-column-2,
-    .builder-header_row_main .builder-column-3,
-    .builder-header_row_main .builder-column-4,
-    .builder-header_row_main .builder-column-5,
-    .builder-header_row_main .builder-column-6,
-    .builder-header_row_below .builder-column-1,
-    .builder-header_row_below .builder-column-2,
-    .builder-header_row_below .builder-column-3,
-    .builder-header_row_below .builder-column-4,
-    .builder-header_row_below .builder-column-5,
-    .builder-header_row_below .builder-column-6,
-    .builder-header_row_above .builder-column-1,
-    .builder-header_row_above .builder-column-2,
-    .builder-header_row_above .builder-column-3,
-    .builder-header_row_above .builder-column-4,
-    .builder-header_row_above .builder-column-5,
-    .builder-header_row_above .builder-column-6{
+    .header-builder .builder-column{
         margin: var(--header-margin-col-tablet, 0px  );
         padding: var(--header-padding-col-tablet, 0px );
         gap: var(--theme-column-spacing-md);
@@ -946,24 +912,7 @@ body.sticky-active .builder-header_row_below{
         min-height: var(--theme--header-row-below-height-mobile);
     }
 
-    .builder-header_row_main .builder-column-1,
-    .builder-header_row_main .builder-column-2,
-    .builder-header_row_main .builder-column-3,
-    .builder-header_row_main .builder-column-4,
-    .builder-header_row_main .builder-column-5,
-    .builder-header_row_main .builder-column-6,
-    .builder-header_row_below .builder-column-1,
-    .builder-header_row_below .builder-column-2,
-    .builder-header_row_below .builder-column-3,
-    .builder-header_row_below .builder-column-4,
-    .builder-header_row_below .builder-column-5,
-    .builder-header_row_below .builder-column-6,
-    .builder-header_row_above .builder-column-1,
-    .builder-header_row_above .builder-column-2,
-    .builder-header_row_above .builder-column-3,
-    .builder-header_row_above .builder-column-4,
-    .builder-header_row_above .builder-column-5,
-    .builder-header_row_above .builder-column-6{
+    .header-builder .builder-column{
         margin: var(--header-margin-col-mobile, 0px  );
         padding: var(--header-padding-col-mobile, 0px );
         gap: var(--theme-column-spacing-sm);
