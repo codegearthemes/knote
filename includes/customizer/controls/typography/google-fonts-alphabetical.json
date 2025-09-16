@@ -1504,6 +1504,16 @@
       ],
       "category": "sans-serif"
     },
+    {
+      "family": "Instrument Sans",
+      "variants": [
+        "400",
+        "500",
+        "600",
+        "700"
+      ],
+      "category": "sans-serif"
+    },
     { "family": "Irish Grover", "variants": ["400"], "category": "display" },
     {
       "family": "Istok Web",

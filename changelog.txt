@@ -1,5 +1,10 @@
 *** Knote Changelog ***
 
+= 0.7.0 (September 16, 2025) =
+* [Update] Screenshot
+* [Update] Javascript optimization
+* [Update] Google Typography Update
+
 = 0.6.9 (May 11, 2025) =
 * [Update] Update CSS Variable
 * [Update] Customizer optimization
