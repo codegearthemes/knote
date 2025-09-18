@@ -144,12 +144,14 @@ window.knote = window.knote || {};
 		const header = document.querySelector('[data-header]');
 
 		// Get all menu links
-		const links = header.querySelectorAll('.menu a');
+		const links = header?.querySelectorAll('.menu a');
 
-		links.forEach((element) => {
-			element.addEventListener('focusin', toggleFocus, true);
-			element.addEventListener('focusout', toggleFocus, true);
-		});
+		if(links.length){
+			links.forEach((element) => {
+				element.addEventListener('focusin', toggleFocus, true);
+				element.addEventListener('focusout', toggleFocus, true);
+			});
+		}
 
 		/**
 		 * Sets or removes .focus class on an element.
