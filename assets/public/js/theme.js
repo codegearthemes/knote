@@ -146,7 +146,7 @@ window.knote = window.knote || {};
 		// Get all menu links
 		const links = header?.querySelectorAll('.menu a');
 
-		if(links.length){
+		if(links){
 			links.forEach((element) => {
 				element.addEventListener('focusin', toggleFocus, true);
 				element.addEventListener('focusout', toggleFocus, true);
@@ -194,7 +194,7 @@ window.knote = window.knote || {};
 			window.addEventListener('scroll', handleScroll);
 		}
 
-		const mainMenu = header.querySelector('[data-main-menu]');
+		const mainMenu = header?.querySelector('[data-main-menu]');
 		const handleMenuReverse = (childMenu) => () => {
 			if (!knote.isInHorizontalViewport(childMenu)) {
 				childMenu.classList.add('sub-menu-reverse');
