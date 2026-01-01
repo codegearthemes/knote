@@ -8,7 +8,7 @@
  * @author      CodegearThemes
  * @category    WordPress
  * @package     Knote
- * @version     0.7.0
+ * @version     0.8.0
  *
  */
 if (!defined('ABSPATH')) {
@@ -19,7 +19,7 @@ if (!defined('ABSPATH')) {
  * Define Constants
  */
 if (!defined('KNOTE_VERSION')) {
-	define('KNOTE_VERSION', '0.7.0');
+	define('KNOTE_VERSION', '0.8.0');
 }
 define('KNOTE_THEME_DIR', trailingslashit(get_template_directory()));
 define('KNOTE_THEME_URI', trailingslashit(esc_url(get_template_directory_uri())));

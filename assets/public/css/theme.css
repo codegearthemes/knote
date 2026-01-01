@@ -2557,6 +2557,8 @@ h6, .h6 {
 
 .site-header .site-branding img{
 	height: auto;
+	position: relative;
+	vertical-align: bottom;
 	max-width: var( --theme--logo-size-desktop );
 }
 
