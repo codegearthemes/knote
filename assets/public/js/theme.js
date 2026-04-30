@@ -144,7 +144,7 @@ window.knote = window.knote || {};
 		const header = document.querySelector('[data-header]');
 
 		// Get all menu links
-		const links = header.querySelectorAll('.menu a');
+		const links = header?.querySelectorAll('.menu a');
 
 		links.forEach((element) => {
 			element.addEventListener('focusin', toggleFocus, true);
